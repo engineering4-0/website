@@ -2,13 +2,8 @@ import {
     Header as CarbonHeader,
     HeaderContainer,
     HeaderName,
-    HeaderNavigation,
     HeaderMenuButton,
-    HeaderMenuItem,
     SkipToContent,
-    SideNav,
-    SideNavItems,
-    HeaderSideNavItems,
 } from '@carbon/react';
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
