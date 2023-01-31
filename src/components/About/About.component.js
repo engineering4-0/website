@@ -1,5 +1,5 @@
 import {
-    Grid, Column
+    Grid, Column, UnorderedList, ListItem
 } from '@carbon/react';
 
 const About = () => {
@@ -11,14 +11,16 @@ const About = () => {
                 <div className='about-content'>
                     <h3>About Us 👋</h3>
                     <hr></hr>
-                    <p>We are a diverse, inclusive student-run organization seeking to provide a platform to the science and technology enthusiasts of University of Windsor to</p>
-                    <ul>
-                        <li>Attend workshops and talks by industry professionals</li>
-                        <li>Work on real-world projects,</li>
-                        <li>Organize study groups,</li>
-                        <li>Get peer review or help to participate in technical competitions and paper presentations, (not to forget!)</li>
-                        <li>Grow your professional network through social events, and so much more!</li>
-                    </ul>
+                    <p>We are a diverse, inclusive student-run organization seeking 
+                        to provide a platform to the science and technology enthusiasts of University of Windsor to</p>
+                        <br></br>
+                    <UnorderedList>
+                        <ListItem>Attend workshops and talks by industry professionals </ListItem>
+                        <ListItem>Work on real-world projects,</ListItem>
+                        <ListItem>Organize study groups,</ListItem>
+                        <ListItem>Get peer review or help to participate in technical competitions and paper presentations, (not to forget!)</ListItem>
+                        <ListItem>Grow your professional network through social events, and so much more!</ListItem>
+                    </UnorderedList>
                 </div>
             </Column>
             <Column lg={2} sm={0} md={0}>
