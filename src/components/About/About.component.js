@@ -9,9 +9,16 @@ const About = () => {
             </Column>
             <Column lg={12} sm={4} md={12}>
                 <div className='about-content'>
-                    <h3>This is About</h3>
+                    <h3>About Us 👋</h3>
                     <hr></hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra eros diam, sit amet vehicula sapien pharetra condimentum. Etiam non risus erat. Praesent orci justo, fermentum in nunc quis, porta pellentesque sapien. Phasellus at vestibulum nunc. Mauris gravida, lacus ut malesuada egestas, erat nulla rhoncus urna, vitae sagittis urna orci a felis. Duis urna risus, rutrum et viverra ut, iaculis blandit libero. Morbi consectetur augue lectus, in ornare erat suscipit ut. Sed efficitur accumsan pretium. Phasellus quis placerat lacus. Vestibulum nisl enim, sollicitudin sed lobortis eu, laoreet eget est. Suspendisse dictum pellentesque condimentum.</p>
+                    <p>We are a diverse, inclusive student-run organization seeking to provide a platform to the science and technology enthusiasts of University of Windsor to</p>
+                    <ul>
+                        <li>Attend workshops and talks by industry professionals</li>
+                        <li>Work on real-world projects,</li>
+                        <li>Organize study groups,</li>
+                        <li>Get peer review or help to participate in technical competitions and paper presentations, (not to forget!)</li>
+                        <li>Grow your professional network through social events, and so much more!</li>
+                    </ul>
                 </div>
             </Column>
             <Column lg={2} sm={0} md={0}>
