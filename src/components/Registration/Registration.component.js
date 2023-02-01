@@ -3,11 +3,12 @@ import {
     Stack,
     TextInput,
     Button,
-    Loading
+    Loading,
 } from '@carbon/react';
 import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { validateEmail } from '../../utils/validation/email';
 
 const Registration = () => {
 
@@ -15,25 +16,37 @@ const Registration = () => {
         first: "",
         last: "",
         email: "",
+        instagram: "",
     });
 
     const [isLoading, setLoading] = useState(false);
+    const [emailError, setEmailError] = useState(false);
 
-    const scriptUrl = "https://sheet.best/api/sheets/80075981-73e9-431a-85c4-7caa42b4680f";
+    const scriptUrl = process.env.REACT_APP_FIREBASE_USER_DATABASE;
 
     const handleChange = (event) => {
         setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });
+
+        if (!validateEmail(contactInfo.email)) {
+            setEmailError(true);
+        } else {
+            setEmailError(false);
+        }
     };
 
-    const onSubmitHandler = (e) => {
+    const onSubmitHandler = async (e) => {
         setLoading(true);
         e.preventDefault();
 
         if (contactInfo.first.length === 0
             || contactInfo.last.length === 0
-            || contactInfo.email.length === 0) return;
+            || contactInfo.email.length === 0
+            || contactInfo.instagram.length === 0) return;
 
-        console.log(contactInfo);
+        const isEmailValid = await validateEmail(contactInfo.email);    
+        if (!isEmailValid) {
+            setEmailError(true);
+        }
 
         axios.post(scriptUrl, contactInfo)
             .then(res => {
@@ -41,6 +54,7 @@ const Registration = () => {
                     email: "",
                     first: "",
                     last: "",
+                    instagram: "",
                 });
                 setLoading(false);
                 toast("Registration Completed");
@@ -52,9 +66,9 @@ const Registration = () => {
                     email: "",
                     first: "",
                     last: "",
+                    instagram: "",
                 });
             });
-
     };
 
     if (isLoading) return <Loading
@@ -62,6 +76,8 @@ const Registration = () => {
 
     return (
         <>
+            <h3>Become a member of Engineering 4.0</h3>
+            <hr></hr>
             <Form onSubmit={onSubmitHandler}>
                 <Stack gap={7}>
                     <TextInput
@@ -89,9 +105,20 @@ const Registration = () => {
                         helperText=""
                         id="email"
                         invalidText="Invalid email."
+                        invalid={emailError}
                         labelText="Email"
                         placeholder="Enter uwindsor email address"
                         name="email"
+                        onChange={handleChange}
+                    />
+                    <TextInput
+                        helperText="You can provide us your instagram handle to get a mention"
+                        id="instagram"
+                        invalidText="Invalid instagram handle."
+                        labelText="Instagram Handle"
+                        placeholder="@username"
+                        name="instagram"
+                        value={contactInfo.instagram}
                         onChange={handleChange}
                     />
                     <Button

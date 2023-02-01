@@ -1,0 +1,49 @@
+.departments {
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  /* color: #0087ca; */
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f79b7a;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 6em;
+  color: #f79b7a;
+}
+
+.heading-02 {
+    font-size: 4em;
+  color: #f79b7a;
+}
+
+.underline {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #f4865e; /* safari still uses vendor prefix */
+    text-decoration-color: #f4865e;
+}
+
+.icons {
+    cursor: pointer;
+}

@@ -4,13 +4,20 @@ import {
     HeaderName,
     HeaderMenuButton,
     SkipToContent,
+    HeaderNavigation,
+    SideNav,
+    HeaderSideNavItems,
+    HeaderMenuItem,
+    SideNavItems
 } from '@carbon/react';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Header = () => {
+    const location = useLocation();
+
     return (
-        <>
-            <HeaderContainer
+        <div style={{marginBottom: "8em"}}>
+            <HeaderContainer 
                 render={({ isSideNavExpanded, onClickSideNavExpand }) => (
                     <CarbonHeader aria-label="Carbon Tutorial">
                         <SkipToContent />
@@ -20,23 +27,23 @@ const Header = () => {
                             isActive={isSideNavExpanded}
                         />
                         <HeaderName element={Link} to="/" prefix="Engineering 4.0">
-                             An Applied Science Club | UWindsor
+                              | UWindsor
                         </HeaderName>
-                        {/* <HeaderNavigation aria-label="Carbon Tutorial">
+                        <HeaderNavigation aria-label="Carbon Tutorial">
                             <HeaderMenuItem
-                                isCurrentPage={location.pathname === '/'}
+                                isCurrentPage={location.pathname === '/register'}
                                 element={Link}
-                                to="/"
+                                to="/register"
                             >
                                 Register
                             </HeaderMenuItem>
-                            <HeaderMenuItem
+                            {/* <HeaderMenuItem
                                 isCurrentPage={location.pathname === '/about'}
                                 element={Link}
                                 to="/about"
                             >
                                 About
-                            </HeaderMenuItem>
+                            </HeaderMenuItem> */}
                         </HeaderNavigation>
                         <SideNav
                             aria-label="Side navigation"
@@ -49,11 +56,11 @@ const Header = () => {
                                     <HeaderMenuItem element={Link} to="/about">About</HeaderMenuItem>
                                 </HeaderSideNavItems>
                             </SideNavItems>
-                        </SideNav> */}
+                        </SideNav>
                     </CarbonHeader>
                 )}
             />
-        </>
+        </div>
     )
 }
 
