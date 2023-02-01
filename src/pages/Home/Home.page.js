@@ -1,18 +1,24 @@
 import {
     Grid,
     Column,
+    Button,
 } from '@carbon/react';
 import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
 import './Home.style.css';
 import Fade from 'react-reveal/Fade';
 import Registration from '../../components/Registration/Registration.component';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
+
+    const navigate = useNavigate();
+
     return (<>
         <Grid style={{ marginBottom: "6em" }}>
             <Column lg={1} md={0} sm={0}></Column>
-            <Column lg={9} md={8} sm={4} className='css-typing'>
+            <Column lg={9} md={8} sm={4} className='home-heading'>
                 <p className='heading'><span className='underline'>Student-run</span>, Applied Science Club! 👋</p>
+                <Button onClick={() => navigate('about')}>Learn More About Us</Button>
             </Column>
             <Column lg={5} md={8} sm={4}>
                 <Registration />
@@ -64,9 +70,8 @@ const HomePage = () => {
             <Grid style={{ marginBottom: "3em" }}>
                 <Column lg={1} md={0} sm={0}></Column>
                 <Column lg={12} md={8} sm={4} style={{ textAlign: "left" }}>
-                    <p className='heading-02'>Follow us on our social media platform to get updates!</p><br></br>
+                    <p className='heading-02'>Follow us on our social media platform for regular updates!</p><br></br>
                     <div>
-
                     </div>
                 </Column>
                 <Column lg={2} md={8} sm={4} style={{ marginTop: "1em" }}>
