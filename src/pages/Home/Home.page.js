@@ -21,14 +21,13 @@ const HomePage = () => {
             <Grid style={{ marginBottom: "6em" }}>
                 <Column lg={1} md={0} sm={0}></Column>
 
-                <Column lg={7} md={4} sm={4}>
+                <Column lg={7} md={4} sm={4} className='department-section'>
                     <p className='departments hover-underline-animation'>Mechanical</p><br></br>
                     <p className='departments hover-underline-animation'>Computer Science</p><br></br>
                     <p className='departments hover-underline-animation'>Electrical</p><br></br>
                     <p className='departments hover-underline-animation'>people intrested in engineering..</p><br></br>
                     <p className='departments hover-underline-animation'>The club is for every engineer!</p>
                 </Column>
-
 
                 <Column lg={7} md={4} sm={4}>
                     <p style={{ fontWeight: 400, fontSize: "20px", marginBottom: "1em" }}>We are a diverse, inclusive student-run organization seeking

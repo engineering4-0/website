@@ -6,7 +6,6 @@
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  /* color: #0087ca; */
 }
 
 .hover-underline-animation::after {
@@ -33,17 +32,35 @@
   color: #f79b7a;
 }
 
+@media screen and (max-width: 360px) {
+  .heading {
+    font-size: 3em !important;
+  }
+
+  .heading-02 {
+    font-size: 3em !important;
+  }
+
+  .departments {
+    font-size: 20px !important;
+  }
+
+  .department-section {
+    margin-bottom: 1em;
+  }
+}
+
 .heading-02 {
-    font-size: 4em;
+  font-size: 4em;
   color: #f79b7a;
 }
 
 .underline {
-    text-decoration: underline;
-    -webkit-text-decoration-color: #f4865e; /* safari still uses vendor prefix */
-    text-decoration-color: #f4865e;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #f4865e; /* safari still uses vendor prefix */
+  text-decoration-color: #f4865e;
 }
 
 .icons {
-    cursor: pointer;
+  cursor: pointer;
 }

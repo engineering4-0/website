@@ -16,8 +16,8 @@ const Header = () => {
     const location = useLocation();
 
     return (
-        <div style={{marginBottom: "8em"}}>
-            <HeaderContainer 
+        <div style={{ marginBottom: "8em" }}>
+            <HeaderContainer
                 render={({ isSideNavExpanded, onClickSideNavExpand }) => (
                     <CarbonHeader aria-label="Carbon Tutorial">
                         <SkipToContent />
@@ -27,7 +27,7 @@ const Header = () => {
                             isActive={isSideNavExpanded}
                         />
                         <HeaderName element={Link} to="/" prefix="Engineering 4.0">
-                              | UWindsor
+                            | UWindsor
                         </HeaderName>
                         <HeaderNavigation aria-label="Carbon Tutorial">
                             <HeaderMenuItem
@@ -52,8 +52,7 @@ const Header = () => {
                         >
                             <SideNavItems>
                                 <HeaderSideNavItems>
-                                    <HeaderMenuItem element={Link} to="/">Register</HeaderMenuItem>
-                                    <HeaderMenuItem element={Link} to="/about">About</HeaderMenuItem>
+                                    <HeaderMenuItem element={Link} to="/register">Register</HeaderMenuItem>
                                 </HeaderSideNavItems>
                             </SideNavItems>
                         </SideNav>
