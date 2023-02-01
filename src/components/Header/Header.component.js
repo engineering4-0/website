@@ -30,20 +30,20 @@ const Header = () => {
                             | UWindsor
                         </HeaderName>
                         <HeaderNavigation aria-label="Carbon Tutorial">
-                            <HeaderMenuItem
+                            {/* <HeaderMenuItem
                                 isCurrentPage={location.pathname === '/register'}
                                 element={Link}
                                 to="/register"
                             >
                                 Register
-                            </HeaderMenuItem>
-                            {/* <HeaderMenuItem
+                            </HeaderMenuItem> */}
+                            <HeaderMenuItem
                                 isCurrentPage={location.pathname === '/about'}
                                 element={Link}
                                 to="/about"
                             >
                                 About
-                            </HeaderMenuItem> */}
+                            </HeaderMenuItem>
                         </HeaderNavigation>
                         <SideNav
                             aria-label="Side navigation"
@@ -53,6 +53,7 @@ const Header = () => {
                             <SideNavItems>
                                 <HeaderSideNavItems>
                                     <HeaderMenuItem element={Link} to="/register">Register</HeaderMenuItem>
+                                    <HeaderMenuItem element={Link} to="/about">About</HeaderMenuItem>
                                 </HeaderSideNavItems>
                             </SideNavItems>
                         </SideNav>

@@ -1,23 +1,25 @@
 import {
     Grid,
     Column,
-    UnorderedList,
-    ListItem,
 } from '@carbon/react';
 import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
 import './Home.style.css';
 import Fade from 'react-reveal/Fade';
+import Registration from '../../components/Registration/Registration.component';
 
 const HomePage = () => {
     return (<>
         <Grid style={{ marginBottom: "6em" }}>
             <Column lg={1} md={0} sm={0}></Column>
-            <Column lg={14} md={8} sm={4}>
+            <Column lg={9} md={8} sm={4} className='css-typing'>
                 <p className='heading'><span className='underline'>Student-run</span>, Applied Science Club! 👋</p>
+            </Column>
+            <Column lg={5} md={8} sm={4}>
+                <Registration />
             </Column>
             <Column lg={1} md={0} sm={0}></Column>
         </Grid>
-        <Fade bottom>
+        {/* <Fade bottom>
             <Grid style={{ marginBottom: "6em" }}>
                 <Column lg={1} md={0} sm={0}></Column>
 
@@ -56,7 +58,7 @@ const HomePage = () => {
                 <Column lg={1} md={0} sm={0}></Column>
 
             </Grid>
-        </Fade>
+        </Fade> */}
         <hr></hr>
         <Fade bottom>
             <Grid style={{ marginBottom: "3em" }}>
@@ -68,7 +70,7 @@ const HomePage = () => {
                     </div>
                 </Column>
                 <Column lg={2} md={8} sm={4} style={{ marginTop: "1em" }}>
-                    <AiOutlineInstagram size="4em" className='icons' onClick={() => window.location.href = "https://www.instagram.com/eng4.0_uwin/"} />
+                    <AiOutlineInstagram size="4em" className='icons instagram' onClick={() => window.location.href = "https://www.instagram.com/eng4.0_uwin/"} />
                     <AiFillLinkedin size="4em" className='icons' />
                 </Column>
                 <Column lg={1} md={0} sm={0}></Column>

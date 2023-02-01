@@ -64,3 +64,8 @@
 .icons {
   cursor: pointer;
 }
+
+.instagram:hover {
+  color: #c13584;
+  cursor: pointer;
+}
