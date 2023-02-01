@@ -32,7 +32,7 @@
   color: #f79b7a;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 450px) {
   .heading {
     font-size: 3em !important;
   }
