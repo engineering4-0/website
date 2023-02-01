@@ -4,6 +4,7 @@ import {
     TextInput,
     Button,
     Loading,
+    InlineNotification
 } from '@carbon/react';
 import { useState } from 'react';
 import axios from 'axios';
@@ -11,6 +12,8 @@ import { toast } from 'react-toastify';
 import { validateEmail } from '../../utils/validation/email';
 
 const Registration = () => {
+
+    const [registrationNotif, setRegistrationNotif] = useState({ isEnabled: false, id: null });
 
     const [contactInfo, setContactInfo] = useState({
         first: "",
@@ -40,16 +43,17 @@ const Registration = () => {
 
         if (contactInfo.first.length === 0
             || contactInfo.last.length === 0
-            || contactInfo.email.length === 0
-            || contactInfo.instagram.length === 0) return;
+            || contactInfo.email.length === 0) return;
 
-        const isEmailValid = await validateEmail(contactInfo.email);    
+        const isEmailValid = await validateEmail(contactInfo.email);
         if (!isEmailValid) {
             setEmailError(true);
         }
 
         axios.post(scriptUrl, contactInfo)
             .then(res => {
+                console.log(res);
+                setRegistrationNotif({ isEnabled: true, id: res.data.name });
                 setContactInfo({
                     email: "",
                     first: "",
@@ -115,7 +119,7 @@ const Registration = () => {
                         helperText="You can provide us your instagram handle to get a mention"
                         id="instagram"
                         invalidText="Invalid instagram handle."
-                        labelText="Instagram Handle"
+                        labelText="Instagram Handle (Optional)"
                         placeholder="@username"
                         name="instagram"
                         value={contactInfo.instagram}
@@ -130,6 +134,14 @@ const Registration = () => {
                     </Button>
                 </Stack>
             </Form>
+            {registrationNotif.isEnabled ? (<InlineNotification
+            style={{ marginTop: "2em"}}
+                kind="info"
+                iconDescription="describes the close button"
+                subtitle={<span>This is your member ID <span style={{fontWeight: 600}}>{registrationNotif.id}</span> Make sure your have this copied.</span>}
+                title="You are now a member of Engineering 4.0!"
+            />) : (<div></div>)}
+
         </>
     );
 }
