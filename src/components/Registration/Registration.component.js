@@ -79,7 +79,7 @@ const Registration = () => {
         description="Active loading indicator" withOverlay={false} />
 
     return (
-        <>
+        <div style={{ backgroundColor: "white", borderRadius: "5px", padding: "2em" }}>
             <h3>Become a member of Engineering 4.0</h3>
             <hr></hr>
             <Form onSubmit={onSubmitHandler}>
@@ -142,7 +142,7 @@ const Registration = () => {
                 title="You are now a member of Engineering 4.0!"
             />) : (<div></div>)}
 
-        </>
+        </div>
     );
 }
 

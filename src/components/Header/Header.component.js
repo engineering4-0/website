@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
 
     return (
-        <div style={{ marginBottom: "6em" }}>
+        <div>
             <HeaderContainer
                 render={({ isSideNavExpanded, onClickSideNavExpand }) => (
                     <CarbonHeader aria-label="Carbon Tutorial">

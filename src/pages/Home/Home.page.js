@@ -13,7 +13,7 @@ const HomePage = () => {
 
     const navigate = useNavigate();
 
-    return (<>
+    return (<div style={{ backgroundColor: "#266382", paddingTop: "6em" }}>
         <Grid style={{ marginBottom: "6em" }}>
             <Column lg={1} md={0} sm={0}></Column>
             <Column lg={9} md={8} sm={4} className='home-heading'>
@@ -65,6 +65,9 @@ const HomePage = () => {
 
             </Grid>
         </Fade> */}
+        {/* <Fade bottom>
+            <BoardMembers />
+        </Fade> */}
         <hr></hr>
         <Fade bottom>
             <Grid style={{ marginBottom: "3em" }}>
@@ -81,15 +84,16 @@ const HomePage = () => {
                 <Column lg={1} md={0} sm={0}></Column>
             </Grid>
         </Fade>
-        <Grid style={{ marginBottom: "1em" }}>
-            <Column lg={16} md={8} sm={4} style={{ textAlign: "center", marginBottom: "1em" }}>
-                Designed with <span style={{ color: "red" }}>♥️</span> by a member, <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/rajcrk/'>Raj</a>
+        
+        <Grid style={{ paddingBottom: "1em" }}>
+            <Column lg={16} md={8} sm={4} style={{ textAlign: "center", marginBottom: "1em", color: "white" }}>
+                Designed with <span style={{ color: "red" }}>♥️</span> by a member, <a target="_blank" style={{ color: "white" }} rel="noreferrer" href='https://www.linkedin.com/in/rajcrk/'>Raj</a>
             </Column>
-            <Column lg={16} md={8} sm={4} style={{ textAlign: "center" }}>
-                Contribute to this website here, <a target="_blank" rel="noreferrer" href='https://github.com/engineering4-0/website'>GitHub</a>
+            <Column lg={16} md={8} sm={4} style={{ textAlign: "center", color: "white" }}>
+                Contribute to this website here, <a target="_blank" rel="noreferrer" style={{ color: "white" }} href='https://github.com/engineering4-0/website'>GitHub</a>
             </Column>
         </Grid>
-    </>);
+    </div>);
 };
 
 export default HomePage;

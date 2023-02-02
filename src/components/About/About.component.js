@@ -18,19 +18,19 @@ const About = () => {
                     <div>
                         <hr></hr>
                         <UnorderedList >
-                            <ListItem style={{ fontSize: "17px", fontWeight: 600 }}>
+                            <ListItem style={{ fontSize: "17px", fontWeight: 600, color: "#F9fbe7" }}>
                                 Attend workshops and talks by industry professionals
                             </ListItem>
-                            <ListItem style={{ fontSize: "17px", fontWeight: 600 }}>
+                            <ListItem style={{ fontSize: "17px", fontWeight: 600, color: "#F9fbe7" }}>
                                 Work on real-world projects,
                             </ListItem>
-                            <ListItem style={{ fontSize: "17px", fontWeight: 600 }}>
+                            <ListItem style={{ fontSize: "17px", fontWeight: 600, color: "#F9fbe7" }}>
                                 Organize study groups,
                             </ListItem>
-                            <ListItem style={{ fontSize: "17px", fontWeight: 600 }}>
+                            <ListItem style={{ fontSize: "17px", fontWeight: 600, color: "#F9fbe7" }}>
                                 Get peer review or help to participate in technical competitions and paper presentations, (not to forget!)
                             </ListItem>
-                            <ListItem style={{ fontSize: "17px", fontWeight: 600 }}>
+                            <ListItem style={{ fontSize: "17px", fontWeight: 600, color: "#F9fbe7" }}>
                                 Grow your professional network through social events, and so much more!
                             </ListItem>
                         </UnorderedList>
