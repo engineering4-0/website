@@ -5,6 +5,7 @@ import {
     SkipToContent,
 } from '@carbon/react';
 import { Link } from 'react-router-dom'
+import image from './logo192.png'
 
 const Header = () => {
 
@@ -15,7 +16,7 @@ const Header = () => {
                     <CarbonHeader aria-label="Carbon Tutorial">
                         <SkipToContent />
                         <HeaderName element={Link} to="/" prefix="" style={{ fontSize: "20px" }}>
-                            Engineering 4.0| UWindsor
+                            Engineering 4.0| UWindsor  <img src={image} style={{ maxHeight: "45px", maxWidth: "45px" }} alt='logo' />
                         </HeaderName>
                     </CarbonHeader>
                 )}
