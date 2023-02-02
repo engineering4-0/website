@@ -61,8 +61,8 @@
 
 .underline {
   text-decoration: underline;
-  -webkit-text-decoration-color: #f4865e; /* safari still uses vendor prefix */
-  text-decoration-color: #f4865e;
+  -webkit-text-decoration-color: #80cbc4; /* safari still uses vendor prefix */
+  text-decoration-color: #80cbc4;
 }
 
 .icons {
@@ -72,5 +72,10 @@
 
 .instagram:hover {
   color: #c13584;
+  cursor: pointer;
+}
+
+.linkedin:hover {
+  color: #0072b1;
   cursor: pointer;
 }

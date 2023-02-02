@@ -79,7 +79,7 @@ const HomePage = () => {
                 </Column>
                 <Column lg={2} md={8} sm={4} style={{ marginTop: "1em" }}>
                     <AiOutlineInstagram size="4em" className='icons instagram' onClick={() => window.location.href = "https://www.instagram.com/eng4.0_uwin/"} />
-                    <AiFillLinkedin size="4em" className='icons' />
+                    <AiFillLinkedin size="4em" className='icons instagram' onClick={() => window.location = "https://www.linkedin.com/company/engineering-4-0/"} />
                 </Column>
                 <Column lg={1} md={0} sm={0}></Column>
             </Grid>
