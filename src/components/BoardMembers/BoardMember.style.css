@@ -1,3 +1,9 @@
 .member-heading {
     text-align: center;
 }
+
+@media screen and (max-width: 500px) {
+    .board-members {
+        margin-bottom: 2em;
+    }
+}

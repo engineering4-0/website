@@ -50,30 +50,50 @@ const Registration = () => {
             setEmailError(true);
         }
 
-        axios.post(scriptUrl, contactInfo)
+        axios.get(scriptUrl, {
+            params: {
+                orderBy: '"email"',
+                equalTo: `"${contactInfo.email}"`,
+            }
+          })
             .then(res => {
-                console.log(res);
-                setRegistrationNotif({ isEnabled: true, id: res.data.name });
-                setContactInfo({
-                    email: "",
-                    first: "",
-                    last: "",
-                    instagram: "",
-                });
-                setLoading(false);
-                toast("Registration Completed");
-            })
-            .catch(err => {
-                setLoading(false);
-                toast("An error occured during registration. Contact club members");
-                setContactInfo({
-                    email: "",
-                    first: "",
-                    last: "",
-                    instagram: "",
-                });
+                if ((res 
+                    && Object.keys(res).length === 0)) {
+                        regsiterUser();
+                    } else {
+                        toast("You are already a member!");
+                        setLoading(false);
+                    }
+            }).catch(err => {
+                console.log(err);
             });
     };
+
+    const regsiterUser = async () => {
+        await axios.post(scriptUrl, contactInfo)
+        .then(res => {
+            console.log(res);
+            setRegistrationNotif({ isEnabled: true, id: res.data.name });
+            setContactInfo({
+                email: "",
+                first: "",
+                last: "",
+                instagram: "",
+            });
+            setLoading(false);
+            toast("Registration Completed");
+        })
+        .catch(err => {
+            setLoading(false);
+            toast("An error occured during registration. Contact club members");
+            setContactInfo({
+                email: "",
+                first: "",
+                last: "",
+                instagram: "",
+            });
+        });
+    }
 
     if (isLoading) return <Loading
         description="Active loading indicator" withOverlay={false} />

@@ -8,6 +8,7 @@ import './Home.style.css';
 import Fade from 'react-reveal/Fade';
 import Registration from '../../components/Registration/Registration.component';
 import { useNavigate } from 'react-router-dom';
+import BoardMembers from '../../components/BoardMembers/BoardMember.component';
 
 const HomePage = () => {
 
@@ -65,9 +66,9 @@ const HomePage = () => {
 
             </Grid>
         </Fade> */}
-        {/* <Fade bottom>
+        <Fade bottom>
             <BoardMembers />
-        </Fade> */}
+        </Fade>
         <hr></hr>
         <Fade bottom>
             <Grid style={{ marginBottom: "3em" }}>
