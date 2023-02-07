@@ -29,7 +29,7 @@
 .heading {
   font-weight: 600;
   font-size: 5em;
-  color: #F9fbe7;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 500px) {
@@ -56,7 +56,7 @@
 
 .heading-02 {
   font-size: 4em;
-  color: #F9fbe7
+  color: #ffffff
 }
 
 .underline {

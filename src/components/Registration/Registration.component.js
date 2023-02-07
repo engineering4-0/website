@@ -30,7 +30,7 @@ const Registration = () => {
     const handleChange = (event) => {
         setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });
 
-        if (!validateEmail(contactInfo.email)) {
+        if (event.target.name === 'email' && !validateEmail(event.target.value)) {
             setEmailError(true);
         } else {
             setEmailError(false);
@@ -48,6 +48,7 @@ const Registration = () => {
         const isEmailValid = await validateEmail(contactInfo.email);
         if (!isEmailValid) {
             setEmailError(true);
+            return;
         }
 
         axios.get(scriptUrl, {
@@ -55,15 +56,15 @@ const Registration = () => {
                 orderBy: '"email"',
                 equalTo: `"${contactInfo.email}"`,
             }
-          })
+        })
             .then(res => {
-                if ((res 
+                if ((res
                     && Object.keys(res).length === 0)) {
-                        regsiterUser();
-                    } else {
-                        toast("You are already a member!");
-                        setLoading(false);
-                    }
+                    regsiterUser();
+                } else {
+                    toast("You are already a member!");
+                    setLoading(false);
+                }
             }).catch(err => {
                 console.log(err);
             });
@@ -71,28 +72,28 @@ const Registration = () => {
 
     const regsiterUser = async () => {
         await axios.post(scriptUrl, contactInfo)
-        .then(res => {
-            console.log(res);
-            setRegistrationNotif({ isEnabled: true, id: res.data.name });
-            setContactInfo({
-                email: "",
-                first: "",
-                last: "",
-                instagram: "",
+            .then(res => {
+                console.log(res);
+                setRegistrationNotif({ isEnabled: true, id: res.data.name });
+                setContactInfo({
+                    email: "",
+                    first: "",
+                    last: "",
+                    instagram: "",
+                });
+                setLoading(false);
+                toast("Registration Completed");
+            })
+            .catch(err => {
+                setLoading(false);
+                toast("An error occured during registration. Contact club members");
+                setContactInfo({
+                    email: "",
+                    first: "",
+                    last: "",
+                    instagram: "",
+                });
             });
-            setLoading(false);
-            toast("Registration Completed");
-        })
-        .catch(err => {
-            setLoading(false);
-            toast("An error occured during registration. Contact club members");
-            setContactInfo({
-                email: "",
-                first: "",
-                last: "",
-                instagram: "",
-            });
-        });
     }
 
     if (isLoading) return <Loading
@@ -128,7 +129,7 @@ const Registration = () => {
                         value={contactInfo.email}
                         helperText=""
                         id="email"
-                        invalidText="Invalid email."
+                        invalidText="Please provide a valid @uwindsor.ca email"
                         invalid={emailError}
                         labelText="Email"
                         placeholder="Enter uwindsor email address"
@@ -155,10 +156,10 @@ const Registration = () => {
                 </Stack>
             </Form>
             {registrationNotif.isEnabled ? (<InlineNotification
-            style={{ marginTop: "2em"}}
+                style={{ marginTop: "2em" }}
                 kind="info"
                 iconDescription="describes the close button"
-                subtitle={<span>This is your member ID <span style={{fontWeight: 600}}>{registrationNotif.id}</span> Make sure your have this copied.</span>}
+                subtitle={<span>This is your member ID <span style={{ fontWeight: 600 }}>{registrationNotif.id}</span> Make sure your have this copied.</span>}
                 title="You are now a member of Engineering 4.0!"
             />) : (<div></div>)}
 
