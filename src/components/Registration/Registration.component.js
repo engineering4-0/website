@@ -58,8 +58,8 @@ const Registration = () => {
             }
         })
             .then(res => {
-                if ((res
-                    && Object.keys(res).length === 0)) {
+                if ((res.data
+                    && Object.keys(res.data).length === 0)) {
                     regsiterUser();
                 } else {
                     toast("You are already a member!");
@@ -71,9 +71,8 @@ const Registration = () => {
     };
 
     const regsiterUser = async () => {
-        await axios.post(scriptUrl, contactInfo)
+        await axios.post(scriptUrl, { ...contactInfo, createdAt: new Date() })
             .then(res => {
-                console.log(res);
                 setRegistrationNotif({ isEnabled: true, id: res.data.name });
                 setContactInfo({
                     email: "",
@@ -158,8 +157,7 @@ const Registration = () => {
             {registrationNotif.isEnabled ? (<InlineNotification
                 style={{ marginTop: "2em" }}
                 kind="info"
-                iconDescription="describes the close button"
-                subtitle={<span>This is your member ID <span style={{ fontWeight: 600 }}>{registrationNotif.id}</span> Make sure your have this copied.</span>}
+                subtitle={`This is your member ID ${registrationNotif.id} Make sure your have this copied.`}
                 title="You are now a member of Engineering 4.0!"
             />) : (<div></div>)}
 

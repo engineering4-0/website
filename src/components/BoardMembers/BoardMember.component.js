@@ -23,55 +23,55 @@ const BoardMembers = () => {
         <Grid style={{ marginBottom: "2em" }}>
             <Column lg={2} md={0} sm={0}></Column>
             <Column lg={3} md={4} sm={2} className='board-members'>
-                <ClickableTile target='_blank' href="https://www.linkedin.com/in/varuncharavanan/">
+                <ClickableTile className='member-tile' target='_blank' href="https://www.linkedin.com/in/varuncharavanan/">
                     <Grid>
                         <Column lg={1} md={4} sm={2}>
-                        <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={varun} />
+                            <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={varun} />
                         </Column>
                         <Column lg={2} md={4} sm={2}>
-                        Varun<hr></hr>
-                        President
+                            Varun<hr></hr>
+                            President
                         </Column>
-                    </Grid> 
+                    </Grid>
                 </ClickableTile>
             </Column>
             <Column lg={3} md={4} sm={2} className='board-members'>
-                <ClickableTile target='_blank' href="https://www.linkedin.com/in/varsha-sri-selvakumar-5b516b177/">
-                <Grid>
+                <ClickableTile className='member-tile' target='_blank' href="https://www.linkedin.com/in/varsha-sri-selvakumar-5b516b177/">
+                    <Grid>
                         <Column lg={1} md={4} sm={2}>
-                        <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={varsha} />
+                            <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={varsha} />
                         </Column>
                         <Column lg={2} md={4} sm={2}>
-                        Varsha<hr></hr>
-                        Vice President
+                            Varsha<hr></hr>
+                            Vice President
                         </Column>
-                    </Grid> 
+                    </Grid>
                 </ClickableTile>
             </Column>
             <Column lg={3} md={4} sm={2} className='board-members'>
-                <ClickableTile target='_blank' href="https://www.linkedin.com/in/irene-ann-patric-4b5305159/">
-                <Grid>
+                <ClickableTile className='member-tile' target='_blank' href="https://www.linkedin.com/in/irene-ann-patric-4b5305159/">
+                    <Grid>
                         <Column lg={1} md={4} sm={2}>
-                        <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={irene} />
+                            <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={irene} />
                         </Column>
                         <Column lg={2} md={4} sm={2}>
-                        Irene<hr></hr>
-                        Social Media Head
+                            Irene<hr></hr>
+                            Social Media Head
                         </Column>
-                    </Grid> 
+                    </Grid>
                 </ClickableTile>
             </Column>
             <Column lg={3} md={4} sm={2} className='board-members'>
-                <ClickableTile target="_blank" href='https://www.linkedin.com/in/kishokrai/'>
-                <Grid>
+                <ClickableTile className='member-tile' target="_blank" href='https://www.linkedin.com/in/kishokrai/'>
+                    <Grid>
                         <Column lg={1} md={4} sm={2}>
-                        <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={kishok} />
+                            <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={kishok} />
                         </Column>
                         <Column lg={2} md={4} sm={2}>
-                        Kishok<hr></hr>
-                        Operations Head
+                            Kishok<hr></hr>
+                            Operations Head
                         </Column>
-                    </Grid> 
+                    </Grid>
                 </ClickableTile>
             </Column>
             <Column lg={2} md={0} sm={0}></Column>
@@ -79,29 +79,29 @@ const BoardMembers = () => {
         <Grid>
             <Column lg={5} md={0} sm={0}></Column>
             <Column lg={3} md={4} sm={2}>
-                <ClickableTile target="_blank" href="https://www.linkedin.com/in/waseem-zahir/">
-                <Grid>
+                <ClickableTile className='member-tile' target="_blank" href="https://www.linkedin.com/in/waseem-zahir/">
+                    <Grid>
                         <Column lg={1} md={4} sm={2}>
-                        <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={wazeem} />
+                            <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={wazeem} />
                         </Column>
                         <Column lg={2} md={4} sm={2}>
-                        Waseem<hr></hr>
-                        Treasurer
+                            Waseem<hr />
+                            Treasurer
                         </Column>
-                    </Grid> 
+                    </Grid>
                 </ClickableTile>
             </Column>
             <Column lg={3} md={4} sm={2}>
-                <ClickableTile target="_blank" href='https://www.linkedin.com/in/rajcrk/'>
-                <Grid>
+                <ClickableTile className='member-tile' target="_blank" href='https://www.linkedin.com/in/rajcrk/'>
+                    <Grid>
                         <Column lg={1} md={4} sm={2}>
-                        <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={raj} />
+                            <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={raj} />
                         </Column>
                         <Column lg={2} md={4} sm={2}>
-                        Raj<hr></hr>
-                        Technical Head
+                            Raj<hr></hr>
+                            Technical Head
                         </Column>
-                    </Grid> 
+                    </Grid>
                 </ClickableTile>
             </Column>
             <Column lg={1} md={0} sm={0}></Column>
