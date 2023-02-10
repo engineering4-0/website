@@ -89,7 +89,7 @@ const Registration = () => {
             .then(res => {
                 sendEmail(
                     `${contactInfo.first} ${contactInfo.last}`,
-                     contactInfo.email, res);
+                     contactInfo.email, res.data.name);
                 setRegistrationNotif({ isEnabled: true, id: res.data.name });
                 setContactInfo({
                     email: "",
