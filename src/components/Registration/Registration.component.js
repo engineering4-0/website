@@ -9,6 +9,7 @@ import {
 import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
 import { validateEmail } from '../../utils/validation/email';
 
 const Registration = () => {
@@ -21,6 +22,19 @@ const Registration = () => {
         email: "",
         instagram: "",
     });
+
+    const sendEmail = (name, email, memberId) => {
+        emailjs.send('service_lygv31m', 'template_dy1kxqz', {
+            name,
+            email,
+            memberId,
+        }, 'dA6mr4EcbGJ3BebKZ')
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+            }, function (error) {
+                console.log('FAILED...', error);
+            });
+    }
 
     const [isLoading, setLoading] = useState(false);
     const [emailError, setEmailError] = useState(false);
@@ -73,6 +87,9 @@ const Registration = () => {
     const regsiterUser = async () => {
         await axios.post(scriptUrl, { ...contactInfo, createdAt: new Date() })
             .then(res => {
+                sendEmail(
+                    `${contactInfo.first} ${contactInfo.last}`,
+                     contactInfo.email, res);
                 setRegistrationNotif({ isEnabled: true, id: res.data.name });
                 setContactInfo({
                     email: "",
