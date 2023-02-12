@@ -56,7 +56,7 @@ const BoardMembers = () => {
                         </Column>
                         <Column lg={2} md={4} sm={2}>
                             Irene<hr></hr>
-                            Head of Administration
+                             Administrative Head
                         </Column>
                     </Grid>
                 </ClickableTile>
@@ -79,7 +79,7 @@ const BoardMembers = () => {
         <Grid>
             <Column lg={5} md={0} sm={0}></Column>
             <Column lg={3} md={4} sm={2}>
-                <ClickableTile className='member-tile' target="_blank" href="https://www.linkedin.com/in/waseem-zahir/">
+                <ClickableTile className='member-tile' href="#">
                     <Grid>
                         <Column lg={1} md={4} sm={2}>
                             <img alt='profile-pic' style={{ height: "55px", width: "55px", borderRadius: "50%" }} src={wazeem} />
