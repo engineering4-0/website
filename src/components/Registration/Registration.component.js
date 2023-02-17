@@ -38,6 +38,8 @@ const Registration = () => {
 
     const [isLoading, setLoading] = useState(false);
     const [emailError, setEmailError] = useState(false);
+    const [firstNameError, setFirstNameError] = useState(false);
+    const [lastNameError, setLastNameError] = useState(false);
 
     const scriptUrl = process.env.REACT_APP_FIREBASE_USER_DATABASE;
 
@@ -57,7 +59,19 @@ const Registration = () => {
 
         if (contactInfo.first.length === 0
             || contactInfo.last.length === 0
-            || contactInfo.email.length === 0) return;
+            || contactInfo.email.length === 0) {
+                if (contactInfo.first.length === 0)
+                    setFirstNameError(true);
+
+                if (contactInfo.last.length === 0)
+                    setLastNameError(true);
+
+                if (contactInfo.email.length === 0)
+                    setEmailError(true);
+
+                setLoading(false);
+                return;
+            }
 
         const isEmailValid = await validateEmail(contactInfo.email);
         if (!isEmailValid) {
@@ -124,6 +138,7 @@ const Registration = () => {
                     <TextInput
                         helperText=""
                         id="first"
+                        invalid={firstNameError}
                         invalidText="Invalid name."
                         labelText="Name"
                         placeholder="Enter first name"
@@ -134,6 +149,7 @@ const Registration = () => {
                     <TextInput
                         helperText=""
                         id="last"
+                        invalid={lastNameError}
                         invalidText="Invalid name."
                         labelText="Last name"
                         placeholder="Enter last name"
