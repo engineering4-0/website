@@ -1,3 +1,7 @@
+## Project status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/12626b6f-5afd-4178-9bd1-da3fefe64327/deploy-status)](https://app.netlify.com/sites/engineering4-0-uwindsor/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:
