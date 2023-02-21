@@ -4,6 +4,7 @@ import {
     Button,
 } from '@carbon/react';
 import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
+import { FaDiscord } from "react-icons/fa";
 import './Home.style.css';
 import Fade from 'react-reveal/Fade';
 import Registration from '../../components/Registration/Registration.component';
@@ -94,6 +95,7 @@ const HomePage = () => {
                 <Column lg={2} md={8} sm={4} style={{ marginTop: "1em" }}>
                     <AiOutlineInstagram size="4em" className='icons instagram' onClick={() => window.location.href = "https://www.instagram.com/eng4.0_uwin/"} />
                     <AiFillLinkedin size="4em" className='icons instagram' onClick={() => window.location = "https://www.linkedin.com/company/engineering-4-0/"} />
+                    <FaDiscord size="4em" className='icons instagram' onClick={() => window.location = "https://discord.gg/Z8JnPSC5tD"} />
                 </Column>
                 <Column lg={1} md={0} sm={0}></Column>
             </Grid>
