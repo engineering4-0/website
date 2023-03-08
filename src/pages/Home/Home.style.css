@@ -26,6 +26,41 @@
   transform-origin: bottom left;
 }
 
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  font-size: 40px;
+  text-align: center;
+}
+.scroller > span {
+  position: absolute;
+  top: 0;
+  animation: slide 6s infinite;
+  font-weight: bold;
+  background-color: green;
+}
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
+}
+
 .heading {
   font-weight: 600;
   font-size: 5em;
@@ -56,12 +91,12 @@
 
 .heading-02 {
   font-size: 4em;
-  color: #ffffff
+  color: #ffffff;
 }
 
 .sub-heading {
   font-size: 2em;
-  color: #ffffff
+  color: #ffffff;
 }
 
 .underline {
