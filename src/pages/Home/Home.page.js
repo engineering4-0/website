@@ -28,7 +28,7 @@ const HomePage = () => {
             </Column>
             <Column lg={1} md={0} sm={0}></Column>
         </Grid>
-        <Fade botton>
+        {/* <Fade botton>
             <Grid style={{ marginBottom: "3em" }}>
                 <Column lg={2} md={0} sm={0}></Column>
                 <Column lg={12} md={8} sm={4} >
@@ -39,7 +39,7 @@ const HomePage = () => {
                 </Column>
                 <Column lg={2} md={0} sm={0}></Column>
             </Grid>
-        </Fade>
+        </Fade> */}
         <Fade bottom>
             <BoardMembers />
         </Fade>
