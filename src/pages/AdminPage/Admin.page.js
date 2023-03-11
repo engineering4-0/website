@@ -10,7 +10,7 @@ const AdminPage = () => {
 
     useEffect(() => {
         getMembers();
-    }, [])
+    });
 
     const getMembers = () => {
         axios.get(scriptUrl, {
