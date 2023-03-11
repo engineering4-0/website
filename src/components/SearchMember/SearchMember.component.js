@@ -32,7 +32,9 @@ const SearchMember = ({ members }) => {
                     if (member.email.includes(searchText)
                         || member.first.includes(searchText)
                         || member.last.includes(searchText)) {
-                        return true
+                        return true;
+                    } else {
+                        return false;
                     }
                 })
                 .map((member, index) => (

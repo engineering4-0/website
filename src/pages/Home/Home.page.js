@@ -10,7 +10,6 @@ import Fade from 'react-reveal/Fade';
 import Registration from '../../components/Registration/Registration.component';
 import { useNavigate } from 'react-router-dom';
 import BoardMembers from '../../components/BoardMembers/BoardMember.component';
-import Career from '../../components/Career/Career.component';
 
 const HomePage = () => {
 
