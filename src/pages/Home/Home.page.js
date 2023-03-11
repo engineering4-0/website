@@ -67,6 +67,9 @@ const HomePage = () => {
             <Column lg={16} md={8} sm={4} style={{ textAlign: "center", color: "white" }}>
                 Contribute to this website here, <a target="_blank" rel="noreferrer" style={{ color: "white" }} href='https://github.com/engineering4-0/website'>GitHub</a>
             </Column>
+            <Column lg={16} md={8} sm={4} style={{ textAlign: "center", color: "white" }} onClick={() => navigate("/admin")}>
+                Copyright protected
+            </Column>
         </Grid>
     </div>);
 };
