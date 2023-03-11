@@ -6,7 +6,6 @@ import {
 
 const SearchMember = ({ members }) => {
     const [searchText, setSearchText] = useState("");
-    const [filteredMembers, setFilteredMembers] = useState(members);
 
     const onSearchHandler = (e) => {
         setSearchText(e.target.value);
