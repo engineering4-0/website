@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AboutPage from './pages/About/About.page';
 import HomePage from './pages/Home/Home.page';
 import AdminPage from './pages/AdminPage/Admin.page';
+import EventsPage from './pages/EventsPage/EventsPage.page';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path='/register' element={<RegistrationPage />}></Route>
           <Route path='/about' element={<AboutPage />}></Route>
           <Route path='/admin' element={<AdminPage />}></Route>
+          <Route path='/events' element={<EventsPage />}></Route>
+          <Route path='/*' element={<h1>404 Page not found!</h1>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
