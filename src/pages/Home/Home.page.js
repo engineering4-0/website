@@ -27,18 +27,6 @@ const HomePage = () => {
             </Column>
             <Column lg={1} md={0} sm={0}></Column>
         </Grid>
-        {/* <Fade botton>
-            <Grid style={{ marginBottom: "3em" }}>
-                <Column lg={2} md={0} sm={0}></Column>
-                <Column lg={12} md={8} sm={4} >
-                    <p className='heading-02'>Careers</p><hr />
-                    <p className='sub-heading'>Work with an awesome club!</p><br />
-                    <p style={{ color: "white", marginBottom: "1em" }}>Send us an email with your resume to engineer4-0@outlook.com with the role as the subject.</p>
-                    <Career />
-                </Column>
-                <Column lg={2} md={0} sm={0}></Column>
-            </Grid>
-        </Fade> */}
         <Fade bottom>
             <BoardMembers />
         </Fade>
@@ -62,13 +50,10 @@ const HomePage = () => {
 
         <Grid style={{ paddingBottom: "1em" }}>
             <Column lg={16} md={8} sm={4} style={{ textAlign: "center", marginBottom: "1em", color: "white" }}>
-                Designed with <span style={{ color: "red" }}>♥️</span> by a member, <a target="_blank" style={{ color: "white" }} rel="noreferrer" href='https://www.linkedin.com/in/rajcrk/'>Raj</a>
+                Designed with <span style={{ color: "red" }}>♥️</span> by The Technical Team
             </Column>
             <Column lg={16} md={8} sm={4} style={{ textAlign: "center", color: "white" }}>
                 Contribute to this website here, <a target="_blank" rel="noreferrer" style={{ color: "white" }} href='https://github.com/engineering4-0/website'>GitHub</a>
-            </Column>
-            <Column lg={16} md={8} sm={4} style={{ textAlign: "center", color: "white" }} onClick={() => navigate("/admin")}>
-                Copyright protected
             </Column>
         </Grid>
     </div>);
