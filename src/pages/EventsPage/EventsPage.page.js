@@ -57,7 +57,7 @@ export default function EventsPage() {
   ];
   return (
     <div className="eventsPageWrapper">
-      <h1 className="title"> Upcomin Events</h1>
+      <h1 className="heading-02 member-heading title">Upcoming Events</h1>
       <section className="eventsTimeline">
         {upcomingEvents.map((event, index) => (
           <div
@@ -83,7 +83,7 @@ export default function EventsPage() {
           </div>
         ))}
       </section>
-      <h1 className="title"> Past Events</h1>
+      <h1 className="heading-02 member-heading title">Past Events</h1>
       <section className="eventsTimeline">
         {pastEvents.map((event, index) => (
           <div

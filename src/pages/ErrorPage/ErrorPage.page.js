@@ -1,10 +1,10 @@
 import React from 'react'
-
+import "./ErrorPage.css"
 export default function ErrorPage() {
   return (
-    <div>
-        <h1>404</h1>
-        <h1>Page not Found!</h1>
-    </div>
+    <section className='error-page-container'>
+        <h1 className="fluid-display-02">Oops,</h1>
+        <h1 className='fluid-display-02'>Page Not Found!</h1>
+    </section>
   )
 }

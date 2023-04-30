@@ -8,6 +8,7 @@ import AboutPage from './pages/About/About.page';
 import HomePage from './pages/Home/Home.page';
 import AdminPage from './pages/AdminPage/Admin.page';
 import EventsPage from './pages/EventsPage/EventsPage.page';
+import ErrorPage from './pages/ErrorPage/ErrorPage.page';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path='/about' element={<AboutPage />}></Route>
           <Route path='/admin' element={<AdminPage />}></Route>
           <Route path='/events' element={<EventsPage />}></Route>
-          <Route path='/*' element={<h1>404 Page not found!</h1>}></Route>
+          <Route path='/*' element={<ErrorPage/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
