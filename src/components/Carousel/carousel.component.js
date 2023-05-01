@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./carousel.css";
 // const items = [1, 2, 3, 4, 5];
 
@@ -8,7 +8,25 @@ const Carousel = ({ images = [] }) => {
   const handleClick = (index) => {
     setActiveIndex(index);
   };
-
+  useEffect(() => {
+    function updateCurrentImage(){
+      setActiveIndex( currentIndex => {
+        let nextIndex = currentIndex + 1;
+        if (nextIndex >= images.length) {
+          return 0
+        }
+        return nextIndex
+      })
+    }
+    let carouselInterval = setInterval(() => {
+      updateCurrentImage()
+    }, 2000);
+  
+    return () => {
+      clearInterval(carouselInterval)
+    }
+  }, [images.length])
+  
   return (
     <>
       {images.length ? (
@@ -18,8 +36,8 @@ const Carousel = ({ images = [] }) => {
               <img
                 className="carousel-item"
                 key={index}
-                src={item}
-                alt={`carousel-item-${index}`}
+                src={images[activeIndex]}
+                alt={`carousel-item-${activeIndex}`}
               />
             ))}
             <div className="slider-container">
