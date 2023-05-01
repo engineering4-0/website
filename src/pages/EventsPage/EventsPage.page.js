@@ -9,7 +9,7 @@ import event_2_4 from "./Event-2_4.jpeg";
 import event_2_5 from "./Event-2_5.jpeg";
 import event_2_6 from "./Event-2_6.jpeg";
 
-export default function EventsPage() {
+const EventsPage = () => {
   // list of upcoming events goes here
   const upcomingEvents = [
     // {
@@ -129,3 +129,5 @@ export default function EventsPage() {
     </div>
   );
 }
+
+export default EventsPage;

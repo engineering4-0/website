@@ -5,17 +5,28 @@ import {
   SkipToContent,
   HeaderNavigation,
   HeaderMenuItem,
+  SideNav,
+  HeaderSideNavItems,
+  SideNavItems,
+  HeaderMenuButton,
 } from "@carbon/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import image from "./logo192.png";
 
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <HeaderContainer
         render={({ isSideNavExpanded, onClickSideNavExpand }) => (
           <CarbonHeader aria-label="Carbon Tutorial">
             <SkipToContent />
+            <HeaderMenuButton
+              aria-label={isSideNavExpanded ? 'Close menu' : 'Open menu'}
+              onClick={onClickSideNavExpand}
+              isActive={isSideNavExpanded}
+            />
             <HeaderName
               element={Link}
               to="/"
@@ -31,10 +42,26 @@ const Header = () => {
               />
             </HeaderName>
             <HeaderNavigation aria-label="Upcoming Events">
-              <HeaderMenuItem href="/events">
-                <span style={{ fontWeight: "700"}}>Events</span>
+              <HeaderMenuItem
+                style={{ cursor: "pointer" }}
+                onClick={() => navigate("/events")}>
+                Upcoming and Previous Events
               </HeaderMenuItem>
             </HeaderNavigation>
+            <SideNav
+              aria-label="Side navigation"
+              expanded={isSideNavExpanded}
+              isPersistent={false}>
+              <SideNavItems>
+                <HeaderSideNavItems>
+                  <HeaderMenuItem
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/events")}>
+                    Upcoming and Previous Events
+                  </HeaderMenuItem>
+                </HeaderSideNavItems>
+              </SideNavItems>
+            </SideNav>
           </CarbonHeader>
         )}
       />
