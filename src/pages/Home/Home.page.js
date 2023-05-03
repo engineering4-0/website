@@ -10,17 +10,36 @@ import Fade from 'react-reveal/Fade';
 import Registration from '../../components/Registration/Registration.component';
 import { useNavigate } from 'react-router-dom';
 import BoardMembers from '../../components/BoardMembers/BoardMember.component';
+import EventSuggestionModal from '../../components/Modal/EventSuggestionModal.component';
+import { useState } from 'react';
 
 const HomePage = () => {
 
     const navigate = useNavigate();
+    const [isSuggestionModalOpen, setIsSuggestionModalOpen] = useState(false);
 
-    return (<div style={{ backgroundColor: "#266382", paddingTop: "6em" }}>
+    const handleModalClose = () => {
+        setIsSuggestionModalOpen(false);
+    };
+
+    return (
+    <div style={{ backgroundColor: "#266382", paddingTop: "6em" }}>
+        <EventSuggestionModal 
+            open={isSuggestionModalOpen} 
+            handleModalClose={handleModalClose}
+            />
         <Grid style={{ marginBottom: "6em" }}>
             <Column lg={1} md={0} sm={0}></Column>
             <Column lg={9} md={8} sm={4} className='home-heading'>
                 <p className='heading'><span className='underline'>Student-run</span>, Applied Science Club! 👋</p>
-                <Button onClick={() => navigate('about')}>Learn More About Us</Button>
+                <Grid>
+                    <Column lg={5} md={8} sm={4}>
+                        <Button onClick={() => navigate('about')}>Learn More About Us</Button>
+                    </Column>
+                    <Column lg={5} md={8} sm={4} style={{ marginTop: "1em", marginBottom: "1em" }}>
+                        <Button kind="secondary" onClick={() => setIsSuggestionModalOpen(true)}>Suggest Events</Button>
+                    </Column>
+                </Grid>
             </Column>
             <Column lg={5} md={8} sm={4}>
                 <Registration />
