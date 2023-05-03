@@ -9,6 +9,8 @@ import HomePage from './pages/Home/Home.page';
 import AdminPage from './pages/AdminPage/Admin.page';
 import EventsPage from './pages/EventsPage/EventsPage.page';
 import ErrorPage from './pages/ErrorPage/ErrorPage.page';
+import BuddyPage from './pages/Buddy/Buddy.page';
+import BuddyListPage from './pages/Buddy/BuddyList.page';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path='/about' element={<AboutPage />}></Route>
           <Route path='/admin' element={<AdminPage />}></Route>
           <Route path='/events' element={<EventsPage />}></Route>
+          <Route path='/buddy' element={<BuddyPage />}></Route>
+          <Route path='/buddy-list' element={<BuddyListPage />}></Route>
           <Route path='/*' element={<ErrorPage/>}></Route>
         </Routes>
       </BrowserRouter>
