@@ -6,9 +6,35 @@ import { toast } from 'react-toastify';
 const EventSuggestionModal = ({ open, handleModalClose }) => {
   const [suggestion, setSuggestion] = useState("");
   const [loading, setLoading] = useState(false);
+  const [invalid, setInvalid] = useState(false);
+  const [invalidText, setInvalidText] = useState("");
   const scriptUrl = process.env.REACT_APP_FIREBASE_SUGGESTIONS_DATABASE;
 
+  const handleClose = () => {
+    setInvalid(false);
+    setInvalidText("");
+    setSuggestion("");
+    handleModalClose();
+  };
+
+  const handleSuggestionChange = (e) => {
+    setSuggestion(e.target.value);
+    if (e.target.value.length === 0) {
+      setInvalid(true);
+      setInvalidText("Suggestion cannot be blank");
+    } else {
+      setInvalid(false);
+      setInvalidText("");
+    }
+  };
+
   const handleSubmission = async () => {
+    if (suggestion.length === 0) {
+      setInvalid(true);
+      setInvalidText("Suggestion cannot be blank");
+      return;
+    }
+
     await axios.post(scriptUrl, 
       { suggestion, createdAt: new Date() })
       .then(res => {
@@ -21,6 +47,7 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
         handleModalClose();
         toast("An error occured while sending feedback. Contact club members");
       });
+    setInvalidText("");
     setSuggestion("");
   };
 
@@ -33,7 +60,7 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
       modalHeading="We want to hear from you ♥️"
       primaryButtonText="Suggest Event"
       secondaryButtonText="Nevermind"
-      onRequestClose={handleModalClose}
+      onRequestClose={handleClose}
       onRequestSubmit={handleSubmission}>
       <p style={{ marginBottom: '1rem' }}>
         We're back and better than ever, and we need your help. We're planning a bunch of awesome events for the upcoming year, and we want to make sure we're catering to your every whim and fancy. After all, who knows better what you want than...well, you?<br></br><br></br>
@@ -45,10 +72,12 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
         id="text-input-1"
         rows={4}
         maxCount={60}
+        invalid={invalid}
+        invalidText={invalidText}
         labelText="Describe the event that you want us to organize"
         placeholder="How about we do a tech talk on Blockchain?"
         style={{ marginBottom: '1rem' }}
-        onChange={(e) => setSuggestion(e.target.value)}
+        onChange={handleSuggestionChange}
         value={suggestion}
       />
     </Modal>
