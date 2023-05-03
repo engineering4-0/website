@@ -64,6 +64,11 @@ const Header = () => {
                     onClick={() => navigate("/events")}>
                     Upcoming and Previous Events
                   </HeaderMenuItem>
+                  <HeaderMenuItem
+                    style={{ cursor: "pointer" }}
+                    onClick={() => navigate("/buddy")}>
+                    Buddy Program 🌟
+                  </HeaderMenuItem>
                 </HeaderSideNavItems>
               </SideNavItems>
             </SideNav>

@@ -8,7 +8,7 @@ const BuddyPage = () => {
   return (
     <div style={{ backgroundColor: "#266382" }}>
       <Grid style={{ paddingTop: "8em", color: "white", marginBottom: "2em" }}>
-        <Column lg={8} md={3} sm={4}>
+        <Column lg={8} md={8} sm={4}>
           <div className="heading-02" style={{ paddingBottom: "1em" }}>
             Welcome to the <span 
               style={{ textDecoration: "underline" }}>
@@ -19,11 +19,11 @@ const BuddyPage = () => {
             <br></br><br></br>This is the place to connect with like-minded individuals who share your passion and skills.</div>
           <div style={{ marginTop: "1em" }}>
             <Button onClick={() => navigate("/buddy-list")}>
-              Find me a buddy!
+              Create / Collaborate on Projects
             </Button>
           </div>
         </Column>
-        <Column lg={8} md={5} sm={0} className="buddyBackground"></Column>
+        <Column lg={8} md={0} sm={0} className="buddyBackground"></Column>
       </Grid>
       <hr style={{ width: "80%" }}></hr>
       <Grid style={{ paddingTop: "2em", color: "white" }}>
