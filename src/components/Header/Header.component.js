@@ -10,11 +10,12 @@ import {
   SideNavItems,
   HeaderMenuButton,
 } from "@carbon/react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import image from "./logo192.png";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div>
@@ -44,12 +45,14 @@ const Header = () => {
             <HeaderNavigation aria-label="Upcoming Events">
               <HeaderMenuItem
                 style={{ cursor: "pointer" }}
-                onClick={() => navigate("/events")}>
+                onClick={() => navigate("/events")} 
+                isCurrentPage={ (location.pathname === '/events') ? true : false }>
                 Upcoming and Previous Events
               </HeaderMenuItem>
               <HeaderMenuItem
                 style={{ cursor: "pointer" }}
-                onClick={() => navigate("/buddy")}>
+                onClick={() => navigate("/buddy")} 
+                isCurrentPage={(location.pathname === '/buddy') ? true : false }>
                 Buddy Program 🌟
               </HeaderMenuItem>
             </HeaderNavigation>
@@ -61,12 +64,14 @@ const Header = () => {
                 <HeaderSideNavItems>
                   <HeaderMenuItem
                     style={{ cursor: "pointer" }}
-                    onClick={() => navigate("/events")}>
+                    onClick={() => navigate("/events")}
+                    isCurrentPage={ (location.pathname === '/events') ? true : false }>
                     Upcoming and Previous Events
                   </HeaderMenuItem>
                   <HeaderMenuItem
                     style={{ cursor: "pointer" }}
-                    onClick={() => navigate("/buddy")}>
+                    onClick={() => navigate("/buddy")}
+                    isCurrentPage={(location.pathname === '/buddy') ? true : false }>
                     Buddy Program 🌟
                   </HeaderMenuItem>
                 </HeaderSideNavItems>

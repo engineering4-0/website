@@ -35,7 +35,6 @@ const BuddyPage = () => {
               style={{ textAlign: "center", marginBottom: "1em" }}>
               Here's how it works
             </div>
-
             <div style={{ color: "black" }}>
               <ExpandableTile
                 tabIndex={0}
@@ -55,7 +54,6 @@ const BuddyPage = () => {
                   </div>
                 </TileBelowTheFoldContent>
               </ExpandableTile>
-
               <ExpandableTile
                 tabIndex={0}
                 tileCollapsedIconText="Interact to Expand tile"
@@ -70,11 +68,10 @@ const BuddyPage = () => {
                 </TileAboveTheFoldContent>
                 <TileBelowTheFoldContent>
                   <div style={{ height: '64px' }}>
-                    Take some time to browse through existing posts to see if there's a project that interests you. If you have the skills and experience needed to contribute to the project, reach out to the poster and introduce yourself.
+                    Take a break from Netflix and scrolling through social media and browse through existing posts to see if there's a project that interests you. If you have the skills and experience needed to contribute to the project, reach out to the poster and introduce yourself.
                   </div>
                 </TileBelowTheFoldContent>
               </ExpandableTile>
-
               <ExpandableTile
                 tabIndex={0}
                 tileCollapsedIconText="Interact to Expand tile"
@@ -93,7 +90,6 @@ const BuddyPage = () => {
                   </div>
                 </TileBelowTheFoldContent>
               </ExpandableTile>
-
               <ExpandableTile
                 tabIndex={0}
                 tileCollapsedIconText="Interact to Expand tile"
@@ -112,7 +108,6 @@ const BuddyPage = () => {
                   </div>
                 </TileBelowTheFoldContent>
               </ExpandableTile>
-
             </div>
           </div>
         </Column>
