@@ -19,9 +19,9 @@ const Volunteer = () => {
         </Column>
         <Column lg={1} md={0} sm={0}></Column>
       </Grid>
-      <Grid style={{ marginBottom: "2em" }}>
+      <Grid style={{ marginBottom: "2em" }} className="Volunteer_Member_Row">
         <Column lg={2} md={0} sm={0}></Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
+        <Column lg={3} md={4} sm={2} className="volunteer-members">
           <ClickableTile
             className="member-tile"
             target="_blank"
@@ -42,7 +42,7 @@ const Volunteer = () => {
             </Grid>
           </ClickableTile>
         </Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
+        <Column lg={3} md={4} sm={2} className="volunteer-members">
           <ClickableTile
             className="member-tile"
             target="_blank"
@@ -63,7 +63,7 @@ const Volunteer = () => {
             </Grid>
           </ClickableTile>
         </Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
+        <Column lg={3} md={4} sm={2} className="volunteer-members">
           <ClickableTile
             className="member-tile"
             target="_blank"
@@ -84,7 +84,7 @@ const Volunteer = () => {
             </Grid>
           </ClickableTile>
         </Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
+        <Column lg={3} md={4} sm={2} className="volunteer-members">
           <ClickableTile
             className="member-tile"
             target="_blank"
@@ -107,9 +107,9 @@ const Volunteer = () => {
         </Column>
         <Column lg={2} md={0} sm={0}></Column>
       </Grid>
-      <Grid>
+      <Grid style={{ marginBottom: "2em" }} className="Volunteer_Member_Row">
         <Column lg={3} md={0} sm={0}></Column>
-        <Column lg={3} md={4} sm={2}>
+        <Column lg={3} md={4} sm={2} className="volunteer-members">
           <ClickableTile
             className="member-tile"
             target="_blank"
@@ -132,7 +132,7 @@ const Volunteer = () => {
           </ClickableTile>
         </Column>
 
-        <Column lg={3} md={4} sm={2}>
+        <Column lg={3} md={4} sm={2} className="volunteer-members">
           <ClickableTile className="member-tile" target="_blank" href="#">
             <Grid>
               <Column lg={1} md={4} sm={2}>
@@ -150,7 +150,7 @@ const Volunteer = () => {
           </ClickableTile>
         </Column>
 
-        <Column lg={3} md={4} sm={2}>
+        <Column lg={3} md={4} sm={2} className="volunteer-members">
           <ClickableTile
             className="member-tile"
             target="_blank"

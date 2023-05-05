@@ -29,7 +29,7 @@ const BoardMembers = () => {
         <Column lg={1} md={0} sm={0}></Column>
       </Grid>
 
-      <Grid style={{ marginBottom: "2em" }}>
+      <Grid style={{ marginBottom: "2em" }} className="board_member_row">
         <Column lg={2} md={0} sm={0}></Column>
         <Column lg={3} md={4} sm={2} className="board-members">
           <ClickableTile
@@ -133,7 +133,7 @@ const BoardMembers = () => {
         </Column>
         <Column lg={2} md={0} sm={0}></Column>
       </Grid>
-      <Grid>
+      <Grid style={{ marginBottom: "2em" }} className="board_member_row">
         <Column lg={5} md={0} sm={0}></Column>
         <Column lg={3} md={4} sm={2}>
           <ClickableTile className="member-tile" href="#">

@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-@media screen and (max-width: 500px) {
-  .board-members {
-    margin-bottom: 2em;
-  }
-}
-
 .member-tile:hover {
   background-color: #b0bec5;
 }
@@ -40,4 +34,13 @@
 .member-heading-board::after,
 .member-heading-volunteers::after {
   margin-left: 1%;
+}
+
+@media screen and (max-width: 1048px) {
+  .board_member_row {
+    margin-bottom: initial !important;
+  }
+  .board_member_row .board-members {
+    margin-bottom: 2em;
+  }
 }

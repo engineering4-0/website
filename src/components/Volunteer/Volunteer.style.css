@@ -14,7 +14,15 @@
 
 #Volunteer_div img {
   object-fit: cover;
-  aspect-ratio: 16/9;
   width: 100%;
   object-position: top;
+}
+
+@media screen and (max-width: 1048px) {
+  .Volunteer_Member_Row {
+    margin-bottom: initial !important;
+  }
+  .Volunteer_Member_Row .volunteer-members {
+    margin-bottom: 2em;
+  }
 }
