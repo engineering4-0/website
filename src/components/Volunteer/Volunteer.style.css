@@ -1,0 +1,20 @@
+.member-heading {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .board-members {
+    margin-bottom: 2em;
+  }
+}
+
+.member-tile:hover {
+  background-color: #b0bec5;
+}
+
+#Volunteer_div img {
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-position: top;
+}
