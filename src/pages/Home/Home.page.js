@@ -10,35 +10,42 @@ import Fade from 'react-reveal/Fade';
 import Registration from '../../components/Registration/Registration.component';
 import { useNavigate } from 'react-router-dom';
 import BoardMembers from '../../components/BoardMembers/BoardMember.component';
+import EventSuggestionModal from '../../components/Modal/EventSuggestionModal.component';
+import { useState } from 'react';
 
 const HomePage = () => {
 
     const navigate = useNavigate();
+    const [isSuggestionModalOpen, setIsSuggestionModalOpen] = useState(false);
 
-    return (<div style={{ backgroundColor: "#266382", paddingTop: "6em" }}>
+    const handleModalClose = () => {
+        setIsSuggestionModalOpen(false);
+    };
+
+    return (
+    <div style={{ backgroundColor: "#266382", paddingTop: "6em" }}>
+        <EventSuggestionModal 
+            open={isSuggestionModalOpen} 
+            handleModalClose={handleModalClose}
+            />
         <Grid style={{ marginBottom: "6em" }}>
             <Column lg={1} md={0} sm={0}></Column>
             <Column lg={9} md={8} sm={4} className='home-heading'>
                 <p className='heading'><span className='underline'>Student-run</span>, Applied Science Club! 👋</p>
-                <Button onClick={() => navigate('about')}>Learn More About Us</Button>
+                <Grid>
+                    <Column lg={5} md={8} sm={4}>
+                        <Button onClick={() => navigate('about')}>Learn More About Us</Button>
+                    </Column>
+                    <Column lg={5} md={8} sm={4} style={{ marginTop: "1em", marginBottom: "1em" }}>
+                        <Button kind="secondary" onClick={() => setIsSuggestionModalOpen(true)}>Suggest Events</Button>
+                    </Column>
+                </Grid>
             </Column>
             <Column lg={5} md={8} sm={4}>
                 <Registration />
             </Column>
             <Column lg={1} md={0} sm={0}></Column>
         </Grid>
-        {/* <Fade botton>
-            <Grid style={{ marginBottom: "3em" }}>
-                <Column lg={2} md={0} sm={0}></Column>
-                <Column lg={12} md={8} sm={4} >
-                    <p className='heading-02'>Careers</p><hr />
-                    <p className='sub-heading'>Work with an awesome club!</p><br />
-                    <p style={{ color: "white", marginBottom: "1em" }}>Send us an email with your resume to engineer4-0@outlook.com with the role as the subject.</p>
-                    <Career />
-                </Column>
-                <Column lg={2} md={0} sm={0}></Column>
-            </Grid>
-        </Fade> */}
         <Fade bottom>
             <BoardMembers />
         </Fade>
@@ -62,13 +69,10 @@ const HomePage = () => {
 
         <Grid style={{ paddingBottom: "1em" }}>
             <Column lg={16} md={8} sm={4} style={{ textAlign: "center", marginBottom: "1em", color: "white" }}>
-                Designed with <span style={{ color: "red" }}>♥️</span> by a member, <a target="_blank" style={{ color: "white" }} rel="noreferrer" href='https://www.linkedin.com/in/rajcrk/'>Raj</a>
+                Designed with <span style={{ color: "red" }}>♥️</span> by The Technical Team
             </Column>
             <Column lg={16} md={8} sm={4} style={{ textAlign: "center", color: "white" }}>
                 Contribute to this website here, <a target="_blank" rel="noreferrer" style={{ color: "white" }} href='https://github.com/engineering4-0/website'>GitHub</a>
-            </Column>
-            <Column lg={16} md={8} sm={4} style={{ textAlign: "center", color: "white" }} onClick={() => navigate("/admin")}>
-                Copyright protected
             </Column>
         </Grid>
     </div>);
