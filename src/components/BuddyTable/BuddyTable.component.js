@@ -33,17 +33,14 @@ const BuddyTable = () => {
     setLoading(true);
     await axios.get(scriptUrl)
       .then(res => {
-        console.log(res);
         const transformedData = transformToCarbonFormat(res.data);
         return transformedData;
       })
       .then(data => {
-        console.log(data);
         setBuddyRequests(data);
         setLoading(false);
       })
       .catch(err => {
-        console.log(err);
         setLoading(false);
       });
   };
@@ -58,9 +55,8 @@ const BuddyTable = () => {
     setIsRequestModalOpen(false);
   };
 
- 
-
   const transformToCarbonFormat = async (data) => {
+    if (data === null) return [];
     return Object.entries(data).map(([id, data], index) => ({
       id: String.fromCharCode(97 + index),
       name: data.name || 'Unknown',
@@ -123,7 +119,7 @@ const BuddyTable = () => {
         }) => (
           <TableContainer
             title="List of people looking for project buddies"
-            description="If are intrested in working with someone or on a project listed here, send out an email to the person who created the post.">
+            description="If are intrested in working with someone or on a project listed here, send out an email to the person who created the post. If you want to take down your buddy request, Please contact the technical team.">
             <TableToolbar>
               <TableToolbarContent>
                 <TableToolbarSearch onChange={onInputChange} />
