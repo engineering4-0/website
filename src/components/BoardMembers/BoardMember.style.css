@@ -1,13 +1,46 @@
 .member-heading {
-    text-align: center;
-}
-
-@media screen and (max-width: 500px) {
-    .board-members {
-        margin-bottom: 2em;
-    }
+  text-align: center;
 }
 
 .member-tile:hover {
-    background-color: #b0bec5;
+  background-color: #b0bec5;
+}
+
+.member-heading-board,
+.member-heading-volunteers {
+  position: relative;
+  text-align: center;
+  color: #f4f4f4;
+}
+.member-heading-board::before,
+.member-heading-board::after,
+.member-heading-volunteers::before,
+.member-heading-volunteers::after {
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  width: 10%;
+  height: 1px;
+  content: "\a0";
+  background-color: #f4f4f4;
+}
+
+.member-heading-board::before,
+.member-heading-volunteers::before {
+  margin-left: -11%;
+  text-align: right;
+}
+
+.member-heading-board::after,
+.member-heading-volunteers::after {
+  margin-left: 1%;
+}
+
+@media screen and (max-width: 1048px) {
+  .board_member_row {
+    margin-bottom: initial !important;
+  }
+  .board_member_row .board-members {
+    margin-bottom: 2em;
+  }
 }
