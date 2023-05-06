@@ -31,7 +31,9 @@ const BuddyRequestModal = ({ open, handleModalClose }) => {
     'Mobile Development',
     'Blockchain',
     'Digital Signal Processing',
-    'UI/UX Design',
+    'Data Science',
+    'Machine Learning',
+    'Electrical'
   ];
 
   const handleClose = () => {
