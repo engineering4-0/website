@@ -47,7 +47,7 @@ const Header = () => {
                 style={{ cursor: "pointer" }}
                 onClick={() => navigate("/events")} 
                 isCurrentPage={ (location.pathname === '/events') ? true : false }>
-                Upcoming and Previous Events
+                Events
               </HeaderMenuItem>
               <HeaderMenuItem
                 style={{ cursor: "pointer" }}
@@ -66,7 +66,7 @@ const Header = () => {
                     style={{ cursor: "pointer" }}
                     onClick={() => navigate("/events")}
                     isCurrentPage={ (location.pathname === '/events') ? true : false }>
-                    Upcoming and Previous Events
+                    Events
                   </HeaderMenuItem>
                   <HeaderMenuItem
                     style={{ cursor: "pointer" }}
