@@ -15,43 +15,61 @@ import {
   TableToolbar,
   TableToolbarContent,
   TableToolbarSearch,
-  Tag
+  Tag,
+  DataTableSkeleton,
 } from '@carbon/react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BuddyRequestModal from '../Modal/BuddyRequestModal.component';
+import axios from 'axios';
 
 const BuddyTable = () => {
 
   const [isRequstModalOpen, setIsRequestModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [buddyRequests, setBuddyRequests] = useState([]);
+  const scriptUrl = process.env.REACT_APP_FIREBASE_BUDDY_DATABASE;
+
+  const getBuddyRequests = async () => {
+    setLoading(true);
+    await axios.get(scriptUrl)
+      .then(res => {
+        console.log(res);
+        const transformedData = transformToCarbonFormat(res.data);
+        return transformedData;
+      })
+      .then(data => {
+        console.log(data);
+        setBuddyRequests(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.log(err);
+        setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    getBuddyRequests();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isRequstModalOpen]);
 
   const handleModalClose = () => {
     setIsRequestModalOpen(false);
   };
 
-  const rows = [
-    {
-      id: 'a',
-      name: 'Varsha Sri SelvaKumar',
-      date: '26th August 23',
-      techList: ["Blockchain", "Mobile Developer"],
-      description: 'Hey everyone, I\'ve been working on a mobile app idea for the past few months, but I need some help to bring it to the next level. The app is focused on healthy living and fitness, and I\'m looking for a collaborator with experience in app development and design. If you have a passion for health and fitness and want to help me create something awesome, shoot me a message and let\'s talk more about it!',
-      email: 'spongebob@uwindsor.ca',
-    },
-    {
-      id: 'b',
-      name: 'Waseem',
-      date: '24th August 23',
-      description: 'bada',
-      email: 'spongebob@uwindsor.ca',
-    },
-    {
-      id: 'c',
-      name: 'Ameya Ade',
-      date: '20th August 23',
-      description: 'csaa',
-      email: 'spongebob@uwindsor.ca',
-    },
-  ];
+ 
+
+  const transformToCarbonFormat = async (data) => {
+    return Object.entries(data).map(([id, data], index) => ({
+      id: String.fromCharCode(97 + index),
+      name: data.name || 'Unknown',
+      date: new Date(data.createdAt).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' }),
+      techList: data.requiredSkills || [],
+      description: data.description || '',
+      email: data.email || ''
+    }));
+  };
 
   const headers = [
     {
@@ -77,13 +95,23 @@ const BuddyTable = () => {
 
   ];
 
+  if (loading) {
+    return (
+      <div>
+        <DataTableSkeleton headers={headers} />
+        <br />
+      </div>
+    );
+  }
+
+
   return (
     <>
       <BuddyRequestModal
         open={isRequstModalOpen}
         handleModalClose={handleModalClose} />
       <DataTable
-        rows={rows}
+        rows={buddyRequests}
         headers={headers} >
         {({
           rows,
@@ -145,12 +173,12 @@ const BuddyTable = () => {
                     {row.isExpanded && (
                       <TableExpandedRow colSpan={headers.length + 1}>
                         <div style={{ paddingTop: "1em", paddingBottom: "1em" }}>
-                        <h6 style={{ paddingBottom: "0.5em" }}>Project Details</h6>
-                        <div>{row.cells[3].value}</div>
+                          <h6 style={{ paddingBottom: "0.5em" }}>Project Details</h6>
+                          <div>{row.cells[3].value}</div>
                         </div>
                         <div style={{ paddingTop: "1em", paddingBottom: "1em" }}>
-                        <h6 style={{ paddingBottom: "0.5em" }}>Contact</h6>
-                        <div>{row.cells[4].value}</div>
+                          <h6 style={{ paddingBottom: "0.5em" }}>Contact</h6>
+                          <div>{row.cells[4].value}</div>
                         </div>
                       </TableExpandedRow>
                     )}
