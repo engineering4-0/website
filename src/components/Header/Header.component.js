@@ -11,7 +11,7 @@ import {
   HeaderMenuButton,
 } from "@carbon/react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import image from "./logo192.png";
+import image from "./icon-180x180.png";
 
 const Header = () => {
   const navigate = useNavigate();
