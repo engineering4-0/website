@@ -1,0 +1,22 @@
+.header-logo {
+  max-height: 45px;
+  max-width: 45px;
+}
+
+.nav-sub-heading {
+  font-weight: 100;
+}
+
+.nav-header {
+  font-size: 20px !important;
+}
+
+@media screen and (max-width: 420px) {
+  .nav-sub-heading {
+    display: none;
+  }
+
+  .nav-header {
+    font-size: 16px !important;
+  }
+}

@@ -12,6 +12,7 @@ import {
 } from "@carbon/react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import image from "./icon-180x180.png";
+import "./Header.style.css";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -32,13 +33,13 @@ const Header = () => {
               element={Link}
               to="/"
               prefix=""
-              style={{ fontSize: "20px" }}
+              className="nav-header"
             >
               Engineering 4.0{" "}
-              <span style={{ fontWeight: "100" }}>| UWindsor</span>{" "}
+              <span className="nav-sub-heading">| UWindsor</span>{" "}
               <img
                 src={image}
-                style={{ maxHeight: "45px", maxWidth: "45px" }}
+                className="header-logo"
                 alt="logo"
               />
             </HeaderName>
