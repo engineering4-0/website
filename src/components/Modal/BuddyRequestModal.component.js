@@ -1,12 +1,12 @@
-import { 
-  Checkbox, 
-  Form, 
-  Loading, 
-  Modal, 
-  MultiSelect, 
-  Stack, 
+import {
+  Checkbox,
+  Form,
+  Loading,
+  Modal,
+  MultiSelect,
+  Stack,
   TextArea,
-  TextInput 
+  TextInput
 } from "@carbon/react";
 import { useState } from "react";
 import axios from 'axios';
@@ -146,7 +146,8 @@ const BuddyRequestModal = ({ open, handleModalClose }) => {
       </p>
       <Form>
         <Stack gap={5}>
-        <TextInput
+          <TextInput
+            data-modal-primary-focus
             id="name-input"
             invalid={isNameInvalid}
             invalidText="You need to enter a valid name"
@@ -182,8 +183,7 @@ const BuddyRequestModal = ({ open, handleModalClose }) => {
             selectionFeedback="top-after-reopen"
           />
           <TextArea
-            data-modal-primary-focus
-            id="text-input-1"
+            id="description-input"
             rows={4}
             maxCount={60}
             value={description}
