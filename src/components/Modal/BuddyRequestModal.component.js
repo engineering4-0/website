@@ -86,24 +86,30 @@ const BuddyRequestModal = ({ open, handleModalClose }) => {
   }
 
   const handleSubmission = async () => {
+    let isInvalid = false;
+
     if (!isAgreementChecked || isAgreementInvalid) {
+      isInvalid = true;
       setIsAgreementInvalid(true);
-      return;
     }
 
     if (email.length === 0 || isEmailInvalid) {
+      isInvalid = true;
       setIsEmailInvalid(true);
-      return;
     }
 
     if (name.length === 0 || isNameInvalid) {
+      isInvalid = true;
       setIsNameInvalid(true);
-      return;
     }
 
     if (description.length === 0 || invalid) {
+      isInvalid = true;
       setInvalid(true);
       setInvalidText("Suggestion cannot be blank");
+    }
+
+    if (isInvalid) {
       return;
     }
 
