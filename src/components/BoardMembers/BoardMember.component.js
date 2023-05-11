@@ -120,7 +120,7 @@ const BoardMembers = () => {
                 />
               </Column>
               <Column lg={2} md={4} sm={2}>
-                Wazeem<hr></hr>
+                Waseem<hr></hr>
                 Treasurer
               </Column>
             </Grid>
