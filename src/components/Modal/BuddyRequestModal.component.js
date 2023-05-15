@@ -33,7 +33,19 @@ const BuddyRequestModal = ({ open, handleModalClose }) => {
     'Digital Signal Processing',
     'Data Science',
     'Machine Learning',
-    'Electrical'
+    'Electrical',
+    'Solidworks',
+    'Creo',
+    'Catia',
+    'Ansys',
+    'Siemens NX',
+    'Autodesk inventor',
+    'Fusion 360',
+    'Power BI',
+    'MS Excel',
+    'R Programming',
+    'SQL',
+    'Python'
   ];
 
   const handleClose = () => {
