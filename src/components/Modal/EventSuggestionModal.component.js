@@ -57,10 +57,10 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
   const sendEmail = (message) => {
     emailjs
       .send(
-        "service_lygv31m",
-        "template_usgut08",
+        REACT_APP_EMAIL_JS_SERVICE_ID,
+        REACT_APP_EMAIL_JS_TEMPLATE_ID,
         { message },
-        "dA6mr4EcbGJ3BebKZ"
+        REACT_APP_EMAIL_JS_PUBLIC_KEY 
       )
       .then(
         (result) => {
