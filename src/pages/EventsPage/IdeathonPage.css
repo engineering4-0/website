@@ -1,0 +1,38 @@
+.ideathonTitle {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.eventTitle {
+  font-size: 4em;
+}
+
+.eventDate {
+  background-color: #212121;
+  font-size: 2em;
+}
+
+.eventLine {
+  display: none;
+}
+
+/* For mobile screens */
+@media (max-width: 600px) {
+  .ideathonTitle {
+    font-size: 3em;
+  }
+
+  .eventLine {
+    display: block;
+  }
+
+  .stackDivide {
+    margin-bottom: 2em;
+  }
+
+  .eventTitle {
+    display: none;
+  }
+}
+
+

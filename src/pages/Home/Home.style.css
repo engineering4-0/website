@@ -119,3 +119,81 @@ body {
   color: #0072b1;
   cursor: pointer;
 }
+
+.light {
+  background: -moz-linear-gradient(
+    -45deg,
+    #0f62fe 0%,
+    #0f62fe 40%,
+    #ffffff 50%,
+    #0f62fe 60%,
+    #0f62fe 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, #0f62fe),
+    color-stop(40%, #0f62fe),
+    color-stop(50%, #ffffff),
+    color-stop(60%, #0f62fe),
+    color-stop(100%, #0f62fe)
+  );
+  background: -webkit-linear-gradient(
+    -45deg,
+    #0f62fe 0%,
+    #0f62fe 40%,
+    #ffffff 50%,
+    #0f62fe 60%,
+    #0f62fe 100%
+  );
+  background: -o-linear-gradient(
+    -45deg,
+    #0f62fe 0%,
+    #0f62fe 40%,
+    #ffffff 50%,
+    #0f62fe 60%,
+    #0f62fe 100%
+  );
+  background: -ms-linear-gradient(
+    -45deg,
+    #0f62fe 0%,
+    #0f62fe 40%,
+    #ffffff 50%,
+    #0f62fe 60%,
+    #0f62fe 100%
+  );
+  background: linear-gradient(
+    135deg,
+    #0f62fe 0%,
+    #0f62fe 40%,
+    #ffffff 50%,
+    #0f62fe 60%,
+    #0f62fe 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f62fe', endColorstr='#0f62fe',GradientType=1 );
+  /* background-repeat: no-repeat; */
+  background-position: 0px;
+  background-size: 300%;
+  animation: light 2s;
+  -webkit-animation: light 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes light {
+  0% {
+    background-position: -600px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+
+@-webkit-keyframes light {
+  0% {
+    background-position: -600px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}

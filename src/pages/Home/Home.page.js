@@ -34,7 +34,7 @@ const HomePage = () => {
                 <p className='heading'><span className='underline'>Student-run</span>, Applied Science Club! 👋</p>
                 <Grid>
                     <Column lg={5} md={8} sm={4}>
-                        <Button onClick={() => navigate('about')}>Learn More About Us</Button>
+                        <Button className="light" onClick={() => navigate('ideathon')}>Register for 4.0 Ideathon</Button>
                     </Column>
                     <Column lg={5} md={8} sm={4} style={{ marginTop: "1em", marginBottom: "1em" }}>
                         <Button kind="secondary" onClick={() => setIsSuggestionModalOpen(true)}>Suggest Events</Button>
