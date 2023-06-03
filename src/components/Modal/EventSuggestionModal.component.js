@@ -40,6 +40,7 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
       .then(res => {
         setLoading(false);
         handleModalClose();
+        sendEmail();
         toast("We hear you loud and clear! Thank you for the suggestion.");
       })
       .catch(err => {
@@ -51,8 +52,28 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
     setSuggestion("");
   };
 
-  if (loading) return <Loading
-        description="Active loading indicator" withOverlay={false} />
+  const sendEmail = (message) => {
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_JS_SUGGESTION_TEMPLATE_ID,
+        { message },
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY 
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  if (loading)
+    return (
+      <Loading description="Active loading indicator" withOverlay={false} />
+    );
 
   return (
     <Modal
