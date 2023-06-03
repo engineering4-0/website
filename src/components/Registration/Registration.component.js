@@ -24,11 +24,11 @@ const Registration = () => {
     });
 
     const sendEmail = (name, email, memberId) => {
-        emailjs.send('service_lygv31m', 'template_dy1kxqz', {
+        emailjs.send(process.env.REACT_APP_EMAIL_JS_SERVICE_ID, 'template_dy1kxqz', {
             name,
             email,
             memberId,
-        }, 'dA6mr4EcbGJ3BebKZ')
+        }, process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY)
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
             }, function (error) {

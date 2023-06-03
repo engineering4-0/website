@@ -1,7 +1,8 @@
 import { Loading, Modal, TextArea } from "@carbon/react";
 import { useState } from "react";
-import axios from 'axios';
-import { toast } from 'react-toastify';
+import axios from "axios";
+import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
 
 const EventSuggestionModal = ({ open, handleModalClose }) => {
   const [suggestion, setSuggestion] = useState("");
@@ -28,22 +29,22 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
     }
   };
 
-  const handleSubmission = async () => {
+  const handleSubmission = async (e) => {
+    e.preventDefault()
     if (suggestion.length === 0) {
       setInvalid(true);
       setInvalidText("Suggestion cannot be blank");
       return;
     }
-
-    await axios.post(scriptUrl, 
-      { suggestion, createdAt: new Date() })
-      .then(res => {
+    await axios
+      .post(scriptUrl, { suggestion, createdAt: new Date() })
+      .then((res) => {
         setLoading(false);
         handleModalClose();
-        sendEmail();
+        sendEmail(suggestion);    // This line will not work with localhost but it will in production due to env is setting the API URL
         toast("We hear you loud and clear! Thank you for the suggestion.");
       })
-      .catch(err => {
+      .catch((err) => {
         setLoading(false);
         handleModalClose();
         toast("An error occured while sending feedback. Contact club members");
@@ -82,11 +83,21 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
       primaryButtonText="Suggest Event"
       secondaryButtonText="Nevermind"
       onRequestClose={handleClose}
-      onRequestSubmit={handleSubmission}>
-      <p style={{ marginBottom: '1rem' }}>
-        We're back and better than ever, and we need your help. We're planning a bunch of awesome events for the upcoming year, and we want to make sure we're catering to your every whim and fancy. After all, who knows better what you want than...well, you?<br></br><br></br>
-        So, we're here to ask you to put on your thinking caps and let us know what kinds of events you'd like to see us host. Don't be shy, we're open to all kinds of suggestions (within reason, of course). The weirder and wackier, the better!<br></br><br></br>
-        So hit us with your best ideas, and let's make this year one to remember!
+      onRequestSubmit={handleSubmission}
+    >
+      <p style={{ marginBottom: "1rem" }}>
+        We're back and better than ever, and we need your help. We're planning a
+        bunch of awesome events for the upcoming year, and we want to make sure
+        we're catering to your every whim and fancy. After all, who knows better
+        what you want than...well, you?<br></br>
+        <br></br>
+        So, we're here to ask you to put on your thinking caps and let us know
+        what kinds of events you'd like to see us host. Don't be shy, we're open
+        to all kinds of suggestions (within reason, of course). The weirder and
+        wackier, the better!<br></br>
+        <br></br>
+        So hit us with your best ideas, and let's make this year one to
+        remember!
       </p>
       <TextArea
         data-modal-primary-focus
@@ -97,7 +108,7 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
         invalidText={invalidText}
         labelText="Describe the event that you want us to organize"
         placeholder="How about we do a tech talk on Blockchain?"
-        style={{ marginBottom: '1rem' }}
+        style={{ marginBottom: "1rem" }}
         onChange={handleSuggestionChange}
         value={suggestion}
       />
