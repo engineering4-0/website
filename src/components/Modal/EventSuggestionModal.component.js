@@ -45,7 +45,6 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
         toast("We hear you loud and clear! Thank you for the suggestion.");
       })
       .catch((err) => {
-        console.log("err", err)
         setLoading(false);
         handleModalClose();
         toast("An error occured while sending feedback. Contact club members");
@@ -57,10 +56,10 @@ const EventSuggestionModal = ({ open, handleModalClose }) => {
   const sendEmail = (message) => {
     emailjs
       .send(
-        REACT_APP_EMAIL_JS_SERVICE_ID,
-        REACT_APP_EMAIL_JS_TEMPLATE_ID,
+        process.env.REACT_APP_EMAIL_JS_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID,
         { message },
-        REACT_APP_EMAIL_JS_PUBLIC_KEY 
+        process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY 
       )
       .then(
         (result) => {
