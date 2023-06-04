@@ -11,6 +11,7 @@ import EventsPage from './pages/EventsPage/EventsPage.page';
 import ErrorPage from './pages/ErrorPage/ErrorPage.page';
 import BuddyPage from './pages/Buddy/Buddy.page';
 import BuddyListPage from './pages/Buddy/BuddyList.page';
+import EventsDetailPage from './pages/EventDetailPage/EventDetail.page'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/about' element={<AboutPage />}></Route>
           <Route path='/admin' element={<AdminPage />}></Route>
           <Route path='/events' element={<EventsPage />}></Route>
+          <Route path='/events/:id' element={<EventsDetailPage />}></Route>
           <Route path='/buddy' element={<BuddyPage />}></Route>
           <Route path='/buddy-list' element={<BuddyListPage />}></Route>
           <Route path='/*' element={<ErrorPage/>}></Route>

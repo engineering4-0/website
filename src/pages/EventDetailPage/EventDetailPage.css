@@ -1,0 +1,99 @@
+.eventDetailWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  padding-top: 20px;
+  min-height: calc(100vh - 3rem);
+}
+
+.eventDetailSection {
+  width: 70%;
+  /* padding: 10px; */
+  flex: 1;
+  /* background-color: #e2e2e2; */
+}
+.eventDetailSection .img-wrapper {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.eventDetailSection .eventHeading {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.eventDetailSection .eventSubHeading {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.eventDetailSection  .eventsDetails {
+  font-size: 18px;
+  font-weight: 500;
+}
+.eventDetailSection .locationAndTimeContainer{
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+@keyframes slideLToR {
+  0% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes slideRToL {
+  0% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes visibility {
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* For mobile screens */
+@media  (max-width: 600px){
+  .eventsTimeline{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .eventsTimeline::after {
+    display: none;
+  }
+  .eventCardContainer::after {
+    display: none;
+  }
+  .eventsPageWrapper {
+    overflow: hidden;
+  }
+  .title {
+    font-size: 2.5em;
+  }
+  .eventCardContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-wrapper {
+    border-radius: 5px 5px 0 0;
+  }
+  .img-wrapper > .carousel-container {
+    min-height: 200px;
+  }
+}

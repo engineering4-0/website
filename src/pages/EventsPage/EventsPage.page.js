@@ -1,7 +1,9 @@
 import React from "react";
-import Carousel from "../../components/Carousel/carousel.component";
+import { useNavigate } from "react-router-dom";
 import "./EventsPage.css";
+import Carousel from "../../components/Carousel/carousel.component";
 import event_1_1 from "./Event-1_1.jpeg";
+import UpEvent_1_1 from "./UpEvent-1_1.jpeg";
 import event_2_1 from "./Event-2_1.jpeg";
 import event_2_2 from "./Event-2_2.jpeg";
 import event_2_3 from "./Event-2_3.jpeg";
@@ -10,17 +12,22 @@ import event_2_5 from "./Event-2_5.jpeg";
 import event_2_6 from "./Event-2_6.jpeg";
 
 const EventsPage = () => {
+  const navigate = useNavigate();
+
+  const handleRedirect = (title) => {
+    navigate(`/events/${title.split(" ").join("_")}`)
+  }
   // list of upcoming events goes here
   const upcomingEvents = [
-    // {
-    //   images: [event_1_1],
-    //   title: "Club Day!",
-    //   // subHeading: "this is sub heading",
-    //   location: "CAW Center",
-    //   time: "Feb 16, 2023",
-    //   describe:
-    //     "Meet members, learn about our projects, and get involved! Free coffee, hot chocolate, and marshmallows for all attendees. All are welcome!",
-    // },
+    {
+      images: [UpEvent_1_1],
+      title: "Industry Skills That Matter",
+      // subHeading: "this is sub heading",
+      location: "CEI",
+      time: "June 15, 2023",
+      describe:
+        "Get the insights into the today's job market and the knowledge necessary from the industry experts on the panel Ashwin Rajeev, Barath Prem Kumar",
+    }
     // {
     //   images: [
     //     event_2_6,
@@ -36,7 +43,7 @@ const EventsPage = () => {
     //   time: "23 Apr 2023",
     //   describe:
     //     "This is a description of an event, This is a description of an event, This is a description of an event,This is a description of an event, This is a description of an event",
-    // },
+    // }
   ];
 
   // list of past events goes here
@@ -76,10 +83,11 @@ const EventsPage = () => {
             {upcomingEvents.map((event, index) => (
               <div
                 className={`eventCardContainer ${
-                  (index + 1) % 2 === 0 ? "right" : ""
+                  (index + 2) % 2 === 0 ? "right" : ""
                 }`}
                 key={index}
                 style={{ gridRowStart: index + 1, gridRowEnd: index + 2 }}
+                onClick={() => handleRedirect(event.title)}
               >
                 <div className="img-wrapper">
                   <Carousel images={event.images} />
