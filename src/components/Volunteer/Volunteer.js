@@ -1,6 +1,5 @@
 import { Grid, Column, ClickableTile } from "@carbon/react";
 import "./Volunteer.style.css";
-import Abishek from "./Abishek.jpg";
 import Altamash from "./Altamash.jpeg";
 import Ashvinjeet from "./Ashvinjeet.jpg";
 import Ameya from "./Ameya.jpg";
@@ -132,27 +131,7 @@ const Volunteer = () => {
           </ClickableTile>
         </Column>
 
-        <Column lg={3} md={4} sm={2} className="volunteer-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/abishekbr1/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{ height: "55px", width: "55px", borderRadius: "50%" }}
-                  src={Abishek}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Abishek bhalaaji<hr></hr>
-                Digital Marketing
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
+        
 
         <Column lg={3} md={4} sm={2} className="volunteer-members">
           <ClickableTile

@@ -2,6 +2,7 @@ import { Grid, Column, ClickableTile } from "@carbon/react";
 import "./BoardMember.style.css";
 import kishok from "./kishok.jpeg";
 import wazeem from "./wazeem.jpeg";
+import Abishek from "./Abishek.jpg";
 import varsha from "./varsha.jpeg";
 import raj from "./raj.jpeg";
 import Volunteer from "../Volunteer/Volunteer";
@@ -127,8 +128,35 @@ const BoardMembers = () => {
           </ClickableTile>
         </Column>
         <Column lg={2} md={0} sm={0}></Column>
-      </Grid>
+        <Grid>
 
+        </Grid>
+        
+      </Grid>
+      <Grid style={{ marginBottom: "2em" }} className="board_member_row">
+      <Column lg={2} md={0} sm={0}></Column>
+      <Column lg={3} md={4} sm={2} className="board-members">
+          <ClickableTile
+            className="member-tile"
+            target="_blank"
+            href="https://www.linkedin.com/in/abishekbr1/"
+          >
+            <Grid>
+              <Column lg={1} md={4} sm={2}>
+                <img
+                  alt="profile-pic"
+                  style={{ height: "55px", width: "55px", borderRadius: "50%" }}
+                  src={Abishek}
+                />
+              </Column>
+              <Column lg={2} md={4} sm={2}>
+                Abishek bhalaaji<hr></hr>
+                Digital Marketing Head
+              </Column>
+            </Grid>
+          </ClickableTile>
+        </Column>
+      </Grid>
       <Volunteer />
     </div>
   );
