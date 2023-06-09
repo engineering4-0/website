@@ -29,9 +29,9 @@ const SearchMember = ({ members }) => {
             <br></br>
             {members
                 .filter(member => {
-                    if (member.email.includes(searchText)
-                        || member.first.includes(searchText)
-                        || member.last.includes(searchText)) {
+                    if (member.email?.includes(searchText)
+                        || member.first?.includes(searchText)
+                        || member.last?.includes(searchText)) {
                         return true;
                     } else {
                         return false;
