@@ -9,7 +9,8 @@ const UserInfo = () => {
   const [emailError, setEmailError] = useState(false);
   const [instagramId, setInstagramId] = useState("");
   const [isLoading, setLoading] = useState(false);
-  const scriptUrl = process.env.REACT_APP_FIREBASE_COFFEE_DATABASE;
+  const scriptUrl = process.env.REACT_APP_FIREBASE_COFFEE_DATABASE; 
+  console.log(scriptUrl);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
