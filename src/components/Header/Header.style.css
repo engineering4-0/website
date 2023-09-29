@@ -3,6 +3,17 @@
   max-width: 45px;
 }
 
+.carbon_navbar {
+  justify-content: space-between;
+}
+
+.member_button {
+  padding: 1rem 1.1rem !important;
+  min-height: 0.5rem !important;
+  max-height: 2.5rem;
+  border-radius: 5px !important;
+}
+
 .nav-sub-heading {
   font-weight: 100;
 }
