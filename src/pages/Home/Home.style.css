@@ -2,7 +2,31 @@
   font-weight: 600;
   font-size: 2em;
 }
+.hero_1 {
+  color: #000 !important;
+  background-repeat: repeat;
+  background-size: auto;
+}
 
+.alertBanner {
+  top: calc(22.5px + 2rem);
+  /* background: #0019f5; */
+  position: absolute;
+  min-width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.alertFooter {
+  /* bottom: calc(22.5px + 2rem); */
+  /* background: #0019f5; */
+  position: absolute;
+  min-width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
 .hover-underline-animation {
   display: inline-block;
   position: relative;
@@ -63,8 +87,44 @@ body {
 
 .heading {
   font-weight: 600;
-  font-size: 5em;
-  color: #ffffff;
+  font-size: 3em;
+  color: #000;
+  margin-bottom: 1em;
+}
+.secondary_heading {
+  font-weight: 500;
+  font-size: 18px;
+}
+.list_hero li {
+  list-style-type: circle;
+}
+
+.member_button {
+  padding: 1rem 1.1rem !important;
+  min-height: 0.5rem !important;
+  max-height: 2.5rem;
+  border-radius: 5px !important;
+  background-color: #0019f5 !important;
+  margin-right: 1em;
+}
+
+.learn_more {
+  padding: 1rem 1.1rem !important;
+  min-height: 0.5rem !important;
+  max-height: 2.5rem;
+  border-radius: 5px !important;
+  background-color: #17181a !important;
+}
+.footer {
+  background: #000;
+  padding: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  box-shadow: 0px -12px 25px 2px;
+}
+
+.Hello {
+  min-height: calc(100vh - 74px);
 }
 
 @media screen and (max-width: 500px) {

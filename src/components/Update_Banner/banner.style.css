@@ -1,0 +1,13 @@
+.Banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  margin-right: 3px;
+}
+
+.instagram {
+  margin-left: 3px;
+}

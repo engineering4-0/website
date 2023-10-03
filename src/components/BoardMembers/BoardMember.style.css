@@ -1,5 +1,12 @@
 .member-heading {
   text-align: center;
+  font-weight: 600;
+  color: #000;
+}
+
+.member-tile {
+  border: 1px solid black;
+  border-radius: 3px;
 }
 
 .member-tile:hover {
@@ -10,7 +17,9 @@
 .member-heading-volunteers {
   position: relative;
   text-align: center;
-  color: #f4f4f4;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
 }
 .member-heading-board::before,
 .member-heading-board::after,
@@ -20,9 +29,9 @@
   top: 51%;
   overflow: hidden;
   width: 10%;
-  height: 1px;
+  height: 3px;
   content: "\a0";
-  background-color: #f4f4f4;
+  background-color: #000;
 }
 
 .member-heading-board::before,
