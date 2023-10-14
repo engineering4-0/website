@@ -32,15 +32,25 @@ const HomePage = () => {
     setIsSuggestionModalOpen(false);
   };
 
+  const handleClickScroll = () => {
+    const element = document.getElementById("contactSection");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div style={{ backgroundImage: `url(${background})` }}>
+    <div
+      style={{ backgroundImage: `url(${background})`, lightingColor: "50%" }}
+    >
       <div
         style={{
           // backgroundImage: `url(${background})`,
           paddingTop: "6em",
           position: "relative",
-          paddingBottom: "2rem",
-          backgroundImage: `url(${background})`,
+          // paddingBottom: "2rem",
+          // backgroundImage: `url(${background})`,
         }}
         className="hero_1 Hello"
       >
@@ -67,7 +77,8 @@ const HomePage = () => {
             <p className="secondary_heading">
               Engineering 4.0 is a student-run organization dedicated to
               supporting and providing a platform for all engineers and tech
-              enthusiasts of the University of Windsor! We are dedicated to -
+              enthusiasts of the University of Windsor! <br />
+              We are dedicated to -
               <ul className="list_hero">
                 <li>
                   Providing up-to-date information on recent technological
@@ -94,16 +105,14 @@ const HomePage = () => {
               </ul>
             </p>
             <div style={{ marginTop: "1em" }}>
-              <Button
-                onClick={() => navigate("about")}
-                className="member_button"
-              >
+              <Button onClick={handleClickScroll} className="member_button">
                 Join Us
               </Button>
               <Button
                 kind="secondary"
-                onClick={() => setIsSuggestionModalOpen(true)}
+                // onClick={() => setIsSuggestionModalOpen(true)}
                 className="learn_more"
+                href="https://linktr.ee/uwindsor_eng4.0?fbclid=PAAaZ6Gw0pfLUFGmJPXntgyT4AuLPLN8aPCzn8C7aaqjM94NpD0CQxVq6PUaE"
               >
                 Learn More
               </Button>
@@ -137,7 +146,7 @@ const HomePage = () => {
         <Fade bottom>
           <BoardMembers />
         </Fade>
-        <div>
+        <div id="contactSection">
           <Contact />
         </div>
         {/* <Fade bottom>

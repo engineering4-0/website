@@ -135,7 +135,7 @@ const BoardMembers = () => {
         <Grid></Grid>
       </Grid>
       <Grid style={{ marginBottom: "2em" }} className="board_member_row">
-        <Column lg={2} md={0} sm={0}></Column>
+        <Column lg={6} md={0} sm={0}></Column>
         <Column lg={3} md={4} sm={2} className="board-members">
           <ClickableTile
             className="member-tile"
@@ -157,6 +157,7 @@ const BoardMembers = () => {
             </Grid>
           </ClickableTile>
         </Column>
+        <Column lg={7} md={0} sm={0}></Column>
       </Grid>
       <Volunteer />
     </div>

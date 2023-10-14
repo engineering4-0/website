@@ -12,12 +12,31 @@ import {
 } from "@carbon/react";
 import { Column, Button } from "@carbon/react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import image from "./icon-180x180.png";
 import "./Header.style.css";
 
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [home, setHome] = useState(true);
+  const handleClickScroll = () => {
+    const element = document.getElementById("contactSection");
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    let p = location.pathname;
+    if (p === "/") {
+      setHome(true);
+      console.log("p", location.pathname);
+    } else {
+      setHome(false);
+    }
+  }, [location.pathname]);
 
   return (
     <div>
@@ -36,7 +55,10 @@ const Header = () => {
               <span className="nav-sub-heading">| UWindsor</span>{" "}
               <img src={image} className="header-logo" alt="logo" />
             </HeaderName>
-            <HeaderNavigation aria-label="Upcoming Events">
+            <HeaderNavigation
+              aria-label="navigation buttons"
+              className="navigateButtons"
+            >
               <HeaderMenuItem
                 style={{ cursor: "pointer" }}
                 onClick={() => navigate("/events")}
@@ -58,7 +80,26 @@ const Header = () => {
                   sm={4}
                   style={{ marginTop: "1em", marginBottom: "1em" }}
                 >
-                  <Button kind="primary" className="member_button">
+                  <Button
+                    kind="primary"
+                    className="member_button"
+                    onClick={
+                      home
+                        ? handleClickScroll
+                        : () => {
+                            navigate("/");
+                            setTimeout(() => {
+                              const contactSection =
+                                document.getElementById("contactSection");
+                              if (contactSection) {
+                                contactSection.scrollIntoView({
+                                  behavior: "smooth",
+                                });
+                              }
+                            }, 100);
+                          }
+                    }
+                  >
                     Become a member
                   </Button>
                 </Column>

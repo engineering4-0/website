@@ -18,6 +18,13 @@
   background-color: #0019f5 !important;
 }
 
+.navigateButtons a:hover {
+  font-weight: 600;
+}
+.member_button:hover {
+  background-color: #0413a1 !important;
+}
+
 .nav-sub-heading {
   font-weight: 100;
 }

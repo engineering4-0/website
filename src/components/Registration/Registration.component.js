@@ -198,9 +198,16 @@ const Registration = () => {
             value={contactInfo.instagram}
             onChange={handleChange}
           />
-          <Button kind="primary" tabIndex={0} type="submit">
-            Register
-          </Button>
+          <div className="registerButtonContainer">
+            <Button
+              kind="primary"
+              tabIndex={0}
+              type="submit"
+              className="submitButton"
+            >
+              Register
+            </Button>
+          </div>
         </Stack>
       </Form>
       {registrationNotif.isEnabled ? (

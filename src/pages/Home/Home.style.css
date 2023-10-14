@@ -21,11 +21,13 @@
 .alertFooter {
   /* bottom: calc(22.5px + 2rem); */
   /* background: #0019f5; */
-  position: absolute;
+  /* position: absolute; */
   min-width: 100%;
-  padding: 10px;
+  padding: 10px 0px;
   text-align: center;
   color: black;
+  position: relative;
+  z-index: 0;
 }
 .hover-underline-animation {
   display: inline-block;
@@ -92,11 +94,15 @@ body {
   margin-bottom: 1em;
 }
 .secondary_heading {
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+.list_hero {
+  padding-left: 20px;
 }
 .list_hero li {
-  list-style-type: circle;
+  list-style-type: disc;
 }
 
 .member_button {
@@ -104,7 +110,12 @@ body {
   min-height: 0.5rem !important;
   max-height: 2.5rem;
   border-radius: 5px !important;
-  background-color: #0019f5 !important;
+  background-color: linear-gradient(
+      90deg,
+      rgba(0, 67, 238, 0.2) 19.75%,
+      rgba(115, 154, 255, 0) 102.56%
+    ),
+    #0019f5 !important;
   margin-right: 1em;
 }
 
@@ -120,11 +131,28 @@ body {
   padding: 15px;
   font-weight: 500;
   line-height: 20px;
-  box-shadow: 0px -12px 25px 2px;
+  box-shadow: 0px 4px 25px 2px;
+  position: relative;
 }
 
 .Hello {
   min-height: calc(100vh - 74px);
+}
+.submitButton {
+  padding: 1rem 2.1rem !important;
+  min-height: 0.5rem !important;
+  max-height: 2.5rem;
+  border-radius: 5px !important;
+  background-color: #0019f5 !important;
+}
+
+.submitButton:hover {
+  background-color: #0413a1 !important;
+}
+
+.registerButtonContainer {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 500px) {
