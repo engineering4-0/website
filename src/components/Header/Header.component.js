@@ -50,7 +50,15 @@ const Header = () => {
               onClick={onClickSideNavExpand}
               isActive={isSideNavExpanded}
             />
-            <HeaderName element={Link} to="/" prefix="" className="nav-header">
+            <HeaderName
+              element={Link}
+              to="/"
+              prefix=""
+              className="nav-header"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
               Engineering 4.0{" "}
               <span className="nav-sub-heading">| UWindsor</span>{" "}
               <img src={image} className="header-logo" alt="logo" />

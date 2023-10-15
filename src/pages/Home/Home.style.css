@@ -57,7 +57,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.scroller {
+/* .scroller {
   height: 1.2em;
   line-height: 1.2em;
   position: relative;
@@ -70,9 +70,9 @@ body {
   top: 0;
   animation: slide 6s infinite;
   font-weight: bold;
-  background-color: green;
-}
-@keyframes slide {
+  background-color: green; */
+/* } */
+/* @keyframes slide {
   0% {
     top: 0;
   }
@@ -85,7 +85,7 @@ body {
   75% {
     top: -3.6em;
   }
-}
+} */
 
 .heading {
   font-weight: 600;

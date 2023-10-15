@@ -13,6 +13,7 @@ import { useState } from "react";
 import Contact from "../Contact_club/Contact";
 import Footer from "../../components/Footer/Footer";
 import Hero from "./hero.png";
+import EventGallery from "../../components/Gallery/eventGallery";
 const HomePage = () => {
   const navigate = useNavigate();
   const [isSuggestionModalOpen, setIsSuggestionModalOpen] = useState(false);
@@ -143,9 +144,8 @@ const HomePage = () => {
           </Column>
           <Column lg={2} md={0} sm={0}></Column>
         </Grid>
-        <Fade bottom>
-          <BoardMembers />
-        </Fade>
+        <BoardMembers />
+        <EventGallery />
         <div id="contactSection">
           <Contact />
         </div>
