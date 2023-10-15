@@ -29,6 +29,7 @@ const EventGallery = () => {
   ];
   useEffect(() => {
     addAnimation();
+    console.log("Yes sirrr", scrollers);
   }, [scrollers]);
 
   function addAnimation() {
@@ -57,11 +58,11 @@ const EventGallery = () => {
       <Grid style={{ marginBottom: "2em" }}>
         <Column lg={1} md={0} sm={0}></Column>
         <Column lg={14} md={8} sm={4}>
-          <div className="scroller">
+          <div className="scroller" data-animated="true">
             <ul className="scroller__inner">
               {galleryImages.map((item, i) => {
                 return (
-                  <li>
+                  <li key={i}>
                     <img src={item} alt={i} />
                   </li>
                 );
