@@ -32,7 +32,6 @@ const Header = () => {
     let p = location.pathname;
     if (p === "/") {
       setHome(true);
-      console.log("p", location.pathname);
     } else {
       setHome(false);
     }

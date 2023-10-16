@@ -5,7 +5,6 @@ import "./banner.style.css";
 
 const Banner = (props) => {
   const { message, background } = props;
-  console.log(message);
   return (
     <div className="Banner">
       {message}{" "}

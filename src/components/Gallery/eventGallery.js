@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Grid, Column, ClickableTile } from "@carbon/react";
 import Event1 from "./Event1.jpeg";
 import Event2 from "./Event2.jpeg";
@@ -27,13 +27,16 @@ const EventGallery = () => {
     Event10,
     Event11,
   ];
-  useEffect(() => {
-    addAnimation();
-    console.log("Yes sirrr", scrollers);
-  }, [scrollers]);
 
-  function addAnimation() {
-    scrollers.forEach((scroller) => {
+
+  useEffect(()=>{
+    const scroller = document.querySelectorAll(".scroller");
+    addAnimation(scroller)
+  },[])
+
+
+  function addAnimation(el) {
+    el && el.forEach((scroller) => {
       scroller.setAttribute("data-animated", true);
       console.log("Am i called");
       const scrollerInner = scroller.querySelector(".scroller__inner");
@@ -58,7 +61,7 @@ const EventGallery = () => {
       <Grid style={{ marginBottom: "2em" }}>
         <Column lg={1} md={0} sm={0}></Column>
         <Column lg={14} md={8} sm={4}>
-          <div className="scroller" data-animated="true">
+          <div className="scroller">
             <ul className="scroller__inner">
               {galleryImages.map((item, i) => {
                 return (
