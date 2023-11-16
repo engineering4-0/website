@@ -1,0 +1,15 @@
+.Banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  margin-right: 3px;
+}
+.Banner svg:hover {
+  fill: #767070 !important;
+}
+.instagram {
+  margin-left: 3px;
+}

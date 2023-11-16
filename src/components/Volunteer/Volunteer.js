@@ -2,10 +2,9 @@ import { Grid, Column, ClickableTile } from "@carbon/react";
 import "./Volunteer.style.css";
 import Altamash from "./Altamash.jpeg";
 import Ashvinjeet from "./Ashvinjeet.jpg";
-import Ameya from "./Ameya.jpg";
-import Divya from "./Divya.jpg";
-import Sockalingam from "./Sockalingam.jpeg";
-import Vikas from "./Vikas.jpg";
+import Varsha from "./varsha.jpeg";
+import Wazeem from "./wazeem.jpeg";
+import Aeshita from "./Aeshita.jpeg";
 
 const Volunteer = () => {
   return (
@@ -24,19 +23,19 @@ const Volunteer = () => {
           <ClickableTile
             className="member-tile"
             target="_blank"
-            href="https://www.linkedin.com/in/vikas-kumar-7b0451128/"
+            href="https://www.linkedin.com/in/varsha-sri-selvakumar-5b516b177/"
           >
             <Grid>
               <Column lg={1} md={4} sm={2}>
                 <img
                   alt="profile-pic"
                   style={{ height: "55px", width: "55px", borderRadius: "50%" }}
-                  src={Vikas}
+                  src={Varsha}
                 />
               </Column>
               <Column lg={2} md={4} sm={2}>
-                Vikas Kumar<hr></hr>
-                Operations Coordinator
+                Varsha<hr></hr>
+                Operations & Digital Marketing Associate
               </Column>
             </Grid>
           </ClickableTile>
@@ -87,68 +86,44 @@ const Volunteer = () => {
           <ClickableTile
             className="member-tile"
             target="_blank"
-            href="https://www.linkedin.com/in/ameya-ade-833a16146/"
+            href="https://www.linkedin.com/in/aeshita-dhiman/"
           >
             <Grid>
               <Column lg={1} md={4} sm={2}>
                 <img
                   alt="profile-pic"
                   style={{ height: "55px", width: "55px", borderRadius: "50%" }}
-                  src={Ameya}
+                  src={Aeshita}
                 />
               </Column>
               <Column lg={2} md={4} sm={2}>
-                Ameya Ade<hr></hr>
-                Web Developer
+                Aeshita Dhiman<hr></hr>
+                Digital Marketing Associate
               </Column>
             </Grid>
           </ClickableTile>
         </Column>
         <Column lg={2} md={0} sm={0}></Column>
+        <Grid></Grid>
       </Grid>
       <Grid style={{ marginBottom: "2em" }} className="Volunteer_Member_Row">
-        <Column lg={3} md={0} sm={0}></Column>
+        <Column lg={6} md={0} sm={0}></Column>
         <Column lg={3} md={4} sm={2} className="volunteer-members">
           <ClickableTile
             className="member-tile"
             target="_blank"
-            href="https://www.linkedin.com/in/divya-khurana-7331ba261/"
+            href="https://www.linkedin.com/in/waseem-zahir/"
           >
             <Grid>
               <Column lg={1} md={4} sm={2}>
                 <img
                   alt="profile-pic"
                   style={{ height: "55px", width: "55px", borderRadius: "50%" }}
-                  src={Divya}
+                  src={Wazeem}
                 />
               </Column>
               <Column lg={2} md={4} sm={2}>
-                Divya Khurana
-                <hr />
-                Digital Marketing
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-
-        
-
-        <Column lg={3} md={4} sm={2} className="volunteer-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/divya-khurana-7331ba261/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{ height: "55px", width: "55px", borderRadius: "50%" }}
-                  src={Sockalingam}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Sockalingam
+                Waseem
                 <hr />
                 Finance Associate
               </Column>
@@ -156,7 +131,7 @@ const Volunteer = () => {
           </ClickableTile>
         </Column>
 
-        <Column lg={3} md={0} sm={0}></Column>
+        <Column lg={7} md={0} sm={0}></Column>
       </Grid>
     </div>
   );
