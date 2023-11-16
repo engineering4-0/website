@@ -16,6 +16,7 @@
   max-height: 2.5rem;
   border-radius: 5px !important;
   background-color: #0019f5 !important;
+  align-items: center;
 }
 
 .navigateButtons a:hover {
