@@ -81,12 +81,6 @@ const Header = () => {
                 Buddy Program 🌟
               </HeaderMenuItem>
               <HeaderMenuItem>
-                <Column
-                  lg={5}
-                  md={8}
-                  sm={4}
-                  style={{ marginTop: "1em", marginBottom: "1em" }}
-                >
                   <Button
                     kind="primary"
                     className="member_button"
@@ -109,7 +103,6 @@ const Header = () => {
                   >
                     Become a member
                   </Button>
-                </Column>
               </HeaderMenuItem>
             </HeaderNavigation>
             <SideNav
