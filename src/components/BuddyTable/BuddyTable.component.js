@@ -49,6 +49,12 @@ const BuddyTable = () => {
     getBuddyRequests();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    getBuddyRequests();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isRequstModalOpen]);
 
   const handleModalClose = () => {

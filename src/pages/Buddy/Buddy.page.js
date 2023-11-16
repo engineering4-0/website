@@ -10,9 +10,9 @@ const BuddyPage = () => {
       <Grid style={{ paddingTop: "8em", color: "white", marginBottom: "2em" }}>
         <Column lg={8} md={8} sm={4}>
           <div className="heading-02" style={{ paddingBottom: "1em" }}>
-            Welcome to the <span 
+            Welcome to the <span
               style={{ textDecoration: "underline" }}>
-                4.0 Buddy Program</span>!
+              4.0 Buddy Program</span>!
           </div>
           <div style={{ fontSize: "1.5em" }}>
             Are you looking for someone to work with you on a project idea, or do you want to collaborate with someone else on a project they've already started?
@@ -49,9 +49,7 @@ const BuddyPage = () => {
                   </div>
                 </TileAboveTheFoldContent>
                 <TileBelowTheFoldContent>
-                  <div style={{ height: '64px' }}>
-                    To get started, simply create a post outlining your project idea and what type of collaborator you're looking for. Be as detailed as possible, including the skills you need and any relevant experience or qualifications.
-                  </div>
+                  To get started, simply create a post outlining your project idea and what type of collaborator you're looking for. Be as detailed as possible, including the skills you need and any relevant experience or qualifications.
                 </TileBelowTheFoldContent>
               </ExpandableTile>
               <ExpandableTile
@@ -67,9 +65,7 @@ const BuddyPage = () => {
                   </div>
                 </TileAboveTheFoldContent>
                 <TileBelowTheFoldContent>
-                  <div style={{ height: '64px' }}>
-                    Take a break from Netflix and scrolling through social media and browse through existing posts to see if there's a project that interests you. If you have the skills and experience needed to contribute to the project, reach out to the poster and introduce yourself.
-                  </div>
+                  Take a break from Netflix and scrolling through social media and browse through existing posts to see if there's a project that interests you. If you have the skills and experience needed to contribute to the project, reach out to the poster and introduce yourself.
                 </TileBelowTheFoldContent>
               </ExpandableTile>
               <ExpandableTile
@@ -85,9 +81,7 @@ const BuddyPage = () => {
                   </div>
                 </TileAboveTheFoldContent>
                 <TileBelowTheFoldContent>
-                  <div style={{ height: '64px' }}>
-                    Once you've found someone you want to work with, start a conversation and discuss the project in more detail. Make sure you're both on the same page about timelines, goals, and expectations before getting started.
-                  </div>
+                  Once you've found someone you want to work with, start a conversation and discuss the project in more detail. Make sure you're both on the same page about timelines, goals, and expectations before getting started.
                 </TileBelowTheFoldContent>
               </ExpandableTile>
               <ExpandableTile
@@ -103,9 +97,7 @@ const BuddyPage = () => {
                   </div>
                 </TileAboveTheFoldContent>
                 <TileBelowTheFoldContent>
-                  <div style={{ height: '64px' }}>
-                    With your collaboration team in place, it's time to start working on your project! Use this page to keep track of progress, communicate with your team members, and share files and other resources.
-                  </div>
+                  With your collaboration team in place, it's time to start working on your project! Use this page to keep track of progress, communicate with your team members, and share files and other resources.
                 </TileBelowTheFoldContent>
               </ExpandableTile>
             </div>

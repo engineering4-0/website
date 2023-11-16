@@ -2,7 +2,33 @@
   font-weight: 600;
   font-size: 2em;
 }
+.hero_1 {
+  color: #000 !important;
+  background-repeat: repeat;
+  background-size: auto;
+}
 
+.alertBanner {
+  top: calc(22.5px + 2rem);
+  /* background: #0019f5; */
+  position: absolute;
+  min-width: 100%;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.alertFooter {
+  /* bottom: calc(22.5px + 2rem); */
+  /* background: #0019f5; */
+  /* position: absolute; */
+  min-width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+  color: black;
+  position: relative;
+  z-index: 0;
+}
 .hover-underline-animation {
   display: inline-block;
   position: relative;
@@ -31,7 +57,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.scroller {
+/* .scroller {
   height: 1.2em;
   line-height: 1.2em;
   position: relative;
@@ -44,9 +70,9 @@ body {
   top: 0;
   animation: slide 6s infinite;
   font-weight: bold;
-  background-color: green;
-}
-@keyframes slide {
+  background-color: green; */
+/* } */
+/* @keyframes slide {
   0% {
     top: 0;
   }
@@ -59,12 +85,74 @@ body {
   75% {
     top: -3.6em;
   }
-}
+} */
 
 .heading {
   font-weight: 600;
-  font-size: 5em;
-  color: #ffffff;
+  font-size: 3em;
+  color: #000;
+  margin-bottom: 1em;
+}
+.secondary_heading {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+.list_hero {
+  padding-left: 20px;
+}
+.list_hero li {
+  list-style-type: disc;
+}
+
+.member_button {
+  padding: 1rem 1.1rem !important;
+  min-height: 0.5rem !important;
+  max-height: 2.5rem;
+  border-radius: 5px !important;
+  background-color: linear-gradient(
+      90deg,
+      rgba(0, 67, 238, 0.2) 19.75%,
+      rgba(115, 154, 255, 0) 102.56%
+    ),
+    #0019f5 !important;
+  margin-right: 1em;
+}
+
+.learn_more {
+  padding: 1rem 1.1rem !important;
+  min-height: 0.5rem !important;
+  max-height: 2.5rem;
+  border-radius: 5px !important;
+  background-color: #17181a !important;
+}
+.footer {
+  background: #000;
+  padding: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  box-shadow: 0px 4px 25px 2px;
+  position: relative;
+}
+
+.Hello {
+  min-height: calc(100vh - 74px);
+}
+.submitButton {
+  padding: 1rem 2.1rem !important;
+  min-height: 0.5rem !important;
+  max-height: 2.5rem;
+  border-radius: 5px !important;
+  background-color: #0019f5 !important;
+}
+
+.submitButton:hover {
+  background-color: #0413a1 !important;
+}
+
+.registerButtonContainer {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 500px) {

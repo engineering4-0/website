@@ -1,0 +1,44 @@
+.header-logo {
+  max-height: 45px;
+  max-width: 45px;
+}
+
+.carbon_navbar {
+  justify-content: space-between;
+  box-shadow: 0px -7px 25px 2px;
+  min-height: 55px;
+  z-index: 3;
+}
+
+.member_button {
+  padding: 1rem 1.1rem !important;
+  min-height: 0.5rem !important;
+  max-height: 2.5rem;
+  border-radius: 5px !important;
+  background-color: #0019f5 !important;
+}
+
+.navigateButtons a:hover {
+  font-weight: 600;
+}
+.member_button:hover {
+  background-color: #0413a1 !important;
+}
+
+.nav-sub-heading {
+  font-weight: 100;
+}
+
+.nav-header {
+  font-size: 20px !important;
+}
+
+@media screen and (max-width: 420px) {
+  .nav-sub-heading {
+    display: none;
+  }
+
+  .nav-header {
+    font-size: 16px !important;
+  }
+}

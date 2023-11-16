@@ -1,12 +1,12 @@
-import { 
-  Checkbox, 
-  Form, 
-  Loading, 
-  Modal, 
-  MultiSelect, 
-  Stack, 
+import {
+  Checkbox,
+  Form,
+  Loading,
+  Modal,
+  MultiSelect,
+  Stack,
   TextArea,
-  TextInput 
+  TextInput
 } from "@carbon/react";
 import { useState } from "react";
 import axios from 'axios';
@@ -33,7 +33,19 @@ const BuddyRequestModal = ({ open, handleModalClose }) => {
     'Digital Signal Processing',
     'Data Science',
     'Machine Learning',
-    'Electrical'
+    'Electrical',
+    'Solidworks',
+    'Creo',
+    'Catia',
+    'Ansys',
+    'Siemens NX',
+    'Autodesk inventor',
+    'Fusion 360',
+    'Power BI',
+    'MS Excel',
+    'R Programming',
+    'SQL',
+    'Python'
   ];
 
   const handleClose = () => {
@@ -86,24 +98,30 @@ const BuddyRequestModal = ({ open, handleModalClose }) => {
   }
 
   const handleSubmission = async () => {
+    let isInvalid = false;
+
     if (!isAgreementChecked || isAgreementInvalid) {
+      isInvalid = true;
       setIsAgreementInvalid(true);
-      return;
     }
 
     if (email.length === 0 || isEmailInvalid) {
+      isInvalid = true;
       setIsEmailInvalid(true);
-      return;
     }
 
     if (name.length === 0 || isNameInvalid) {
+      isInvalid = true;
       setIsNameInvalid(true);
-      return;
     }
 
     if (description.length === 0 || invalid) {
+      isInvalid = true;
       setInvalid(true);
       setInvalidText("Suggestion cannot be blank");
+    }
+
+    if (isInvalid) {
       return;
     }
 
@@ -146,7 +164,8 @@ const BuddyRequestModal = ({ open, handleModalClose }) => {
       </p>
       <Form>
         <Stack gap={5}>
-        <TextInput
+          <TextInput
+            data-modal-primary-focus
             id="name-input"
             invalid={isNameInvalid}
             invalidText="You need to enter a valid name"
@@ -182,8 +201,7 @@ const BuddyRequestModal = ({ open, handleModalClose }) => {
             selectionFeedback="top-after-reopen"
           />
           <TextArea
-            data-modal-primary-focus
-            id="text-input-1"
+            id="description-input"
             rows={4}
             maxCount={60}
             value={description}

@@ -11,6 +11,7 @@ import EventsPage from './pages/EventsPage/EventsPage.page';
 import ErrorPage from './pages/ErrorPage/ErrorPage.page';
 import BuddyPage from './pages/Buddy/Buddy.page';
 import BuddyListPage from './pages/Buddy/BuddyList.page';
+import UserInfo from './pages/Temp/UserInfo.Screen';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/events' element={<EventsPage />}></Route>
           <Route path='/buddy' element={<BuddyPage />}></Route>
           <Route path='/buddy-list' element={<BuddyListPage />}></Route>
+          <Route path='/temp' element={<UserInfo />}></Route>
           <Route path='/*' element={<ErrorPage/>}></Route>
         </Routes>
       </BrowserRouter>
