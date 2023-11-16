@@ -4,7 +4,7 @@ import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
 import "./banner.style.css";
 
 const Banner = (props) => {
-  const { message, background } = props;
+  const { message } = props;
   return (
     <div className="Banner">
       {message}{" "}

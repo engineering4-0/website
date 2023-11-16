@@ -1,20 +1,14 @@
 import { Grid, Column, Button } from "@carbon/react";
 import "./Home.style.css";
-import Fade from "react-reveal/Fade";
-import Registration from "../../components/Registration/Registration.component";
-import { useNavigate } from "react-router-dom";
 import BoardMembers from "../../components/BoardMembers/BoardMember.component";
 import Banner from "../../components/Update_Banner/Banner";
 // import EventSuggestionModal from "../../components/Modal/EventSuggestionModal.component";
 import background from "./bg.png";
-import { useState } from "react";
 import Contact from "../Contact_club/Contact";
 import Footer from "../../components/Footer/Footer";
 import Hero from "./hero.png";
 import EventGallery from "../../components/Gallery/eventGallery";
 const HomePage = () => {
-  const navigate = useNavigate();
-  const [isSuggestionModalOpen, setIsSuggestionModalOpen] = useState(false);
   const concatenatedString =
     "Engineering 4.0 are looking for volunteers. Unlock Your Potential: <u>Join</u> our Student Engineering Club Today!";
   const renderedString = (
@@ -24,12 +18,6 @@ const HomePage = () => {
   const concatenatedString2 =
     "Follow our social media platform for regular updates";
 
-  // const renderedString2 = (
-  //   <span dangerouslySetInnerHTML={{ __html: concatenatedString2 }} />
-  // );
-  const handleModalClose = () => {
-    setIsSuggestionModalOpen(false);
-  };
 
   const handleClickScroll = () => {
     const element = document.getElementById("contactSection");
@@ -62,10 +50,7 @@ const HomePage = () => {
         >
           <Banner message={renderedString} />
         </Column>
-        {/* <EventSuggestionModal
-        open={isSuggestionModalOpen}
-        handleModalClose={handleModalClose}
-      /> */}
+
         <Grid style={{ marginBottom: "2em", marginTop: "3em" }}>
           <Column lg={2} md={0} sm={0}></Column>
           <Column lg={6} md={5} sm={4} className="home-heading">
@@ -109,7 +94,6 @@ const HomePage = () => {
               </Button>
               <Button
                 kind="secondary"
-                // onClick={() => setIsSuggestionModalOpen(true)}
                 className="learn_more"
                 href="https://linktr.ee/uwindsor_eng4.0?fbclid=PAAaZ6Gw0pfLUFGmJPXntgyT4AuLPLN8aPCzn8C7aaqjM94NpD0CQxVq6PUaE"
               >
@@ -118,7 +102,7 @@ const HomePage = () => {
             </div>
           </Column>
           <Column lg={6} md={5} sm={4}>
-            <img src={Hero} alt="Hero image" style={{ maxWidth: "100%" }} />
+            <img src={Hero} alt="Hero" style={{ maxWidth: "100%" }} />
           </Column>
           <Column lg={2} md={0} sm={0}></Column>
         </Grid>

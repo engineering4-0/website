@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Column, ClickableTile } from "@carbon/react";
+import { Grid, Column } from "@carbon/react";
 import join from "./Join.png";
 import Registration from "../../components/Registration/Registration.component";
 const Contact = () => {

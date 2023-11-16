@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { Grid, Column, ClickableTile } from "@carbon/react";
+import React, { useEffect } from "react";
+import { Grid, Column } from "@carbon/react";
 import Event1 from "./Event1.jpeg";
 import Event2 from "./Event2.jpeg";
 import Event3 from "./Event3.jpeg";
@@ -13,7 +13,6 @@ import Event10 from "./Event10.jpg";
 import Event11 from "./Event11.jpg";
 import "./gallery.style.css";
 const EventGallery = () => {
-  const scrollers = document.querySelectorAll(".scroller");
   const galleryImages = [
     Event1,
     Event2,

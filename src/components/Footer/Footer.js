@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Column, ClickableTile } from "@carbon/react";
+import { Column } from "@carbon/react";
 
 const Footer = () => {
   return (
