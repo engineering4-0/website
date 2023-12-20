@@ -1,165 +1,88 @@
-import { Grid, Column, ClickableTile } from "@carbon/react";
+import { Grid, Column } from "@carbon/react";
 import "./BoardMember.style.css";
 import Abishek from "./Abishek.jpg";
 import Ameya from "./Ameya.jpg";
 import Divya from "./Divya.jpg";
 import Sockalingam from "./Sockalingam.jpeg";
 import Vikas from "./Vikas.jpg";
-import Volunteer from "../Volunteer/Volunteer";
+import ProfileCard from "../ProfileCard/ProfileCard.component";
+
+
+const boardMembers = [
+  {
+    imageUrl: Abishek,
+    name: "Abhishek Bhalaaji",
+    position: "President & Operations Head",
+    profileLink: "https://www.linkedin.com/in/abishekbr1/",
+  },
+  {
+    imageUrl: Vikas,
+    name: "Vikas Kumar",
+    position: "Vice President",
+    profileLink: "https://www.linkedin.com/in/vikas-kumar-7b0451128/",
+  },
+  {
+    imageUrl: Divya,
+    name: "Divya Khurana",
+    position: "Digital Marketing Head",
+    profileLink: "https://www.linkedin.com/in/divya-khurana-7331ba261/",
+  },
+  {
+    imageUrl: Sockalingam,
+    name: "Sockalingam",
+    position: "Treasurer",
+    profileLink: "https://www.linkedin.com/in/sockalingam-saravanan-341a9a193/",
+  },
+  {
+    imageUrl: Ameya,
+    name: "Ameya Ade",
+    position: "Technical Head",
+    profileLink: "https://www.linkedin.com/in/ameya-ade-833a16146/",
+  }
+];
+
 
 const BoardMembers = () => {
   return (
-    <div style={{ marginTop: "8em", marginBottom: "6em" }}>
-      <Grid style={{ marginBottom: "2em" }}>
-        <Column lg={1} md={0} sm={0}></Column>
-        <Column lg={14} md={8} sm={4}>
-          <p className="heading-02 member-heading">
-            <u>Connect</u> with the board members and volunteers
+    <div
+      style={{
+        marginTop: "2rem",
+        marginBottom: "2rem",
+      }}
+    >
+      <Grid
+        fullWidth
+        style={{
+          gridGap: "2rem",
+          padding: " 2rem 5rem",
+        }}
+      >
+        <Column lg={16} md={8} sm={4}>
+          <p className="textColor heading-02 member-heading">
+            Connect with the board members and volunteers{" "}
           </p>
         </Column>
-        <Column lg={1} md={0} sm={0}></Column>
-      </Grid>
-      {/* heading for board members */}
-      <Grid style={{ marginBottom: "2em" }}>
-        <Column lg={1} md={0} sm={0}></Column>
-        <Column lg={14} md={8} sm={4}>
-          <p className="heading-04 member-heading-board">BOARD MEMBERS</p>
-        </Column>
-        <Column lg={1} md={0} sm={0}></Column>
-      </Grid>
 
-      <Grid style={{ marginBottom: "2em" }} className="board_member_row">
-        <Column lg={2} md={0} sm={0}></Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/abishekbr1/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{
-                    height: "55px",
-                    width: "55px",
-                    borderRadius: "50%",
-                  }}
-                  src={Abishek}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Abishek bhalaaji<hr></hr>
-                President & Operations Head
-              </Column>
-            </Grid>
-          </ClickableTile>
+        <Column lg={16} md={8} sm={4}>
+          <p className="textColor heading-04 member-heading-board">
+            {" "}
+            BOARD MEMBERS{" "}
+          </p>{" "}
         </Column>
 
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/vikas-kumar-7b0451128/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{
-                    height: "55px",
-                    width: "55px",
-                    borderRadius: "50%",
-                  }}
-                  src={Vikas}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Vikas Kumar<hr></hr>
-                Vice President
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/divya-khurana-7331ba261/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{
-                    height: "55px",
-                    width: "55px",
-                    borderRadius: "50%",
-                  }}
-                  src={Divya}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Divya Khurana<hr></hr>
-                Digital Marketing Head
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/sockalingam-saravanan-341a9a193/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{
-                    height: "55px",
-                    width: "55px",
-                    borderRadius: "50%",
-                  }}
-                  src={Sockalingam}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Sockalingam<hr></hr>
-                Treasurer
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-        <Column lg={2} md={0} sm={0}></Column>
-        <Grid></Grid>
+        {boardMembers.map((member) => {
+          return (
+            <Column lg={{ span: 4 }} md={4} sm={4} className="board-members">
+              <ProfileCard
+                imageUrl={member.imageUrl}
+                name={member.name}
+                position={member.position}
+                profileLink={member.profileLink}
+              />
+            </Column>
+          );
+        })}
       </Grid>
-      <Grid style={{ marginBottom: "2em" }} className="board_member_row">
-        <Column lg={6} md={0} sm={0}></Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/ameya-ade-833a16146/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{ height: "55px", width: "55px", borderRadius: "50%" }}
-                  src={Ameya}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Ameya Ade<hr></hr>
-                Technical Head
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-        <Column lg={7} md={0} sm={0}></Column>
-      </Grid>
-      <Volunteer />
     </div>
   );
 };

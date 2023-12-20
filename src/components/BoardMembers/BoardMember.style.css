@@ -2,6 +2,11 @@
   text-align: center;
   font-weight: 600;
   color: #000;
+  margin-bottom: 2rem;
+}
+
+.textColor {
+  color: #27374D
 }
 
 .member-tile {
@@ -17,9 +22,10 @@
 .member-heading-volunteers {
   position: relative;
   text-align: center;
-  color: #000;
-  font-size: 16px;
+  /* color: #000; */
+  font-size: 2em;
   font-weight: 600;
+  margin-bottom: 2rem;
 }
 .member-heading-board::before,
 .member-heading-board::after,
@@ -31,7 +37,7 @@
   width: 10%;
   height: 3px;
   content: "\a0";
-  background-color: #000;
+  background-color: #27374D;
 }
 
 .member-heading-board::before,
@@ -43,6 +49,10 @@
 .member-heading-board::after,
 .member-heading-volunteers::after {
   margin-left: 1%;
+}
+
+.board-members {
+  margin: 0;
 }
 
 @media screen and (max-width: 1048px) {

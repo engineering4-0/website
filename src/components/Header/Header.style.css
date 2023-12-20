@@ -1,3 +1,5 @@
+
+
 .header-logo {
   max-height: 45px;
   max-width: 45px;
@@ -6,24 +8,29 @@
 .carbon_navbar {
   justify-content: space-between;
   box-shadow: 0px -7px 25px 2px;
-  min-height: 55px;
+  min-height: 75px;
   z-index: 3;
+  padding: 0 4rem !important;
+  background-color: #F9F5F6 !important;
+  border: 0 !important;
 }
 
 .member_button {
-  padding: 1rem 1.1rem !important;
-  min-height: 0.5rem !important;
-  max-height: 2.5rem;
   border-radius: 5px !important;
-  background-color: #0019f5 !important;
-  align-items: center;
+  margin-right: 2rem;
+  font-size: 1em !important;
+  font-weight: 400 !important;
+  padding: 1rem 1.5rem !important;
+  background-color: #6D8B74 !important;
 }
-
+.cds--header__menu-item{
+  background-color: #F9F5F6 !important;
+}
+.cds--header__menu-item:hover{
+  background-color: #F9F5F6 !important;
+}
 .navigateButtons a:hover {
-  font-weight: 600;
-}
-.member_button:hover {
-  background-color: #0413a1 !important;
+  /* font-weight: 600; */
 }
 
 .nav-sub-heading {
@@ -34,9 +41,12 @@
   font-size: 20px !important;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 626px) {
   .nav-sub-heading {
     display: none;
+  }
+  .carbon_navbar{
+    padding: 0 !important;
   }
 
   .nav-header {

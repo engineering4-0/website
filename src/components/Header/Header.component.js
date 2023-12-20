@@ -13,7 +13,7 @@ import {
 import { Column, Button } from "@carbon/react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import image from "./icon-180x180.png";
+import image from "./icon-180x180-removebg.png";
 import "./Header.style.css";
 
 const Header = () => {
@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <div>
       <HeaderContainer
-        className="Hello_there"
+        className="Hello_there header"
         render={({ isSideNavExpanded, onClickSideNavExpand }) => (
           <CarbonHeader aria-label="Carbon Tutorial" className="carbon_navbar">
             <SkipToContent />
@@ -50,7 +50,7 @@ const Header = () => {
               isActive={isSideNavExpanded}
             />
             <HeaderName
-              element={Link}
+              as={Link}
               to="/"
               prefix=""
               className="nav-header"
@@ -58,9 +58,15 @@ const Header = () => {
                 window.scrollTo(0, 0);
               }}
             >
-              Engineering 4.0{" "}
-              <span className="nav-sub-heading">| UWindsor</span>{" "}
               <img src={image} className="header-logo" alt="logo" />
+              Engineering 4.0
+              <span
+                className="nav-sub-heading"
+                style={{ margin: "0 0.5rem", fontWeight: "100" }}
+              >
+                |
+              </span>
+              <span className="nav-sub-heading">UWindsor</span>
             </HeaderName>
             <HeaderNavigation
               aria-label="navigation buttons"
@@ -81,28 +87,28 @@ const Header = () => {
                 Buddy Program 🌟
               </HeaderMenuItem>
               <HeaderMenuItem>
-                  <Button
-                    kind="primary"
-                    className="member_button"
-                    onClick={
-                      home
-                        ? handleClickScroll
-                        : () => {
-                            navigate("/");
-                            setTimeout(() => {
-                              const contactSection =
-                                document.getElementById("contactSection");
-                              if (contactSection) {
-                                contactSection.scrollIntoView({
-                                  behavior: "smooth",
-                                });
-                              }
-                            }, 100);
-                          }
-                    }
-                  >
-                    Become a member
-                  </Button>
+                <Button
+                  kind="primary"
+                  className="member_button"
+                  onClick={
+                    home
+                      ? handleClickScroll
+                      : () => {
+                          navigate("/");
+                          setTimeout(() => {
+                            const contactSection =
+                              document.getElementById("contactSection");
+                            if (contactSection) {
+                              contactSection.scrollIntoView({
+                                behavior: "smooth",
+                              });
+                            }
+                          }, 100);
+                        }
+                  }
+                >
+                  Become a member
+                </Button>
               </HeaderMenuItem>
             </HeaderNavigation>
             <SideNav
@@ -135,7 +141,6 @@ const Header = () => {
                       lg={5}
                       md={8}
                       sm={4}
-                      style={{ marginTop: "1em", marginBottom: "1em" }}
                     >
                       <Button kind="primary" className="member_button">
                         Become a member

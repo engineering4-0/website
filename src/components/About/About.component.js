@@ -5,14 +5,13 @@ import Fade from 'react-reveal/Fade';
 
 const About = () => {
     return (<>
-        <Fade bottom>
+        {/* <Fade bottom> */}
             <Grid style={{ marginBottom: "6em" }}>
-                <Column lg={1} md={0} sm={0}></Column>
-                <Column lg={7} md={4} sm={4} className='department-section'>
+                <Column lg={16} md={8} sm={4} className='department-section'>
                     <p className='departments hover-underline-animation'>People intrested in engineering</p><br></br>
                     <p className='departments hover-underline-animation'>The club is for every engineer and tech enthusiasts!</p>
                 </Column>
-                <Column lg={7} md={4} sm={4}>
+                <Column lg={16} md={8} sm={4}>
                     <p style={{ fontWeight: 400, fontSize: "20px", marginBottom: "1em" }}>We are a diverse, inclusive student-run organization seeking
                         to provide a platform to the science and technology enthusiasts of University of Windsor to</p>
                     <div>
@@ -36,9 +35,8 @@ const About = () => {
                         </UnorderedList>
                     </div>
                 </Column>
-                <Column lg={1} md={0} sm={0}></Column>
             </Grid>
-        </Fade>
+        {/* </Fade> */}
     </>)
 }
 
