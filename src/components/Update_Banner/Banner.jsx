@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaDiscord } from 'react-icons/fa';
 import { AiOutlineInstagram, AiFillLinkedin } from 'react-icons/ai';
-import './banner.style.css';
+import './banner.style.scss';
 
 const Banner = (props) => {
   const { message } = props;
@@ -9,7 +9,8 @@ const Banner = (props) => {
     <div className="Banner">
       {message}{' '}
       {message === 'Follow our social media platform for regular updates' ? (
-        <span>
+        
+        <div>
           <a
             href="https://www.instagram.com/uwindsor_eng4.0/"
             rel="noreferrer"
@@ -35,7 +36,7 @@ const Banner = (props) => {
           >
             <FaDiscord size="2em" fill="black" className="icons" />
           </a>
-        </span>
+        </div>
       ) : (
         ''
       )}

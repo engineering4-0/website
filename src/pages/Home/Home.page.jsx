@@ -2,8 +2,6 @@ import { Grid, Column, Button } from "@carbon/react";
 import "./Home.style.scss";
 import BoardMembers from "../../components/BoardMembers/BoardMember.component";
 import Banner from "../../components/Update_Banner/Banner";
-// import EventSuggestionModal from "../../components/Modal/EventSuggestionModal.component";
-import background from "./bg.png";
 import Contact from "../Contact_club/Contact";
 import Footer from "../../components/Footer/Footer";
 import Hero from "./hero.png";
@@ -11,17 +9,9 @@ import EventGallery from "../../components/Gallery/eventGallery";
 import Volunteer from "../../components/Volunteer/Volunteer";
 
 const HomePage = () => {
-  const concatenatedString =
-    "Engineering 4.0 are looking for volunteers. Unlock Your Potential: Join our Student Engineering Club Today!";
-  const renderedString = (
-    <span dangerouslySetInnerHTML={{ __html: concatenatedString }} />
-  );
-
-  const concatenatedString2 =
-    "Follow our social media platform for regular updates";
-
   const handleClickScroll = () => {
     const element = document.getElementById("contactSection");
+    console.log(element);
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({ behavior: "smooth" });
@@ -29,36 +19,23 @@ const HomePage = () => {
   };
 
   return (
-    <div className="homePage" style={{ backgroundColor: "#F9F5F6"}}>
-      <div
-        style={{
-          paddingTop: "8rem",
-          position: "relative",
-        }}
-        className="textColor hero_1 Hello"
-      >
-        <Column
-          lg={16}
-          md={0}
-          sm={0}
-          className={"alertBanner"}
-          style={{ background: "#FF8080" }}
-        >
-          <Banner message={renderedString} />
+    <div className="homePage">
+      <div className="homePage_container">
+        <Column lg={16} md={0} sm={0} className="alertBanner">
+          <Banner message="Engineering 4.0 are looking for volunteers. Unlock Your Potential: Join our Student Engineering Club Today!" />
         </Column>
 
-        <Grid fullWidth style={{ padding: " 2rem 5rem" }}>
-          <Column lg={8} md={8} sm={4} className="home-heading">
-            <p className="textColor heading">
-              <span className="underline">Student-Run</span>, Applied Science
-              Club! 👋
+        <Grid className="hero_grid" fullWidth>
+          <Column lg={8} md={8} sm={4} className="hero_container_left">
+            <p className="hero_heading">
+              <span>Student-Run</span>, Applied Science Club! 👋
             </p>
-            <p className="textColor secondary_heading">
+            <p className="hero_sub_heading">
               Engineering 4.0 is a student-run organization dedicated to
               supporting and providing a platform for all engineers and tech
               enthusiasts of the University of Windsor! <br />
               We are dedicated to -
-              <ul className="textColor list_hero">
+              <ul className="hero_content">
                 <li>
                   Providing up-to-date information on recent technological
                   developments.
@@ -83,34 +60,26 @@ const HomePage = () => {
                 </li>
               </ul>
             </p>
-            <div style={{ marginTop: "1rem" }}>
+            <div className="hero_button_container">
               <Button
                 kind="primary"
                 onClick={handleClickScroll}
-                className="primary_button"
+                className="button primary"
               >
                 Join Us
               </Button>
               <Button
+                formTarget="_blank"
                 kind="secondary"
-                className="secondary_button"
+                className="button secondary"
                 href="https://linktr.ee/uwindsor_eng4.0?fbclid=PAAaZ6Gw0pfLUFGmJPXntgyT4AuLPLN8aPCzn8C7aaqjM94NpD0CQxVq6PUaE"
               >
                 Learn More
               </Button>
             </div>
           </Column>
-          <Column lg={8} md={8} sm={4} className="imageColumn">
-            <img
-              src={Hero}
-              alt="Hero"
-              style={{
-                maxHeight: "80vh",
-                justifyContent: "center",
-                overflow: "hidden",
-                filter: "drop-shadow(0px 0px 5px #27374d)"
-              }}
-            />
+          <Column lg={8} md={8} sm={4} className="hero_container_right">
+            <img src={Hero} alt="hero_image" />
           </Column>
         </Grid>
         {/* Board member grid */}
@@ -128,10 +97,11 @@ const HomePage = () => {
           className={"alertFooter"}
           style={{ background: "#CDCDCD" }}
         >
-          <Banner message={concatenatedString2} />
+          <Column lg={16} md={0} sm={0} className="followBanner">
+            <Banner message="Follow our social media platform for regular updates" />
+          </Column>
         </Column>
       </div>
-      <Footer />
     </div>
   );
 };

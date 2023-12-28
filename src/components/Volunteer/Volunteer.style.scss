@@ -1,0 +1,48 @@
+.volunteer_container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  .volunteer_grid {
+    gap: 2rem;
+    padding: 2rem 5rem;
+  }
+
+  .sub-heading {
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 2rem;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 51%;
+      overflow: hidden;
+      width: 10%;
+      height: 3px;
+      content: "\a0";
+    }
+
+    &::after {
+      margin-left: 1%;
+    }
+
+    &::before {
+      margin-left: -11%;
+      text-align: right;
+    }
+  }
+
+  .board_members_cards {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 1048px) {
+    .board_member_row {
+      margin-bottom: initial !important;
+    }
+    .board_member_row .board-members {
+      margin-bottom: 2em;
+    }
+  }
+}

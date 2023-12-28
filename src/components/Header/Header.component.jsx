@@ -14,7 +14,7 @@ import { Column, Button } from "@carbon/react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import image from "./icon-180x180-removebg.png";
-import "./Header.style.css";
+import "./Header.style.scss";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -38,11 +38,10 @@ const Header = () => {
   }, [location.pathname]);
 
   return (
-    <div>
+    <div className="header_container">
       <HeaderContainer
-        className="Hello_there header"
         render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-          <CarbonHeader aria-label="Carbon Tutorial" className="carbon_navbar">
+          <CarbonHeader className="nav-bar">
             <SkipToContent />
             <HeaderMenuButton
               aria-label={isSideNavExpanded ? "Close menu" : "Open menu"}
@@ -60,18 +59,10 @@ const Header = () => {
             >
               <img src={image} className="header-logo" alt="logo" />
               Engineering 4.0
-              <span
-                className="nav-sub-heading"
-                style={{ margin: "0 0.5rem", fontWeight: "100" }}
-              >
-                |
-              </span>
+              <span className="nav-sub-heading">|</span>
               <span className="nav-sub-heading">UWindsor</span>
             </HeaderName>
-            <HeaderNavigation
-              aria-label="navigation buttons"
-              className="navigateButtons"
-            >
+            <HeaderNavigation aria-label="navigation buttons">
               <HeaderMenuItem
                 style={{ cursor: "pointer" }}
                 onClick={() => navigate("/events")}
@@ -89,7 +80,7 @@ const Header = () => {
               <HeaderMenuItem>
                 <Button
                   kind="primary"
-                  className="member_button"
+                  className="button primary"
                   onClick={
                     home
                       ? handleClickScroll
@@ -137,12 +128,8 @@ const Header = () => {
                     Buddy Program 🌟
                   </HeaderMenuItem>
                   <HeaderMenuItem>
-                    <Column
-                      lg={5}
-                      md={8}
-                      sm={4}
-                    >
-                      <Button kind="primary" className="member_button">
+                    <Column lg={5} md={8} sm={4}>
+                      <Button kind="primary" className="button primary">
                         Become a member
                       </Button>
                     </Column>

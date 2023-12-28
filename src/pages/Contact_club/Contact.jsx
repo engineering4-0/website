@@ -2,24 +2,14 @@ import React from "react";
 import { Grid, Column } from "@carbon/react";
 import join from "./Join.png";
 import Registration from "../../components/Registration/Registration.component";
+import "./Contact.style.scss"
 
 const Contact = () => {
   return (
-    <div
-      style={{
-        marginTop: "2rem",
-        marginBottom: "2rem",
-      }}
-    >
-      <Grid
-        fullWidth
-        style={{
-          gridGap: "2rem",
-          padding: " 2rem 5rem",
-        }}
-      >
+    <div className="contact_container" id="contactSection">
+      <Grid fullWidth className="contact_grid">
         <Column lg={16} md={8} sm={4}>
-          <p className="heading-02 member-heading">
+          <p className="heading">
             Become a member of Engineering 4.0
           </p>
         </Column>

@@ -213,7 +213,7 @@ const Registration = () => {
               kind="primary"
               tabIndex={0}
               type="submit"
-              className="submitButton"
+              className="button primary"
             >
               Register{" "}
             </Button>{" "}

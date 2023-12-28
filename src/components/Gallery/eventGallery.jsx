@@ -11,7 +11,7 @@ import Event8 from "./Event8.jpg";
 import Event9 from "./Event9.jpg";
 import Event10 from "./Event10.jpg";
 import Event11 from "./Event11.jpg";
-import "./gallery.style.css";
+import "./gallery.style.scss";
 
 const galleryImages = [
   Event1,
@@ -49,21 +49,10 @@ const EventGallery = () => {
   }
 
   return (
-    <div
-      style={{
-        marginTop: "2rem",
-        marginBottom: "2rem",
-      }}
-    >
-      <Grid
-        fullWidth
-        style={{
-          gridGap: "2rem",
-          padding: " 2rem 5rem",
-        }}
-      >
+    <div className="gallery_container">
+      <Grid fullWidth className="gallery_grid">
         <Column lg={16} md={8} sm={4}>
-          <p className="heading-02 member-heading">Past Events</p>
+          <p className="heading">Past Events</p>
         </Column>
         <Column lg={16} md={8} sm={4}>
           <div className="scroller">

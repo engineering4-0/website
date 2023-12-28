@@ -1,0 +1,64 @@
+$font-color-dark: #27374d;
+$font-color-grey: #3d4652;
+$font-color-light: #f9f5f6;
+
+$background-color-light: #f9f5f6;
+$background-color-dark: #27374d;
+$background-color-danger: #dbaabb;
+
+$primary-button-color: #6d8b74;
+$secondary-button-color: #27374d;
+
+.enggApp {
+  background-color: $background-color-light;
+  color: $font-color-dark;
+
+  .button {
+    border-radius: 5px !important;
+    margin-right: 2rem;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 1rem 1.5rem;
+    border-width: 0px;
+    color: $font-color-light;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.primary {
+      background-color: $primary-button-color;
+    }
+
+    &.secondary {
+      background-color: $secondary-button-color;
+    }
+  }
+
+  .footer {
+    background: $background-color-dark;
+    color: $font-color-light;
+    padding: 1.5rem;
+    font-weight: 500;
+    line-height: 20px;
+    position: relative;
+
+    .link {
+      background-color: $background-color-light;
+      border-radius: 3rem;
+      padding: 0.3rem;
+      color: $font-color-dark;
+    }
+  }
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: $background-color-light;
+  background: $primary-button-color;
+}
+
+::selection {
+  color: $background-color-light;
+  background: $primary-button-color;
+}

@@ -1,12 +1,11 @@
 import { Grid, Column } from "@carbon/react";
-import "./BoardMember.style.css";
+import "./BoardMember.style.scss";
 import Abishek from "./Abishek.jpg";
 import Ameya from "./Ameya.jpg";
 import Divya from "./Divya.jpg";
 import Sockalingam from "./Sockalingam.jpeg";
 import Vikas from "./Vikas.jpg";
 import ProfileCard from "../ProfileCard/ProfileCard.component";
-
 
 const boardMembers = [
   {
@@ -38,41 +37,33 @@ const boardMembers = [
     name: "Ameya Ade",
     position: "Technical Head",
     profileLink: "https://www.linkedin.com/in/ameya-ade-833a16146/",
-  }
+  },
 ];
-
 
 const BoardMembers = () => {
   return (
-    <div
-      style={{
-        marginTop: "2rem",
-        marginBottom: "2rem",
-      }}
-    >
-      <Grid
-        fullWidth
-        style={{
-          gridGap: "2rem",
-          padding: " 2rem 5rem",
-        }}
-      >
+    <div className="board_member_container">
+      <Grid fullWidth className="board_member_grid">
         <Column lg={16} md={8} sm={4}>
-          <p className="textColor heading-02 member-heading">
+          <p className="heading">
             Connect with the board members and volunteers{" "}
           </p>
         </Column>
 
         <Column lg={16} md={8} sm={4}>
-          <p className="textColor heading-04 member-heading-board">
-            {" "}
-            BOARD MEMBERS{" "}
-          </p>{" "}
+          <p className="sub-heading"> BOARD MEMBERS </p>{" "}
         </Column>
 
         {boardMembers.map((member) => {
           return (
-            <Column lg={{ span: 4 }} md={4} sm={4} className="board-members">
+            <Column
+              lg={{
+                span: 4,
+              }}
+              md={4}
+              sm={4}
+              className="board_members_cards"
+            >
               <ProfileCard
                 imageUrl={member.imageUrl}
                 name={member.name}

@@ -1,0 +1,80 @@
+@import "../../App.scss";
+
+.header_container {
+  .header-logo {
+    max-height: 45px;
+    max-width: 45px;
+  }
+
+  .nav-bar {
+    justify-content: space-between;
+    box-shadow: 0px -7px 25px 2px;
+    min-height: 75px;
+    z-index: 3;
+    padding: 0 4rem !important;
+    background-color: $background-color-light !important;
+    color: $font-color-dark;
+    border: 0 !important;
+  }
+
+  .cds--header__menu-item {
+    background-color: $background-color-light !important;
+  }
+  .cds--header__menu-item:hover {
+    background-color: $background-color-light !important;
+  }
+
+  .cds--text-truncate--end{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  a.cds--header__menu-item[aria-current=page]::after, .cds--header__menu-item--current::after {
+    position: absolute;
+    background-color: $primary-button-color;
+    block-size: 3px;
+    content: "";
+    inline-size: calc(100% + 4px);
+    inset-block-end: -2px;
+    inset-inline-start: -2px;
+}
+
+  .cds--side-nav__navigation {
+    top: 75px;
+    background-color: $background-color-light !important;
+  }
+
+  .cds--side-nav__overlay {
+    top: 75px;
+  }
+
+  .nav-sub-heading {
+    font-weight: 100;
+    color: $font-color-dark;
+    margin: 0 0.5rem;
+  }
+
+  .nav-header {
+    font-size: 20px !important;
+    color: $font-color-dark;
+  }
+
+  .cds--side-nav__header-navigation {
+    li {
+      padding: 0.5rem 0;
+    }
+  }
+
+  @media screen and (max-width: 626px) {
+    .nav-sub-heading {
+      display: none;
+    }
+    .nav-bar {
+      padding: 0 !important;
+    }
+
+    .nav-header {
+      font-size: 16px !important;
+    }
+  }
+}

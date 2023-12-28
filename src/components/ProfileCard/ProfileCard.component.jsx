@@ -1,4 +1,4 @@
-import "./ProfileCard.style.css";
+import "./ProfileCard.style.scss";
 
 const ProfileCard = ({ profileLink, imageUrl, name, position }) => {
   return (
