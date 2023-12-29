@@ -3,14 +3,12 @@
 .homePage {
   .homePage_container {
     min-height: calc(100vh - 75px);
-    padding-top: 8rem;
+    padding-top: 4.5rem;
     position: relative;
   }
 
   .alertBanner {
     background: $background-color-danger;
-    top: calc(75px);
-    position: absolute;
     min-width: 100%;
     padding: 10px;
     text-align: center;
@@ -25,7 +23,8 @@
   }
 
   .hero_grid {
-    padding: 2rem 5rem;
+    padding: 3rem 1rem;
+    // padding: 2rem 5rem;
     align-items: center;
   }
 
@@ -38,9 +37,10 @@
   }
 
   .hero_heading {
-    font-weight: 800;
-    font-size: 4em;
+    font-weight: 600;
+    font-size: 3rem;
     text-transform: uppercase;
+    text-align: center;
 
     span {
       background: linear-gradient(
@@ -55,8 +55,8 @@
   }
 
   .hero_sub_heading {
-    font-weight: 400;
-    font-size: 1.125rem;
+    font-weight: 500;
+    font-size: 1rem;
     line-height: 1.5rem;
     text-align: justify;
   }
@@ -70,11 +70,13 @@
 
   .hero_button_container {
     margin-top: 1rem;
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
   }
 
   .button {
     border-radius: 5px !important;
-    margin-right: 2rem;
     font-size: 1em;
     font-weight: 400;
     padding: 1rem 1.5rem;
@@ -91,19 +93,46 @@
 
     &.secondary {
       background-color: $secondary-button-color;
+      margin: 0;
     }
+  }
+
+  .dots {
+    --dot-size: 3px;
+    --dot-space: 22px;
+    background: linear-gradient(
+          90deg,
+          $background-color-light calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center / var(--dot-space) var(--dot-space),
+      linear-gradient(
+          $background-color-light calc(var(--dot-space) - var(--dot-size)),
+          transparent 1%
+        )
+        center / var(--dot-space) var(--dot-space),
+      $primary-button-color;
   }
 
   .hero_container_right {
     display: flex;
     justify-content: center;
-    aspect-ratio: 1/1;
+    margin-top: 3rem;
+    position: relative;
+    margin-left: 2rem;
 
-    img {
-      max-height: 80vh;
+    .img {
+      max-height: 70vh;
       justify-content: center;
       overflow: hidden;
       filter: drop-shadow(0px 0px 5px $font-color-dark);
+    }
+
+    .svg {
+      position: absolute;
+      filter: drop-shadow(0px 0px 0px #27374d);
+      bottom: 0;
+      max-width: 85vh;
     }
   }
 
@@ -119,25 +148,28 @@
     margin: 0;
     color: #1a120b;
   }
-  @media screen and (max-width: 500px) {
-    .heading {
-      font-size: 3em !important;
+  @media screen and (min-width: 1055px) {
+    .hero_grid {
+      padding: 2rem 5rem;
+      align-items: center;
     }
 
-    .heading-02 {
-      font-size: 3em !important;
+    .hero_heading {
+      font-weight: 600;
+      font-size: 4rem;
+      text-align: start;
     }
 
-    .departments {
-      font-size: 20px !important;
+    .hero_container_right {
+      margin: 0;
+      margin-left: 2rem;
     }
 
-    .department-section {
-      margin-bottom: 1em;
-    }
-
-    .home-heading {
-      margin-bottom: 4em;
+    .hero_button_container {
+      margin-top: 1rem;
+      justify-content: start;
+      display: flex;
+      gap: 2rem;
     }
   }
 

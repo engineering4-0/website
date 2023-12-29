@@ -121,7 +121,12 @@ const Volunteer = () => {
         </Column>
         {volunteers.map((member) => {
           return (
-            <Column lg={{ span: 4 }} md={4} sm={4} className="board-members">
+            <Column
+              lg={{ span: 4 }}
+              md={4}
+              sm={4}
+              className="board_members_cards"
+            >
               <ProfileCard
                 imageUrl={member.imageUrl}
                 name={member.name}

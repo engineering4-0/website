@@ -12,6 +12,7 @@ $secondary-button-color: #27374d;
 .enggApp {
   background-color: $background-color-light;
   color: $font-color-dark;
+  font-size: 16px;
 
   .button {
     border-radius: 5px !important;
@@ -21,6 +22,7 @@ $secondary-button-color: #27374d;
     padding: 1rem 1.5rem;
     border-width: 0px;
     color: $font-color-light;
+    margin: 0;
 
     &:focus {
       outline: none;
@@ -50,15 +52,15 @@ $secondary-button-color: #27374d;
       color: $font-color-dark;
     }
   }
-}
 
-::-moz-selection {
-  /* Code for Firefox */
-  color: $background-color-light;
-  background: $primary-button-color;
-}
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: $background-color-light;
+    background: $primary-button-color;
+  }
 
-::selection {
-  color: $background-color-light;
-  background: $primary-button-color;
+  ::selection {
+    color: $background-color-light;
+    background: $primary-button-color;
+  }
 }

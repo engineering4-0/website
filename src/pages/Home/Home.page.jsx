@@ -5,6 +5,7 @@ import Banner from "../../components/Update_Banner/Banner";
 import Contact from "../Contact_club/Contact";
 import Footer from "../../components/Footer/Footer";
 import Hero from "./hero.png";
+import Blob from "./blob.svg";
 import EventGallery from "../../components/Gallery/eventGallery";
 import Volunteer from "../../components/Volunteer/Volunteer";
 
@@ -78,8 +79,9 @@ const HomePage = () => {
               </Button>
             </div>
           </Column>
-          <Column lg={8} md={8} sm={4} className="hero_container_right">
-            <img src={Hero} alt="hero_image" />
+          <Column lg={8} md={8} sm={4} className="hero_container_right dots">
+            <img src={Blob} className="svg" alt="" />
+            <img src={Hero} className="img" alt="hero_image" />
           </Column>
         </Grid>
         {/* Board member grid */}

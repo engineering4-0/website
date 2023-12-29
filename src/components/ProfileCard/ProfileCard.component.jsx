@@ -16,7 +16,9 @@ const ProfileCard = ({ profileLink, imageUrl, name, position }) => {
           src={imageUrl}
         />
       </div>
-      <div className="card__title">{name}</div>
+      <div className="card__title">
+        <b>{name}</b>
+      </div>
       <div className="card__subtitle">{position}</div>
       <div className="card__wrapper">
         <button className="card__btn card__btn-solid">Connect</button>
