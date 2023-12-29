@@ -9,8 +9,10 @@ import event4 from '../Gallery/Event11.jpg';
 
 const Hero = () => {
   return (
-    <div className="h-svh grid lg:grid-cols-5 lg:grid-rows-2 place-items-center px-10 overflow-hidden">
+    <div className="h-[calc(100svh-100px)] grid lg:grid-cols-5 lg:grid-rows-2 place-items-center px-10 overflow-hidden">
+      {/* adds dotted background to hero section */}
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
       <div className="container row-span-2 col-start-2 col-end-5 col-span-3 flex flex-col items-center justify-center gap-10 mx-auto py-10">
         <div className="text-center max-w-2xl 2xl:max-w-3xl flex flex-col items-center">
           <h1 className="font-bold uppercase mb-4 text-accent-900 text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
@@ -20,7 +22,15 @@ const Hero = () => {
             Engineering 4.0 is a student-run organization dedicated to
             supporting and providing a platform for all engineers and tech
             enthusiasts of the{' '}
-            <span className="font-bold">University of Windsor</span>!
+            <a
+              href="https://www.uwindsor.ca/"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+              className="font-bold hover:text-accent-500 transition-colors duration-300 ease-in-out"
+            >
+              University of Windsor
+            </a>
+            !
           </p>
         </div>
         <Members />
