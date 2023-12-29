@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header/Header.component';
-import "@carbon/styles/css/styles.css";
+import Header from './components/Header/Header';
+// import '@carbon/styles/css/styles.css';
 import RegistrationPage from './pages/Registration/Registration.page';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -20,15 +20,15 @@ function App() {
         <Header />
         <ToastContainer />
         <Routes>
-          <Route path='/' element={<HomePage />}></Route>
-          <Route path='/register' element={<RegistrationPage />}></Route>
-          <Route path='/about' element={<AboutPage />}></Route>
-          <Route path='/admin' element={<AdminPage />}></Route>
-          <Route path='/events' element={<EventsPage />}></Route>
-          <Route path='/buddy' element={<BuddyPage />}></Route>
-          <Route path='/buddy-list' element={<BuddyListPage />}></Route>
-          <Route path='/temp' element={<UserInfo />}></Route>
-          <Route path='/*' element={<ErrorPage/>}></Route>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/register" element={<RegistrationPage />}></Route>
+          <Route path="/about" element={<AboutPage />}></Route>
+          <Route path="/admin" element={<AdminPage />}></Route>
+          <Route path="/events" element={<EventsPage />}></Route>
+          <Route path="/buddy" element={<BuddyPage />}></Route>
+          <Route path="/buddy-list" element={<BuddyListPage />}></Route>
+          <Route path="/temp" element={<UserInfo />}></Route>
+          <Route path="/*" element={<ErrorPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
