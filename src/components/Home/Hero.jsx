@@ -3,16 +3,16 @@ import Members from './Members';
 import HeroPhotos from './HeroPhotos';
 
 import event1 from '../Gallery/Event1.jpeg';
-import event2 from '../Gallery/Event2.jpeg';
-import event3 from '../Gallery/Event3.jpeg';
-import event4 from '../Gallery/Event4.jpeg';
+import event2 from '../Gallery/Event5.jpeg';
+import event3 from '../Gallery/Event7.jpeg';
+import event4 from '../Gallery/Event11.jpg';
 
 const Hero = () => {
   return (
     <div className="h-svh grid lg:grid-cols-5 lg:grid-rows-2 place-items-center px-10 overflow-hidden">
       <div className="container row-span-2 col-start-2 col-end-5 col-span-3 flex flex-col items-center justify-center gap-10 mx-auto py-10">
         <div className="text-center max-w-2xl">
-          <h1 className="font-bold uppercase mb-4 text-4xl md:text-5xl lg:text-6xl tracking-tighter">
+          <h1 className="font-bold uppercase mb-4 text-accent-900 text-4xl md:text-5xl lg:text-6xl tracking-tighter">
             Student-run, Applied Science Club!
           </h1>
           <p>
@@ -32,13 +32,13 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <HeroPhotos className="-rotate-[205deg] justify-self-end" img={event1} />
-      <HeroPhotos className="-rotate-12 justify-self-start" img={event2} />
-      <HeroPhotos className="-rotate-[50deg] justify-self-start" img={event3} />
       <HeroPhotos
-        className="col-start-1 row-start-1 rotate-[25deg] justify-self-end"
-        img={event4}
+        className="col-start-1 row-start-1 -rotate-[45deg] justify-self-end"
+        img={event1}
       />
+      <HeroPhotos className="rotate-[25deg] justify-self-end" img={event2} />
+      <HeroPhotos className="-rotate-12 justify-self-start" img={event3} />
+      <HeroPhotos className="rotate-[4deg] justify-self-start" img={event4} />
     </div>
   );
 };
