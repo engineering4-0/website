@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <div className="container row-span-2 col-start-2 col-end-5 col-span-3 flex flex-col items-center justify-center gap-10 mx-auto py-10">
         <div className="text-center max-w-2xl 2xl:max-w-3xl">
-          <h1 className="font-bold uppercase mb-4 text-accent-900 text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl tracking-tighter">
+          <h1 className="font-bold uppercase mb-4 text-accent-900 text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
             Student-run, Applied Science Club!
           </h1>
           <p>
