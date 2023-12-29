@@ -10,9 +10,10 @@ import event4 from '../Gallery/Event11.jpg';
 const Hero = () => {
   return (
     <div className="h-svh grid lg:grid-cols-5 lg:grid-rows-2 place-items-center px-10 overflow-hidden">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <div className="container row-span-2 col-start-2 col-end-5 col-span-3 flex flex-col items-center justify-center gap-10 mx-auto py-10">
-        <div className="text-center max-w-2xl">
-          <h1 className="font-bold uppercase mb-4 text-accent-900 text-4xl md:text-5xl lg:text-6xl tracking-tighter">
+        <div className="text-center max-w-2xl 2xl:max-w-3xl">
+          <h1 className="font-bold uppercase mb-4 text-accent-900 text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl tracking-tighter">
             Student-run, Applied Science Club!
           </h1>
           <p>
@@ -27,7 +28,7 @@ const Hero = () => {
           <a href="/" className="btn-accent">
             Join us
           </a>
-          <a href="/" className="btn-primary">
+          <a href="https://linktr.ee/uwindsor_eng4.0" className="btn-primary">
             Learn More
           </a>
         </div>
