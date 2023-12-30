@@ -1,32 +1,31 @@
-import React from 'react';
-import Members from './Members';
-import HeroPhotos from './HeroPhotos';
+import React from "react";
+import Members from "./Members";
+import HeroPhotos from "./HeroPhotos";
 
-import event1 from '../Gallery/Event1.jpeg';
-import event2 from '../Gallery/Event5.jpeg';
-import event3 from '../Gallery/Event7.jpeg';
-import event4 from '../Gallery/Event11.jpg';
+import event1 from "../Gallery/Event1.jpeg";
+import event2 from "../Gallery/Event5.jpeg";
+import event3 from "../Gallery/Event7.jpeg";
+import event4 from "../Gallery/Event11.jpg";
 
 const Hero = () => {
   return (
-    <div className="h-[calc(100svh-100px)] grid lg:grid-cols-5 lg:grid-rows-2 place-items-center px-10 overflow-hidden">
+    <div className="grid h-[calc(100svh-100px)] place-items-center overflow-hidden px-10 lg:grid-cols-5 lg:grid-rows-2">
       {/* adds dotted background to hero section */}
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-      <div className="container row-span-2 col-start-2 col-end-5 col-span-3 flex flex-col items-center justify-center gap-10 mx-auto py-10">
-        <div className="text-center max-w-2xl 2xl:max-w-3xl flex flex-col items-center">
-          <h1 className="font-bold uppercase mb-4 text-accent-900 text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
+      <div className="container col-span-3 col-start-2 col-end-5 row-span-2 mx-auto flex flex-col items-center justify-center gap-10 py-10">
+        <div className="flex max-w-2xl flex-col items-center text-center 2xl:max-w-3xl">
+          <h1 className="mb-4 text-5xl font-bold uppercase text-accent-900 md:text-6xl lg:text-7xl 2xl:text-8xl">
             Student-run, Applied Science Club!
           </h1>
           <p className="max-w-2xl">
-            Engineering 4.0 is a student-run organization dedicated to
-            supporting and providing a platform for all engineers and tech
-            enthusiasts of the{' '}
+            Engineering 4.0 is a student-run organization dedicated to supporting and providing a platform for all
+            engineers and tech enthusiasts of the{" "}
             <a
               href="https://www.uwindsor.ca/"
               target="_blank"
               rel="noreferrer noopener nofollow"
-              className="font-bold hover:text-accent-500 transition-colors duration-300 ease-in-out"
+              className="font-bold transition-colors duration-300 ease-in-out hover:text-accent-500"
             >
               University of Windsor
             </a>
@@ -34,24 +33,16 @@ const Hero = () => {
           </p>
         </div>
         <Members />
-        <div className="flex gap-4 items-stretch justify-evenly">
+        <div className="flex items-stretch justify-evenly gap-4">
           <a href="/" className="btn-accent">
             Join us
           </a>
-          <a
-            href="https://linktr.ee/uwindsor_eng4.0"
-            target="_blank"
-            rel="noreferrer"
-            className="btn-primary"
-          >
+          <a href="https://linktr.ee/uwindsor_eng4.0" target="_blank" rel="noreferrer" className="btn-primary">
             Learn More
           </a>
         </div>
       </div>
-      <HeroPhotos
-        className="col-start-1 row-start-1 -rotate-[45deg] justify-self-end"
-        img={event1}
-      />
+      <HeroPhotos className="col-start-1 row-start-1 -rotate-[45deg] justify-self-end" img={event1} />
       <HeroPhotos className="rotate-[25deg] justify-self-end" img={event2} />
       <HeroPhotos className="-rotate-12 justify-self-start" img={event3} />
       <HeroPhotos className="rotate-[4deg] justify-self-start" img={event4} />
