@@ -5,8 +5,8 @@ import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-black px-4 py-8 text-center text-sm text-white ">
-      <div className="mx-auto flex max-w-screen-md flex-col justify-around gap-4 md:flex-row">
-        <nav className="mb-4">
+      <div className="mx-auto flex max-w-screen-md flex-col items-stretch justify-around gap-4 md:flex-row">
+        <nav className="my-2">
           <h3 className="mb-2 text-3xl">Social Media Links</h3>
           <ul className="flex items-center justify-center gap-4">
             <li className="transition-colors duration-300 hover:text-gray-300">
@@ -32,8 +32,8 @@ const Footer = () => {
             </li>
           </ul>
         </nav>
-        <nav>
-          <h3 className="my-2 text-3xl">Pages</h3>
+        <nav className="my-2">
+          <h3 className="mb-2 text-3xl">Pages</h3>
           <ul className="flex items-center justify-center gap-4">
             <li className="hover:text-gray-300 hover:underline">
               <Link>Home</Link>
