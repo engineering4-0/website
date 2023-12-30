@@ -1,37 +1,5 @@
 import React from "react";
-import Abishek from "../BoardMembers/Abishek.jpg";
-import Sockalingam from "../BoardMembers/Sockalingam.jpeg";
-import Vikas from "../BoardMembers/Vikas.jpg";
-import Ameya from "../BoardMembers/Ameya.jpg";
-import Divya from "../BoardMembers/Divya.jpg";
-
-const MEMBERS = [
-  {
-    id: 1,
-    name: "Abishek",
-    img: Abishek,
-  },
-  {
-    id: 2,
-    name: "Ameya",
-    img: Ameya,
-  },
-  {
-    id: 3,
-    name: "Divya",
-    img: Divya,
-  },
-  {
-    id: 4,
-    name: "Sockalingam",
-    img: Sockalingam,
-  },
-  {
-    id: 5,
-    name: "Vikas",
-    img: Vikas,
-  },
-];
+import MEMBERS from "../../utils/member-list";
 
 const Members = () => {
   return (
