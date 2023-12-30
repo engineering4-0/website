@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header
-      className="flex justify-between items-center px-8 pt-6 pb-2.5 sticky top-0 z-50"
+      className="flex justify-between items-center px-8 pt-6 pb-3 sticky top-0 z-50"
       ref={headerRef}
     >
       <Link
@@ -50,20 +50,48 @@ const Header = () => {
         className={`${
           isNavScroll &&
           'shadow-2xl shadow-slate-400 rounded-lg  justify-around gap-0 backdrop-blur-2xl bg-[#ffffff80]'
-        } transition-all duration-300 ease-in-out self-center p-4`}
+        } transition-all duration-300 ease-in-out self-center px-6 py-5`}
       >
-        <ul className="flex gap-8 justify-evenly">
+        <ul className="flex gap-6 justify-around">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'text-accent-600 font-bold' : ''
+              }
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/events">Events</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'text-accent-600 font-bold' : ''
+              }
+              to="/events"
+            >
+              Events
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/buddy">Buddy Program</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'text-accent-600 font-bold' : ''
+              }
+              to="/buddy"
+            >
+              Buddy Program
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? 'text-accent-600 font-bold' : ''
+              }
+              to="/about"
+            >
+              About
+            </NavLink>
           </li>
           <li>
             <Link to="/" className="btn-accent">
