@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -25,11 +25,11 @@ const Footer = () => {
               </a>
             </li>
 
-            {/* <li className="hover:text-gray-300 transition-colors duration-300">
-              <a href="/" target="_blank" rel="noopener noreferrer">
-                <FaFacebook size="1.75rem" />
+            <li className="transition-colors duration-300 hover:text-gray-300">
+              <a href="https://discord.com/invite/Z8JnPSC5tD" target="_blank" rel="noopener noreferrer">
+                <FaDiscord size="1.75rem" />
               </a>
-            </li> */}
+            </li>
           </ul>
         </nav>
         <nav>
