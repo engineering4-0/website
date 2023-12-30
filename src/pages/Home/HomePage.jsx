@@ -1,6 +1,6 @@
-import Hero from '../../components/Home/Hero';
-import BoardMembers from '../../components/BoardMembers/BoardMember';
-import Footer from '../../components/Footer/Footer';
+import Hero from "../../components/Home/Hero";
+import BoardMembers from "../../components/BoardMembers/BoardMembers";
+import Footer from "../../components/Footer/Footer";
 
 const HomePage = () => {
   return (
