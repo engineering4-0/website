@@ -1,11 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-// import '@carbon/styles/css/styles.css';
 import RegistrationPage from './pages/Registration/Registration.page';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AboutPage from './pages/About/About.page';
-import HomePage from './pages/Home/Home.page';
+import HomePage from './pages/Home/HomePage';
 import AdminPage from './pages/AdminPage/Admin.page';
 import EventsPage from './pages/EventsPage/EventsPage.page';
 import ErrorPage from './pages/ErrorPage/ErrorPage.page';
