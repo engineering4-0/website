@@ -9,9 +9,9 @@ import event4 from "../Gallery/Event11.jpg";
 
 const Hero = () => {
   return (
-    <div className="grid h-[calc(100svh-100px)] place-items-center overflow-hidden px-10 lg:grid-cols-5 lg:grid-rows-2">
+    <div className="hero-height grid place-items-center overflow-hidden bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] px-10 [background-size:16px_16px] lg:grid-cols-5 lg:grid-rows-2">
       {/* adds dotted background to hero section */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <div className="bg-height absolute inset-0 -z-10 w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
       <div className="container z-20 col-span-3 col-start-2 col-end-5 row-span-2 mx-auto flex flex-col items-center justify-center gap-10 py-10">
         <div className="flex max-w-2xl flex-col items-center text-center 2xl:max-w-3xl">
@@ -33,9 +33,9 @@ const Hero = () => {
           </p>
         </div>
         <Members />
-        <div className="flex items-stretch justify-evenly gap-4">
-          <a href="/" className="btn-accent">
-            Become a Member
+        <div className="flex items-center justify-evenly gap-4 text-xs sm:items-stretch sm:text-base">
+          <a href="/" className="btn-accent ">
+            Join us!
           </a>
           <a href="https://linktr.ee/uwindsor_eng4.0" target="_blank" rel="noreferrer" className="btn-primary">
             Learn More
