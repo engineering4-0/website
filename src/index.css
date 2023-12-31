@@ -52,7 +52,7 @@
     height: calc(100svh - 100px);
   }
 
-  @media screen and (max-height: 500px) {
+  @media screen and (max-height: 540px) {
     .hero-height {
       height: auto;
     }

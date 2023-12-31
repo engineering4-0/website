@@ -13,7 +13,7 @@ const Header = () => {
     if (!headerRef.current) return;
 
     const changeNav = () => {
-      if (window.scrollY >= headerRef.current.clientHeight) {
+      if (window.scrollY >= headerRef.current.clientHeight / 2) {
         setIsNavScroll(true);
       } else {
         setIsNavScroll(false);
