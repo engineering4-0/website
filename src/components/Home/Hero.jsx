@@ -6,6 +6,7 @@ import event1 from "../Gallery/Event1.jpeg";
 import event2 from "../Gallery/Event5.jpeg";
 import event3 from "../Gallery/Event7.jpeg";
 import event4 from "../Gallery/Event11.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -32,7 +33,9 @@ const Hero = () => {
             !
           </p>
         </div>
-        <Members />
+        <Link to="/members">
+          <Members />
+        </Link>
         <div className="flex items-center justify-evenly gap-4 text-sm sm:items-stretch sm:text-base">
           <a href="/" className="btn-accent ">
             Join us!
