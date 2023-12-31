@@ -33,7 +33,7 @@ const Hero = () => {
           </p>
         </div>
         <Members />
-        <div className="flex items-center justify-evenly gap-4 text-xs sm:items-stretch sm:text-base">
+        <div className="flex items-center justify-evenly gap-4 text-sm sm:items-stretch sm:text-base">
           <a href="/" className="btn-accent ">
             Join us!
           </a>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { HiOutlineMenu } from "react-icons/hi";
+import { HiOutlineMenu, HiX } from "react-icons/hi";
 
 import logo from "./icon-180x180.png";
 
@@ -51,15 +51,15 @@ const Header = () => {
           onClick={() => setIsNavOpen((prev) => !prev)}
           className="header-bg rounded-full p-2 transition-colors duration-300 ease-in-out hover:bg-accent-500 hover:text-white md:hidden"
         >
-          <HiOutlineMenu size="1.75rem" />
+          {isNavOpen ? <HiX size="1.75rem" /> : <HiOutlineMenu size="1.75rem" />}
         </button>
       </div>
       <nav
         className={`${isNavScroll && "rounded-lg bg-[#ffffff80] shadow-2xl shadow-slate-400 backdrop-blur-2xl"} ${
-          isNavOpen ? "right-2 top-20" : "-right-60 top-20"
-        } header-bg fixed self-end px-5 py-5 text-center transition-all duration-300 ease-in-out md:static md:self-center`}
+          isNavOpen ? "right-4 top-20" : "-right-60 top-20"
+        } header-bg fixed w-full max-w-[10.5rem] self-end px-5 py-5 text-center transition-all duration-300 ease-in-out md:static md:max-w-max md:self-center`}
       >
-        <ul className="flex flex-col justify-around gap-6 md:flex-row ">
+        <ul className="flex flex-col justify-around gap-3 md:flex-row md:gap-6 ">
           <li className="transition-colors duration-300 ease-in-out hover:text-accent-600">
             <NavLink className={({ isActive }) => (isActive ? "font-bold text-accent-600" : "")} to="/">
               Home
@@ -80,8 +80,8 @@ const Header = () => {
               About
             </NavLink>
           </li>
-          <li>
-            <Link to="/" className="btn-accent w-full text-sm md:w-min">
+          <li className="p-2.5 md:p-0">
+            <Link to="/" className="btn-accent w-full px-6 text-sm md:w-min">
               Join
             </Link>
           </li>
