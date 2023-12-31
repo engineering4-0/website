@@ -26,12 +26,6 @@
 }
 
 @layer components {
-  .hero-bg {
-    /* background-image: url(../src/components/Gallery/Event1.jpeg); */
-    object-fit: contain;
-    object-position: top;
-  }
-
   @media screen and (min-width: 768px) {
     .header-bg {
       @apply bg-inherit shadow-none backdrop-blur-0;
@@ -63,13 +57,4 @@
       height: auto;
     }
   }
-  .bg-height {
-    height: 100svh;
-  }
-  /* 
-  @media screen and (max-height: 500px) {
-    .bg-height {
-      height: auto;
-    }
-  } */
 }
