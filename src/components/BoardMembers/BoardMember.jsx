@@ -1,167 +1,50 @@
-import { Grid, Column, ClickableTile } from "@carbon/react";
-import "./BoardMember.style.css";
-import Abishek from "./Abishek.jpg";
-import Ameya from "./Ameya.jpg";
-import Divya from "./Divya.jpg";
-import Sockalingam from "./Sockalingam.jpeg";
-import Vikas from "./Vikas.jpg";
-import Volunteer from "../Volunteer/Volunteer";
+import React from "react";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-const BoardMembers = () => {
+const BoardMember = (props) => {
   return (
-    <div style={{ marginTop: "8em", marginBottom: "6em" }}>
-      <Grid style={{ marginBottom: "2em" }}>
-        <Column lg={1} md={0} sm={0}></Column>
-        <Column lg={14} md={8} sm={4}>
-          <p className="heading-02 member-heading">
-            <u>Connect</u> with the board members and volunteers
-          </p>
-        </Column>
-        <Column lg={1} md={0} sm={0}></Column>
-      </Grid>
-      {/* heading for board members */}
-      <Grid style={{ marginBottom: "2em" }}>
-        <Column lg={1} md={0} sm={0}></Column>
-        <Column lg={14} md={8} sm={4}>
-          <p className="heading-04 member-heading-board">BOARD MEMBERS</p>
-        </Column>
-        <Column lg={1} md={0} sm={0}></Column>
-      </Grid>
-
-      <Grid style={{ marginBottom: "2em" }} className="board_member_row">
-        <Column lg={2} md={0} sm={0}></Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/abishekbr1/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{
-                    height: "55px",
-                    width: "55px",
-                    borderRadius: "50%",
-                  }}
-                  src={Abishek}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Abishek bhalaaji<hr></hr>
-                President & Operations Head
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/vikas-kumar-7b0451128/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{
-                    height: "55px",
-                    width: "55px",
-                    borderRadius: "50%",
-                  }}
-                  src={Vikas}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Vikas Kumar<hr></hr>
-                Vice President
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/divya-khurana-7331ba261/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{
-                    height: "55px",
-                    width: "55px",
-                    borderRadius: "50%",
-                  }}
-                  src={Divya}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Divya Khurana<hr></hr>
-                Digital Marketing Head
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/sockalingam-saravanan-341a9a193/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{
-                    height: "55px",
-                    width: "55px",
-                    borderRadius: "50%",
-                  }}
-                  src={Sockalingam}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Sockalingam<hr></hr>
-                Treasurer
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-        <Column lg={2} md={0} sm={0}></Column>
-        <Grid></Grid>
-      </Grid>
-      <Grid style={{ marginBottom: "2em" }} className="board_member_row">
-        <Column lg={6} md={0} sm={0}></Column>
-        <Column lg={3} md={4} sm={2} className="board-members">
-          <ClickableTile
-            className="member-tile"
-            target="_blank"
-            href="https://www.linkedin.com/in/ameya-ade-833a16146/"
-          >
-            <Grid>
-              <Column lg={1} md={4} sm={2}>
-                <img
-                  alt="profile-pic"
-                  style={{ height: "55px", width: "55px", borderRadius: "50%" }}
-                  src={Ameya}
-                />
-              </Column>
-              <Column lg={2} md={4} sm={2}>
-                Ameya Ade<hr></hr>
-                Technical Head
-              </Column>
-            </Grid>
-          </ClickableTile>
-        </Column>
-        <Column lg={7} md={0} sm={0}></Column>
-      </Grid>
-      <Volunteer />
+    <div className="m-2 flex w-full max-w-60 flex-col items-center justify-evenly rounded-xl border-2 border-slate-50 bg-[#ffffff80] px-10 py-6 text-center shadow-xl backdrop-blur-2xl transition-all duration-300 ease-in-out hover:scale-105 hover:border-accent-600">
+      <a href={props.linkedIn} target="_blank" rel="noreferrer noopener nofollow">
+        <img
+          className="mx-auto mb-4 aspect-square w-full max-w-36 rounded-full object-cover object-top"
+          src={props.img}
+          alt={props.name}
+        />
+        <h3 className="mb-1 text-3xl font-bold tracking-wide text-gray-900">{props.name}</h3>
+      </a>
+      <p>{props.role}</p>
+      <ul className="mt-4 flex items-center justify-center space-x-4">
+        {props.linkedIn && (
+          <li>
+            <a href={props.linkedIn} className="text-[#0077b5] hover:text-gray-500">
+              <FaLinkedin size="1.5rem" />
+            </a>
+          </li>
+        )}
+        {props.instagram && (
+          <li>
+            <a href={props.instagram} className="text-[#f60078] hover:text-gray-500">
+              <FaInstagram size="1.5rem" />
+            </a>
+          </li>
+        )}
+        {props.gitHub && (
+          <li>
+            <a href={props.gitHub} className="text-gray-900 hover:text-gray-500">
+              <FaGithub size="1.5rem" />
+            </a>
+          </li>
+        )}
+        {props.facebook && (
+          <li>
+            <a href={props.facebook} className="text-[#39569c] hover:text-gray-500">
+              <FaFacebook size="1.5rem" />
+            </a>
+          </li>
+        )}
+      </ul>
     </div>
   );
 };
 
-export default BoardMembers;
+export default BoardMember;
