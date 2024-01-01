@@ -26,6 +26,10 @@
 }
 
 @layer components {
+  .bento {
+    grid-template-rows: repeat(3, 250px);
+  }
+
   @media screen and (min-width: 768px) {
     .header-bg {
       @apply bg-inherit shadow-none backdrop-blur-0;

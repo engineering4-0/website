@@ -1,4 +1,5 @@
 import Hero from "../../components/Home/Hero";
+import EventGallery from "../../components/Gallery/EventGallery";
 import BoardMembers from "../../components/BoardMembers/BoardMembers";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -15,6 +16,7 @@ const HomePage = () => {
             <FaArrowRightLong className="ml-2 inline" />
           </span>
         </Link>
+        <EventGallery />
       </div>
     </>
   );
