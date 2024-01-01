@@ -40,6 +40,9 @@
     .header-bg {
       @apply rounded-lg bg-[#ffffff80] shadow-2xl shadow-gray-400 backdrop-blur-xl;
     }
+    .bento {
+      grid-template-rows: repeat(3, 100px);
+    }
   }
 }
 

@@ -11,8 +11,8 @@ const EventGallery = () => {
   return (
     <>
       <h2 className="mb-8 mt-20 text-center text-5xl">Event Gallery</h2>
-      <div className="container mx-auto mb-20 max-w-screen-lg">
-        <div className="bento grid grid-flow-dense grid-cols-4 items-stretch gap-3">
+      <div className="container mx-auto mb-20 w-full max-w-screen-lg p-4">
+        <div className="bento grid grid-flow-dense grid-cols-3 items-stretch gap-3 md:grid-cols-4">
           <div className="self-stretch overflow-hidden rounded-xl">
             <img
               src={Event10}
@@ -24,7 +24,7 @@ const EventGallery = () => {
             <img
               src={Event11}
               alt=""
-              className="aspect-video w-full max-w-lg -translate-y-6 scale-110 rounded-xl object-cover object-center"
+              className="aspect-video w-full max-w-lg -translate-y-3 rounded-xl object-cover object-center md:-translate-y-6 md:scale-110"
             />
           </div>
           <div className="self-stretch overflow-hidden rounded-xl">
@@ -34,19 +34,23 @@ const EventGallery = () => {
               className="aspect-square w-full max-w-sm scale-110 rounded-xl object-cover object-top"
             />
           </div>
-          <div className="col-span-2 self-stretch overflow-hidden rounded-xl">
-            <img src={Event1} alt="" className="w-full -translate-y-10 scale-110 rounded-xl object-cover object-top" />
+          <div className="col-span-2 col-start-1 self-stretch overflow-hidden rounded-xl md:col-start-auto">
+            <img
+              src={Event1}
+              alt=""
+              className="aspect-square w-full -translate-y-6 scale-110 rounded-xl object-cover object-top md:aspect-auto md:-translate-y-10"
+            />
           </div>
 
           <div className="self-stretch overflow-hidden rounded-xl">
             <img
               src={Event6}
               alt=""
-              className="aspect-square w-full max-w-sm -translate-x-2 scale-110 rounded-xl object-cover object-top"
+              className="aspect-square w-full max-w-sm scale-110 rounded-xl object-cover object-top md:-translate-x-2"
             />
           </div>
-          <div className="row-span-2 self-stretch overflow-hidden rounded-xl">
-            <img src={Event9} alt="" className="w-full max-w-sm scale-110 rounded-xl object-cover object-top" />
+          <div className="col-start-3 row-span-2 self-stretch overflow-hidden rounded-xl md:col-start-auto">
+            <img src={Event9} alt="" className="w-full max-w-sm scale-110 rounded-xl object-cover object-center" />
           </div>
           <div className="self-stretch overflow-hidden rounded-xl">
             <img
@@ -55,8 +59,12 @@ const EventGallery = () => {
               className="aspect-square w-full max-w-sm scale-110 rounded-xl object-cover object-top"
             />
           </div>
-          <div className="col-span-2 self-stretch overflow-hidden rounded-xl">
-            <img src={Event8} alt="" className="max-w-xl scale-110 rounded-xl object-cover object-center" />
+          <div className="col-span-2 self-stretch overflow-hidden rounded-xl md:aspect-auto">
+            <img
+              src={Event8}
+              alt=""
+              className="w-full max-w-xl scale-110 rounded-xl object-cover object-center md:w-auto"
+            />
           </div>
         </div>
       </div>
@@ -65,9 +73,3 @@ const EventGallery = () => {
 };
 
 export default EventGallery;
-
-{
-  /* <div className="self-stretch overflow-hidden rounded-xl">
-  <img src={Event5} alt="" className="aspect-square w-full max-w-sm rounded-xl object-cover object-top" />
-</div>; */
-}
