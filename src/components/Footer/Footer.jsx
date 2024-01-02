@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
@@ -34,23 +33,26 @@ const Footer = () => {
         </nav>
         <nav className="my-2">
           <h3 className="mb-2 text-3xl">Pages</h3>
-          <ul className="flex items-center justify-center gap-4">
+          <ul className="flex flex-col items-center justify-center gap-2 md:flex-row md:gap-4">
             <li className="hover:text-gray-300 hover:underline">
-              <Link>Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="hover:text-gray-300 hover:underline">
-              <Link>About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li className="hover:text-gray-300 hover:underline">
-              <Link>Events</Link>
+              <Link to="/events">Events</Link>
             </li>
             <li className="hover:text-gray-300 hover:underline">
-              <Link>Buddy Page</Link>
+              <Link to="/buddy">Buddy Program</Link>
+            </li>
+            <li className="hover:text-gray-300 hover:underline">
+              <Link to="/members">Members</Link>
             </li>
           </ul>
         </nav>
       </div>
-      <div className="mx-auto my-4 max-w-screen-sm">Copyrights &copy; 2023 &nbsp; Engineering Club 4.0</div>
+      <div className="mx-auto my-4 max-w-screen-sm">Copyrights &copy; 2024 &nbsp; Engineering Club 4.0</div>
     </footer>
   );
 };
