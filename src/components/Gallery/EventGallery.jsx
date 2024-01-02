@@ -11,8 +11,8 @@ const EventGallery = () => {
   return (
     <>
       <h2 className="mb-8 mt-20 text-center text-5xl">Event Gallery</h2>
-      <div className="mx-auto mb-20 w-full max-w-md p-4 lg:max-w-screen-lg">
-        <div className="bento grid grid-flow-dense grid-cols-3 items-stretch gap-3 lg:grid-cols-4">
+      <div className="mx-auto w-full max-w-md p-4 md:max-w-screen-sm lg:max-w-screen-lg">
+        <div className="bento grid grid-flow-dense grid-cols-3 items-stretch gap-1.5 md:gap-3 lg:grid-cols-4">
           <div className="self-stretch overflow-hidden rounded-xl">
             <img
               src={Event10}
@@ -63,7 +63,7 @@ const EventGallery = () => {
             <img
               src={Event8}
               alt=""
-              className="w-full max-w-xl scale-110 rounded-xl object-cover object-center lg:w-auto"
+              className="w-full max-w-xl translate-y-2 scale-125 rounded-xl object-cover object-center md:object-top lg:w-auto lg:translate-y-0 lg:scale-110 lg:object-center"
             />
           </div>
         </div>

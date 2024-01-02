@@ -38,13 +38,17 @@
 
   @media screen and (max-width: 1023px) {
     .bento {
-      grid-template-rows: repeat(3, 100px);
+      grid-template-rows: repeat(3, 180px);
     }
   }
 
   @media screen and (max-width: 767px) {
     .header-bg {
       @apply rounded-lg bg-[#ffffff80] shadow-2xl shadow-gray-400 backdrop-blur-xl;
+    }
+
+    .bento {
+      grid-template-rows: repeat(3, 100px);
     }
   }
 }
