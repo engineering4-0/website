@@ -79,7 +79,35 @@ const HomePage = () => {
               </Button>
             </div>
           </Column>
-          <Column lg={8} md={8} sm={4} className="hero_container_right dots">
+          <Column lg={8} md={8} sm={4} className="hero_container_right">
+            <svg style={{ position: "absolute" }} width="100%" height="100%">
+              <pattern
+                id="pattern-circles"
+                x="0"
+                y="0"
+                width="50"
+                height="50"
+                patternUnits="userSpaceOnUse"
+                patternContentUnits="userSpaceOnUse"
+              >
+                <circle
+                  id="pattern-circle"
+                  cx="10"
+                  cy="10"
+                  r="2"
+                  fill="#6d8b74"
+                ></circle>
+              </pattern>
+
+              <rect
+                id="rect"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                fill="url(#pattern-circles)"
+              ></rect>
+            </svg>
             <img src={Blob} className="svg" alt="" />
             <img src={Hero} className="img" alt="hero_image" />
           </Column>
