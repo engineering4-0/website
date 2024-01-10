@@ -2,3 +2,7 @@
     background: url("../../../public/images/buddy.png")
     no-repeat;
 }
+
+#buddyAccordian .cds--tile__chevron{
+    align-items: normal!important;
+}
