@@ -55,7 +55,7 @@ const HomePage = () => {
           <Column lg={2} md={0} sm={0}></Column>
           <Column lg={6} md={5} sm={4} className="home-heading">
             <p className="heading">
-              <span className="underline">Student-run</span>, Applied Science
+              <span>Student-run</span>, Applied Science
               Club! 👋
             </p>
             <p className="secondary_heading">

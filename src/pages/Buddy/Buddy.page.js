@@ -35,7 +35,7 @@ const BuddyPage = () => {
               style={{ textAlign: "center", marginBottom: "1em" }}>
               Here's how it works
             </div>
-            <div style={{ color: "black" }}>
+            <div style={{ color: "black" }} id="buddyAccordian">
               <ExpandableTile
                 tabIndex={0}
                 tileCollapsedIconText="Interact to Expand tile"
