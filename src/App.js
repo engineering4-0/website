@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
-import RegistrationPage from "./pages/Registration/Registration.page";
+import RegistrationPage from "./pages/Registration/RegistrationPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AboutPage from "./pages/About/AboutPage";
 import HomePage from "./pages/Home/HomePage";
 import AdminPage from "./pages/AdminPage/Admin.page";
-import EventsPage from "./pages/EventsPage/EventsPage.page";
+import EventsPage from "./pages/EventsPage/EventsPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.page";
-import BuddyPage from "./pages/Buddy/Buddy.page";
+import BuddyPage from "./pages/Buddy/BuddyPage";
 import BuddyListPage from "./pages/Buddy/BuddyList.page";
 import UserInfo from "./pages/Temp/UserInfo.Screen";
 import MembersPage from "./pages/MembersPage";
