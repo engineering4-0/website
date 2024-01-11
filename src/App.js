@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import RegistrationPage from "./pages/Registration/Registration.page";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AboutPage from "./pages/About/About.page";
+import AboutPage from "./pages/About/AboutPage";
 import HomePage from "./pages/Home/HomePage";
 import AdminPage from "./pages/AdminPage/Admin.page";
 import EventsPage from "./pages/EventsPage/EventsPage.page";

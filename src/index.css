@@ -30,6 +30,13 @@
     grid-template-rows: repeat(3, 250px);
   }
 
+  .about-bg {
+    /* background-image: url("./assets/Events/GroupPhoto.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
   @media screen and (min-width: 768px) {
     .header-bg {
       @apply bg-inherit shadow-none backdrop-blur-0;
