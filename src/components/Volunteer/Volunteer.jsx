@@ -2,8 +2,8 @@ import { Grid, Column } from "@carbon/react";
 import "./Volunteer.style.scss";
 import Altamash from "./Altamash.jpeg";
 import Ashvinjeet from "./Ashvinjeet.jpg";
-import Varsha from "./varsha.jpeg";
-import Wazeem from "./wazeem.jpeg";
+// import Varsha from "./varsha.jpeg";
+// import Wazeem from "./wazeem.jpeg";
 import Aeshita from "./Aeshita.jpeg";
 import ProfileCard from "../ProfileCard/ProfileCard.component";
 
@@ -126,6 +126,7 @@ const Volunteer = () => {
               md={4}
               sm={4}
               className="board_members_cards"
+              key={member.name}
             >
               <ProfileCard
                 imageUrl={member.imageUrl}

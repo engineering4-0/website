@@ -17,7 +17,7 @@ const Footer = () => {
         Team
       </Column>
       <Column lg={16} md={8} sm={4} style={{ textAlign: "center" }}>
-        Contribute to this website here{" "}
+        Contribute to this website here
         <a
           target="_blank"
           rel="noreferrer"

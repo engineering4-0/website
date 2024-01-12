@@ -1,15 +1,14 @@
-import React from 'react';
-import { FaDiscord } from 'react-icons/fa';
-import { AiOutlineInstagram, AiFillLinkedin } from 'react-icons/ai';
-import './banner.style.scss';
+import React from "react";
+import { FaDiscord } from "react-icons/fa";
+import { AiOutlineInstagram, AiFillLinkedin } from "react-icons/ai";
+import "./banner.style.scss";
 
 const Banner = (props) => {
   const { message } = props;
   return (
     <div className="Banner">
-      {message}{' '}
-      {message === 'Follow our social media platform for regular updates' ? (
-        
+      {message}{" "}
+      {message === "Follow our social media platform for regular updates" && (
         <div>
           <a
             href="https://www.instagram.com/uwindsor_eng4.0/"
@@ -37,8 +36,6 @@ const Banner = (props) => {
             <FaDiscord size="2em" fill="black" className="icons" />
           </a>
         </div>
-      ) : (
-        ''
       )}
     </div>
   );

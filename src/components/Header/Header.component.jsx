@@ -41,7 +41,7 @@ const Header = () => {
     <div className="header_container">
       <HeaderContainer
         render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-          <CarbonHeader className="nav-bar">
+          <CarbonHeader className="nav_bar">
             <SkipToContent />
             <HeaderMenuButton
               aria-label={isSideNavExpanded ? "Close menu" : "Open menu"}
@@ -80,7 +80,7 @@ const Header = () => {
               <HeaderMenuItem>
                 <Button
                   kind="primary"
-                  className="button primary"
+                  className="button_primary"
                   onClick={
                     home
                       ? handleClickScroll

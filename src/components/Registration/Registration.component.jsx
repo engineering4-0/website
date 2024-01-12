@@ -160,7 +160,7 @@ const Registration = () => {
         backgroundColor: "#cdcdcd",
         borderRadius: "5px",
         padding: "2em",
-        width: "100%"
+        width: "100%",
       }}
     >
       <Form onSubmit={onSubmitHandler}>
@@ -175,7 +175,7 @@ const Registration = () => {
             name="first"
             value={contactInfo.first}
             onChange={handleChange}
-          />{" "}
+          />
           <TextInput
             helperText=""
             id="last"
@@ -186,7 +186,7 @@ const Registration = () => {
             name="last"
             value={contactInfo.last}
             onChange={handleChange}
-          />{" "}
+          />
           <TextInput
             value={contactInfo.email}
             helperText=""
@@ -197,7 +197,7 @@ const Registration = () => {
             placeholder="Enter uwindsor email address"
             name="email"
             onChange={handleChange}
-          />{" "}
+          />
           <TextInput
             helperText="You can provide us your instagram handle to get a mention"
             id="instagram"
@@ -207,20 +207,20 @@ const Registration = () => {
             name="instagram"
             value={contactInfo.instagram}
             onChange={handleChange}
-          />{" "}
+          />
           <div className="registerButtonContainer">
             <Button
               kind="primary"
               tabIndex={0}
               type="submit"
-              className="button primary"
+              className="button_primary"
             >
-              Register{" "}
-            </Button>{" "}
-          </div>{" "}
-        </Stack>{" "}
-      </Form>{" "}
-      {registrationNotif.isEnabled ? (
+              Register
+            </Button>
+          </div>
+        </Stack>
+      </Form>
+      {registrationNotif.isEnabled && (
         <InlineNotification
           style={{
             marginTop: "2em",
@@ -229,9 +229,7 @@ const Registration = () => {
           subtitle={`This is your member ID ${registrationNotif.id} Make sure your have this copied.`}
           title="You are now a member of Engineering 4.0!"
         />
-      ) : (
-        <div> </div>
-      )}{" "}
+      )}
     </div>
   );
 };

@@ -5,23 +5,16 @@ const ProfileCard = ({ profileLink, imageUrl, name, position }) => {
     <div className="card">
       <div className="card__img"></div>
       <div className="card__avatar">
-        <img
-          alt="profile-pic"
-          style={{
-            height: "inherit",
-            width: "inherit",
-            borderRadius: "50%",
-            border: "2px solid black",
-          }}
-          src={imageUrl}
-        />
+        <img alt="profile-pic" src={imageUrl} />
       </div>
       <div className="card__title">
         <b>{name}</b>
       </div>
       <div className="card__subtitle">{position}</div>
       <div className="card__wrapper">
-        <button className="card__btn card__btn-solid">Connect</button>
+        <a href={profileLink} target="_blank" rel="noreferrer">
+          <button className="card__btn card__btn-solid">Connect</button>
+        </a>{" "}
       </div>
     </div>
   );

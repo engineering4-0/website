@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./carousel.css";
-// const items = [1, 2, 3, 4, 5];
+import "./carousel.scss";
 
 const Carousel = ({ images = [] }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -9,24 +8,24 @@ const Carousel = ({ images = [] }) => {
     setActiveIndex(index);
   };
   useEffect(() => {
-    function updateCurrentImage(){
-      setActiveIndex( currentIndex => {
+    function updateCurrentImage() {
+      setActiveIndex((currentIndex) => {
         let nextIndex = currentIndex + 1;
         if (nextIndex >= images.length) {
-          return 0
+          return 0;
         }
-        return nextIndex
-      })
+        return nextIndex;
+      });
     }
     let carouselInterval = setInterval(() => {
-      updateCurrentImage()
+      updateCurrentImage();
     }, 2000);
-  
+
     return () => {
-      clearInterval(carouselInterval)
-    }
-  }, [images.length])
-  
+      clearInterval(carouselInterval);
+    };
+  }, [images.length]);
+
   return (
     <>
       {images.length ? (

@@ -1,3 +1,6 @@
+@use "../../utils/styles/mixins" as *;
+@use "../../utils/styles/variables" as *;
+
 .volunteer_container {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -5,13 +8,16 @@
     gap: 2rem;
     // padding: 2rem 5rem;
     padding: 3rem 1rem;
+    @media screen and (min-width: 1055px) {
+      padding: 2rem 5rem;
+    }
   }
 
   .sub-heading {
+    @include sub_heading();
+    font-weight: 600;
     position: relative;
     text-align: center;
-    font-size: 2em;
-    font-weight: 600;
     margin-bottom: 2rem;
 
     &::before,

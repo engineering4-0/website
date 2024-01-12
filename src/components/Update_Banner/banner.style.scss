@@ -1,4 +1,6 @@
-@import "../../App.scss";
+@use "../../utils/styles/mixins" as *;
+@use "../../utils/styles/variables" as *;
+
 .Banner {
   display: flex;
   flex-direction: column;
@@ -13,6 +15,6 @@
   }
   .icons {
     margin-top: 0.5rem;
-    fill: $font-color-light;
+    fill: $color-font-light;
   }
 }

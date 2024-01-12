@@ -17,18 +17,11 @@ const Contact = () => {
           <img
             src={join}
             alt="contact_avatar"
-            id="contact_image"
-            style={{
-              maxWidth: "100%",
-            }}
+            className="contact_image"
           />
         </Column>
         <Column
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          className="registration_container"
           lg={8}
           md={4}
           sm={4}

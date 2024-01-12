@@ -46,20 +46,18 @@ const BoardMembers = () => {
       <Grid fullWidth className="board_member_grid">
         <Column lg={16} md={8} sm={4}>
           <p className="heading">
-            Connect with the board members and volunteers{" "}
+            Connect with the board members and volunteers
           </p>
         </Column>
 
         <Column lg={16} md={8} sm={4}>
-          <p className="sub-heading"> BOARD MEMBERS </p>{" "}
+          <p className="sub-heading"> BOARD MEMBERS </p>
         </Column>
 
         {boardMembers.map((member) => {
           return (
             <Column
-              lg={{
-                span: 4,
-              }}
+              lg={4}
               md={4}
               sm={4}
               className="board_members_cards"

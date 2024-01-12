@@ -1,8 +1,6 @@
 import React from "react";
 import Carousel from "../../components/Carousel/carousel.component";
 import "./EventsPage.scss";
-import background from "./bg.png";
-import Footer from "../../components/Footer/Footer";
 import event_1_1 from "./Event-1_1.jpeg";
 import event_2_1 from "./Event-2_1.jpeg";
 import event_2_2 from "./Event-2_2.jpeg";
@@ -187,7 +185,6 @@ const EventsPage = () => {
           ))}
         </section>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -22,36 +22,18 @@ function App() {
         <Header />
         <ToastContainer />
         <Routes>
-          <Route path="/" element={<HomePage />}>
-            {" "}
-          </Route>{" "}
-          <Route path="/register" element={<RegistrationPage />}>
-            {" "}
-          </Route>{" "}
-          <Route path="/about" element={<AboutPage />}>
-            {" "}
-          </Route>{" "}
-          <Route path="/admin" element={<AdminPage />}>
-            {" "}
-          </Route>{" "}
-          <Route path="/events" element={<EventsPage />}>
-            {" "}
-          </Route>{" "}
-          <Route path="/buddy" element={<BuddyPage />}>
-            {" "}
-          </Route>{" "}
-          <Route path="/buddy-list" element={<BuddyListPage />}>
-            {" "}
-          </Route>{" "}
-          <Route path="/temp" element={<UserInfo />}>
-            {" "}
-          </Route>{" "}
-          <Route path="/*" element={<ErrorPage />}>
-            {" "}
-          </Route>{" "}
-        </Routes>{" "}
-        <Footer />
-      </BrowserRouter>{" "}
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/register" element={<RegistrationPage />}></Route>
+          <Route path="/about" element={<AboutPage />}></Route>
+          <Route path="/admin" element={<AdminPage />}></Route>
+          <Route path="/events" element={<EventsPage />}></Route>
+          <Route path="/buddy" element={<BuddyPage />}></Route>
+          <Route path="/buddy-list" element={<BuddyListPage />}></Route>
+          <Route path="/temp" element={<UserInfo />}></Route>
+          <Route path="/*" element={<ErrorPage />}></Route>
+        </Routes>
+      </BrowserRouter>
+      <Footer />
     </div>
   );
 }
