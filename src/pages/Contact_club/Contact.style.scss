@@ -1,0 +1,32 @@
+@use "../../utils/styles/mixins" as *;
+@use "../../utils/styles/variables" as *;
+
+.contact_container {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  .contact_grid {
+    gap: 2rem;
+    // padding: 2rem 5rem;
+    padding: 3rem 1rem;
+
+    @media screen and (min-width: 1055px) {
+      padding: 2rem 5rem;
+    }
+
+    .contact_image {
+      max-width: 100%;
+    }
+    .registration_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .heading {
+    @include heading();
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}

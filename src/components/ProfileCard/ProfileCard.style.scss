@@ -1,0 +1,91 @@
+@use "../../utils/styles/mixins" as *;
+@use "../../utils/styles/variables" as *;
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  padding: 2rem;
+
+  .card__img {
+    /* height: 90px; */
+    width: 100%;
+  }
+
+  .card__img svg {
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .card__avatar {
+    /* position: absolute; */
+    width: 114px;
+    height: 114px;
+    // background: var(--bg-color);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 180px);
+
+    img {
+      height: inherit;
+      width: inherit;
+      border-radius: 50%;
+      border: 2px solid $color-background-dark;
+    }
+  }
+
+  .card__avatar svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card__title {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: $color-font-dark;
+  }
+
+  .card__subtitle {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    color: $color-font-grey;
+  }
+
+  .card__btn {
+    margin-top: 15px;
+    width: 76px;
+    height: 31px;
+    border: 2px solid $color-background-dark;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+    color: $color-font-light;
+    background: $color-background-dark;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  .card__btn-solid {
+    background: $color-background-dark;
+    color: $color-font-light;
+  }
+
+  .card__btn:hover {
+    background: $color-background-light;
+    color: $color-font-dark;
+  }
+
+  .card__btn-solid:hover {
+    background: $color-background-light;
+    color: $color-font-dark;
+  }
+}

@@ -1,0 +1,184 @@
+@use "../../utils/styles/mixins" as *;
+@use "../../utils/styles/variables" as *;
+
+.event-container {
+  background-color: $color-background-light;
+
+  .eventsPageWrapper {
+    margin-top: 3rem;
+    padding-top: 20px;
+    min-height: calc(100vh - 121px);
+
+    .event-header {
+      @include heading($color-font-dark);
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .eventsTimeline {
+      width: 100%;
+      padding: 20px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: max-content;
+      column-gap: 40px;
+      row-gap: 20px;
+      position: relative;
+      margin-bottom: 20px;
+
+      .right {
+        animation: slideRToL 1s forwards;
+        grid-column-start: 2;
+        background-color: #e2e2e2;
+        &::after {
+          content: "";
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          position: absolute;
+          left: -30px;
+          top: 50%;
+          z-index: 1;
+        }
+      }
+
+      &::after {
+        content: "";
+        width: 10px;
+        height: 100%;
+        border-radius: 10px;
+        background-color: #474747;
+        position: absolute;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%);
+      }
+
+      .eventCardContainer {
+        transform: translateX(-20px);
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        position: relative;
+        grid-template-columns: 2fr 3fr;
+        display: grid;
+        grid-column-gap: 10px;
+        animation: slideLToR 1s forwards;
+
+        .img-wrapper {
+          position: relative;
+          flex: 1 1;
+          border-radius: 5px 0 0 5px;
+          overflow: hidden;
+        }
+
+        .content-wrapper {
+          padding: 20px;
+          flex: 3;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .eventHeading {
+            font-weight: 700;
+            line-height: 30px;
+            margin-bottom: 5px;
+          }
+
+          .eventSubHeading {
+            font-weight: 600;
+            font-size: 20px;
+            color: #676767;
+          }
+
+          .locationAndTimeContainer {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+
+            .location,
+            .time {
+              /* font-weight: 600; */
+              font-size: 15px;
+              font-weight: 600;
+            }
+          }
+
+          .eventDescription {
+            display: block;
+            overflow: hidden;
+          }
+        }
+      }
+      .eventCardContainer::after {
+        opacity: 0;
+        content: "";
+        height: 20px;
+        width: 20px;
+        background-color: #e2e2e2;
+        border-radius: 50%;
+        position: absolute;
+        right: -30px;
+        top: 50%;
+        z-index: 2;
+        animation: visibility 1s forwards;
+      }
+    }
+  }
+
+  /* For mobile screens */
+  @media (max-width: 600px) {
+    .eventsPageWrapper {
+      overflow: hidden;
+      .eventsTimeline {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &::after {
+          display: none;
+          .eventCardContainer::after {
+            display: none;
+          }
+        }
+
+        .eventCardContainer {
+          display: flex;
+          flex-direction: column;
+          .img-wrapper {
+            border-radius: 5px 5px 0 0;
+          }
+          .img-wrapper > .carousel-container {
+            min-height: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes slideLToR {
+    0% {
+      transform: translateX(-20px);
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes slideRToL {
+    0% {
+      transform: translateX(20px);
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes visibility {
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

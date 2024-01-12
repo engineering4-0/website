@@ -1,8 +1,6 @@
 import React from "react";
 import Carousel from "../../components/Carousel/carousel.component";
-import "./EventsPage.css";
-import background from "./bg.png";
-import Footer from "../../components/Footer/Footer";
+import "./EventsPage.scss";
 import event_1_1 from "./Event-1_1.jpeg";
 import event_2_1 from "./Event-2_1.jpeg";
 import event_2_2 from "./Event-2_2.jpeg";
@@ -15,10 +13,20 @@ import event_3_2 from "./Event-3_2.jpg";
 import event_3_3 from "./Event-3_3.jpg";
 import event_3_4 from "./Event-3_4.jpg";
 import event_3_5 from "./Event-3_5.jpg";
-import event_4_1 from "./Event-4_1.jpeg";
-import event_4_2 from "./Event-4_2.jpeg";
-import event_4_3 from "./Event-4_3.jpeg";
-import event_4_4 from "./Event-4_4.jpeg";
+import event_4_1 from "./Event-4_1.jpg";
+import event_4_2 from "./Event-4_2.jpg";
+import event_4_3 from "./Event-4_3.jpg";
+import event_4_4 from "./Event-4_4.jpg";
+import event_4_5 from "./Event-4_5.jpg";
+import event_4_6 from "./Event-4_6.jpg";
+import event_4_7 from "./Event-4_7.jpg";
+import event_4_8 from "./Event-4_8.jpg";
+import event_4_9 from "./Event-4_9.jpg";
+import event_4_10 from "./Event-4_10.jpg";
+import event_5_1 from "./Event-5_1.jpeg";
+import event_5_2 from "./Event-5_2.jpeg";
+import event_5_3 from "./Event-5_3.jpeg";
+import event_5_4 from "./Event-5_4.jpeg";
 
 const EventsPage = () => {
   // list of upcoming events goes here
@@ -87,7 +95,18 @@ const EventsPage = () => {
         "Club Coffee Day was a fun and joyful event conducted in June 2023. The event acted as an introduction event to new club members and an opportunity for all students to learn about the club, possible hirings, and upcoming events!",
     },
     {
-      images: [event_3_1, event_3_2, event_3_3, event_3_4, event_3_5],
+      images: [
+        event_4_1,
+        event_4_2,
+        event_4_3,
+        event_4_4,
+        event_4_5,
+        event_4_6,
+        event_4_7,
+        event_4_8,
+        event_4_9,
+        event_4_10,
+      ],
       title: "Industry Skills that matters",
       // subHeading: "this is sub heading",
       location: "Toldo Health Center",
@@ -96,7 +115,7 @@ const EventsPage = () => {
         "Industry Skills that Matter is a workshop conducted by Engineering 4.0 on June 2023 to bring working professionals from various Industries to provide a seminar on what skills are required by all students to land their dream jobs! The workshop brought three working professionals from the workforce to discuss their experiences and struggles to land their jobs!",
     },
     {
-      images: [event_4_1, event_4_2, event_4_3,event_4_4],
+      images: [event_5_1, event_5_2, event_5_3, event_5_4],
       title: "Club Showcase Day",
       // subHeading: "this is sub heading",
       location: "CEI building",
@@ -106,9 +125,7 @@ const EventsPage = () => {
     },
   ];
   return (
-    <div
-      style={{ backgroundImage: `url(${background})`, lightingColor: "50%" }}
-    >
+    <div className="event-container">
       <div className="eventsPageWrapper">
         {upcomingEvents.length ? (
           <>
@@ -140,7 +157,7 @@ const EventsPage = () => {
             </section>
           </>
         ) : null}
-        <h1 className="heading-02 member-heading title">Past Events</h1>
+        <h1 className="event-header">Past Events</h1>
         <section className="eventsTimeline">
           {pastEvents.map((event, index) => (
             <div
@@ -168,9 +185,8 @@ const EventsPage = () => {
           ))}
         </section>
       </div>
-      <Footer />
     </div>
   );
-}
+};
 
 export default EventsPage;

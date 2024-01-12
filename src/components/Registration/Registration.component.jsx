@@ -55,7 +55,10 @@ const Registration = () => {
   const scriptUrl = process.env.REACT_APP_FIREBASE_USER_DATABASE;
 
   const handleChange = (event) => {
-    setContactInfo({ ...contactInfo, [event.target.name]: event.target.value });
+    setContactInfo({
+      ...contactInfo,
+      [event.target.name]: event.target.value,
+    });
 
     if (event.target.name === "email" && !validateEmail(event.target.value)) {
       setEmailError(true);
@@ -111,14 +114,20 @@ const Registration = () => {
 
   const regsiterUser = async () => {
     await axios
-      .post(scriptUrl, { ...contactInfo, createdAt: new Date() })
+      .post(scriptUrl, {
+        ...contactInfo,
+        createdAt: new Date(),
+      })
       .then((res) => {
         sendEmail(
           `${contactInfo.first} ${contactInfo.last}`,
           contactInfo.email,
           res.data.name
         );
-        setRegistrationNotif({ isEnabled: true, id: res.data.name });
+        setRegistrationNotif({
+          isEnabled: true,
+          id: res.data.name,
+        });
         setContactInfo({
           email: "",
           first: "",
@@ -151,6 +160,7 @@ const Registration = () => {
         backgroundColor: "#cdcdcd",
         borderRadius: "5px",
         padding: "2em",
+        width: "100%",
       }}
     >
       <Form onSubmit={onSubmitHandler}>
@@ -203,22 +213,22 @@ const Registration = () => {
               kind="primary"
               tabIndex={0}
               type="submit"
-              className="submitButton"
+              className="button_primary"
             >
               Register
             </Button>
           </div>
         </Stack>
       </Form>
-      {registrationNotif.isEnabled ? (
+      {registrationNotif.isEnabled && (
         <InlineNotification
-          style={{ marginTop: "2em" }}
+          style={{
+            marginTop: "2em",
+          }}
           kind="info"
           subtitle={`This is your member ID ${registrationNotif.id} Make sure your have this copied.`}
           title="You are now a member of Engineering 4.0!"
         />
-      ) : (
-        <div></div>
       )}
     </div>
   );

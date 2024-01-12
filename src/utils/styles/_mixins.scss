@@ -1,0 +1,42 @@
+@use "./variables" as *;
+
+@mixin heading($color: $color-font-dark) {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 600;
+  color: $color;
+  @media screen and (min-width: 1055px) {
+    font-size: 4rem;
+  }
+}
+
+@mixin sub_heading($color: $color-font-dark) {
+  font-size: 2rem;
+  font-weight: 500;
+  color: $color;
+}
+
+@mixin content($color: $color-font-dark) {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+@mixin button($buttonType) {
+  border-radius: 5px !important;
+  margin-right: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1rem 1.5rem;
+  border-width: 0px;
+  color: $color-font-light;
+  margin: 0;
+
+  @if $buttonType==primary {
+    background-color: $color-button-primary;
+  } @else if $buttonType==secondary {
+    background-color: $color-background-light;
+    border: 2px solid $color-button-secondary;
+    color: $color-font-dark;
+  }
+}

@@ -13,8 +13,8 @@ import {
 import { Column, Button } from "@carbon/react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import image from "./icon-180x180.png";
-import "./Header.style.css";
+import image from "./icon-180x180-removebg.png";
+import "./Header.style.scss";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -38,11 +38,10 @@ const Header = () => {
   }, [location.pathname]);
 
   return (
-    <div>
+    <div className="header_container">
       <HeaderContainer
-        className="Hello_there"
         render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-          <CarbonHeader aria-label="Carbon Tutorial" className="carbon_navbar">
+          <CarbonHeader className="nav_bar">
             <SkipToContent />
             <HeaderMenuButton
               aria-label={isSideNavExpanded ? "Close menu" : "Open menu"}
@@ -50,7 +49,7 @@ const Header = () => {
               isActive={isSideNavExpanded}
             />
             <HeaderName
-              element={Link}
+              as={Link}
               to="/"
               prefix=""
               className="nav-header"
@@ -58,14 +57,12 @@ const Header = () => {
                 window.scrollTo(0, 0);
               }}
             >
-              Engineering 4.0{" "}
-              <span className="nav-sub-heading">| UWindsor</span>{" "}
               <img src={image} className="header-logo" alt="logo" />
+              Engineering 4.0
+              <span className="nav-sub-heading">|</span>
+              <span className="nav-sub-heading">UWindsor</span>
             </HeaderName>
-            <HeaderNavigation
-              aria-label="navigation buttons"
-              className="navigateButtons"
-            >
+            <HeaderNavigation aria-label="navigation buttons">
               <HeaderMenuItem
                 style={{ cursor: "pointer" }}
                 onClick={() => navigate("/events")}
@@ -81,28 +78,28 @@ const Header = () => {
                 Buddy Program 🌟
               </HeaderMenuItem>
               <HeaderMenuItem>
-                  <Button
-                    kind="primary"
-                    className="member_button"
-                    onClick={
-                      home
-                        ? handleClickScroll
-                        : () => {
-                            navigate("/");
-                            setTimeout(() => {
-                              const contactSection =
-                                document.getElementById("contactSection");
-                              if (contactSection) {
-                                contactSection.scrollIntoView({
-                                  behavior: "smooth",
-                                });
-                              }
-                            }, 100);
-                          }
-                    }
-                  >
-                    Become a member
-                  </Button>
+                <Button
+                  kind="primary"
+                  className="button_primary"
+                  onClick={
+                    home
+                      ? handleClickScroll
+                      : () => {
+                          navigate("/");
+                          setTimeout(() => {
+                            const contactSection =
+                              document.getElementById("contactSection");
+                            if (contactSection) {
+                              contactSection.scrollIntoView({
+                                behavior: "smooth",
+                              });
+                            }
+                          }, 100);
+                        }
+                  }
+                >
+                  Become a member
+                </Button>
               </HeaderMenuItem>
             </HeaderNavigation>
             <SideNav
@@ -131,13 +128,8 @@ const Header = () => {
                     Buddy Program 🌟
                   </HeaderMenuItem>
                   <HeaderMenuItem>
-                    <Column
-                      lg={5}
-                      md={8}
-                      sm={4}
-                      style={{ marginTop: "1em", marginBottom: "1em" }}
-                    >
-                      <Button kind="primary" className="member_button">
+                    <Column lg={5} md={8} sm={4}>
+                      <Button kind="primary" className="button primary">
                         Become a member
                       </Button>
                     </Column>
