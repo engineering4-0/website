@@ -11,14 +11,16 @@ const About = () => {
           science and technology enthusiasts.
         </p>
       </div>
-      <div className="container mx-auto flex max-w-screen-lg items-center gap-6">
+      <div className="container mx-auto flex max-w-screen-lg flex-col items-center gap-6 p-4 sm:px-8 md:flex-row">
         <div>
           <h2 className="mb-2 text-3xl underline">Join us to:</h2>
           <ul className="flex flex-col gap-3">
-            <li>Attend workshops and talks by industry professionals.</li>
-            <li>Work on real-world projects.</li>
-            <li>Organize study groups and participate in technical competitions.</li>
-            <li>Receive peer review, support, and expand your professional network through social events.</li>
+            <li className="list-disc">Attend workshops and talks by industry professionals.</li>
+            <li className="list-disc">Work on real-world projects.</li>
+            <li className="list-disc">Organize study groups and participate in technical competitions.</li>
+            <li className="list-disc">
+              Receive peer review, support, and expand your professional network through social events.
+            </li>
           </ul>
         </div>
         <img src={img} alt="engineering 4.0 event" className="w-full max-w-sm rounded-xl shadow-lg" />

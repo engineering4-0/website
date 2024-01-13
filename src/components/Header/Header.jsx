@@ -36,6 +36,7 @@ const Header = () => {
             <img src={logo} alt="Engineering Club 4.0 logo" className="w-12 rounded-full lg:w-14" />
           </Link>
           <Link
+            to="/"
             className={`text-nowrap font-bold tracking-wide text-accent-900 md:text-lg lg:text-xl ${
               isNavScroll && "pointer-events-none opacity-0"
             } transition-opacity duration-300 ease-in-out`}
