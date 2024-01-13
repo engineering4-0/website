@@ -9,7 +9,7 @@ import AdminPage from "./pages/AdminPage/Admin.page";
 import EventsPage from "./pages/EventsPage/EventsPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.page";
 import BuddyPage from "./pages/Buddy/BuddyPage";
-import BuddyListPage from "./pages/Buddy/BuddyList.page";
+import BuddyListPage from "./pages/Buddy/BuddyList";
 import UserInfo from "./pages/Temp/UserInfo.Screen";
 import MembersPage from "./pages/MembersPage";
 import Footer from "./components/Footer/Footer";
