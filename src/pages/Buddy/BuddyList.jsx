@@ -1,4 +1,4 @@
-import BuddyTable from "../../components/BuddyTable/BuddyTable.component";
+import BuddyTable from "../../components/BuddyTable/BuddyTable";
 
 const BuddyListPage = () => {
   return (
