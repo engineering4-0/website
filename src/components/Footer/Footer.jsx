@@ -52,7 +52,9 @@ const Footer = () => {
           </ul>
         </nav>
       </div>
-      <div className="mx-auto my-4 max-w-screen-sm">Copyrights &copy; 2024 &nbsp; Engineering Club 4.0</div>
+      <div className="mx-auto my-4 max-w-screen-sm">
+        Copyrights &copy; {new Date().getFullYear()} &nbsp; Engineering Club 4.0
+      </div>
     </footer>
   );
 };
