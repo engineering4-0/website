@@ -17,7 +17,7 @@ const Members = () => {
       <div className="flex aspect-square h-10 w-10 items-center justify-center rounded-full bg-slate-100 object-cover object-top p-2 text-sm">
         +50
       </div>
-      <span className="ml-1.5">Members</span>
+      <span className="ml-1.5">Volunteers</span>
     </div>
   );
 };
