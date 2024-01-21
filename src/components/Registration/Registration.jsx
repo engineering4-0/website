@@ -1,11 +1,44 @@
-import React from "react";
-
 const Registration = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const fd = new FormData(e.target);
+    const data = Object.fromEntries(fd.entries());
+    console.log(data);
+
+    e.target.reset();
+  };
+
   return (
-    <div>
-      <h2>Register</h2>
-      <form action="">
-        
+    <div className="mx-auto my-10">
+      <form onSubmit={handleSubmit}>
+        <div className="container mx-auto flex flex-col items-center justify-stretch gap-4">
+          <h2 className="text-4xl">Register</h2>
+          <div className="flex flex-col justify-start">
+            <label htmlFor="firstName">First Name</label>
+            <input id="firstName" type="text" name="firstName" required className="border-2" />
+          </div>
+          <div className="flex flex-col justify-start">
+            <label htmlFor="lastName">Last Name</label>
+            <input id="lastName" type="text" name="lastName" required className="border-2" />
+          </div>
+          <div className="flex flex-col justify-start">
+            <label htmlFor="email">Email</label>
+            <input id="email" type="email" name="email" required className="border-2" />
+          </div>
+          <div className="flex flex-col justify-start">
+            <label htmlFor="instagram">
+              Instagram handle <span className="text-xs">(optional)</span>
+            </label>
+            <input id="instagram" type="text" name="instagram" className="border-2" />
+          </div>
+          <div className="flex gap-4">
+            <button type="reset" className="btn-primary">
+              Reset
+            </button>
+            <button className="btn-accent">Submit</button>
+          </div>
+        </div>
       </form>
     </div>
   );
