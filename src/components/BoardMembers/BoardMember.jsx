@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const BoardMember = (props) => {
   return (
-    <div className="w-full max-w-60 items-stretch rounded-lg bg-gray-50 shadow-xl lg:flex lg:max-w-md">
+    <div className="w-full max-w-60 items-center sm:items-stretch rounded-lg bg-gray-50 shadow-xl lg:flex lg:max-w-md">
       <a href="/" className="w-full max-w-40">
         <img
           className="aspect-square h-full w-full rounded-lg object-cover object-top lg:rounded-none lg:rounded-l-lg"
