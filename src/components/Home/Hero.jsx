@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="hero-height grid place-items-center overflow-hidden bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] px-10 [background-size:16px_16px] lg:grid-cols-5 lg:grid-rows-2">
+    <section className="hero-height grid place-items-center overflow-hidden bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] px-10 [background-size:16px_16px] lg:grid-cols-5 lg:grid-rows-2">
       {/* adds dotted background to hero section */}
       <div className="bg-height absolute inset-0 -z-10 w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
@@ -37,7 +37,7 @@ const Hero = () => {
           <Members />
         </Link>
         <div className="flex items-center justify-evenly gap-4 text-sm sm:items-stretch sm:text-base">
-          <a href="/" className="btn-accent ">
+          <a href="/register" className="btn-accent ">
             Join us!
           </a>
           <a href="https://linktr.ee/uwindsor_eng4.0" target="_blank" rel="noreferrer" className="btn-primary">
@@ -49,7 +49,7 @@ const Hero = () => {
       <HeroPhotos className="rotate-[25deg] justify-self-end" img={event2} />
       <HeroPhotos className="-rotate-12 justify-self-start" img={event3} />
       <HeroPhotos className="rotate-[4deg] justify-self-start" img={event4} />
-    </div>
+    </section>
   );
 };
 

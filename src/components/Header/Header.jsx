@@ -82,7 +82,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="p-2.5 md:p-0">
-            <Link to="/" className="btn-accent w-full px-6 text-sm md:w-min">
+            <Link to="/register" className="btn-accent w-full px-6 text-sm md:w-min">
               Join
             </Link>
           </li>
