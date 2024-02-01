@@ -5,7 +5,7 @@ const BuddyDetails = ({ index, item }) => {
   return (
     <div className="flex flex-col justify-center">
       <div
-        className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50"} grid cursor-pointer grid-cols-3`}
+        className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50"} grid cursor-pointer grid-cols-[1fr_1fr_2fr]`}
         key={index}
         onClick={() => setAccordionOpen((p) => !p)}
       >
@@ -27,7 +27,7 @@ const BuddyDetails = ({ index, item }) => {
           accordionOpen ? "grid-rows-[1fr] py-4 opacity-100" : "grid-rows-[0fr] py-0 opacity-0"
         } ${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
       >
-        <div className="w-full overflow-hidden px-32 text-left">
+        <div className="w-full overflow-hidden px-16 text-left">
           <h4 className="text-lg">Project Details</h4>
           <p className="mb-4 text-sm">{item.description}</p>
           <h4 className="text-lg">Contact</h4>

@@ -93,7 +93,7 @@ const BuddyTable = () => {
       <div className="w-full max-w-screen-lg overflow-hidden rounded-lg">
         <div className="w-full border-gray-200 text-center">
           <div className="border-b-2 border-gray-200 bg-gray-50">
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-[1fr_1fr_2fr]">
               <div className="p-3 text-sm font-semibold tracking-wide">Name</div>
               <div className="p-3 text-sm font-semibold tracking-wide">Posted On</div>
               <div className="p-3 text-sm font-semibold tracking-wide">I need people who know...</div>
