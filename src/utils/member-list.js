@@ -49,6 +49,16 @@ const MEMBERS = [
     gitHub: "",
     facebook: "",
   },
+  {
+    id: 6,
+    name: "Aeshita Dhiman",
+    img: "/images/BoardMembers/Aeshita.jpg",
+    role: "Digital Marketing Head",
+    linkedIn: "",
+    instagram: "",
+    gitHub: "",
+    facebook: "",
+  },
 ];
 
 export default MEMBERS;
