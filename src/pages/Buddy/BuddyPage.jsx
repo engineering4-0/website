@@ -19,7 +19,7 @@ const BuddyPage = () => {
       </div>
       <div className="container m-8 mx-auto">
         <h2 className="m-4 text-center text-3xl">Here's how it works</h2>
-        <div className="mx-auto flex max-w-screen-lg flex-col justify-center gap-4 self-stretch">
+        <div className="mx-4 flex max-w-screen-lg flex-col justify-center gap-4 self-stretch md:mx-auto">
           <Accordion
             title="Create a Post"
             content="To get started, simply create a post outlining you project idea and what type of collaborator you're looking for. Be as detailed as possible, including the skills you need and any relevant experience or qualifications."
